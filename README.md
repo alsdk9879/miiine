@@ -1,4 +1,4 @@
-### Hi there 👋
+### Hi, I'm Mina
 
 <!--
 **alsdk9879/alsdk9879** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
