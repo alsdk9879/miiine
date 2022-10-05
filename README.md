@@ -1,5 +1,10 @@
 ### Hi, I'm Mina
 
+<img src="https://img.shields.io/badge/
+          Javascript-2496ED
+          ?style=flat
+          &logo=Javascript
+          &logoColor=white"/> 
 
 <!--
 **alsdk9879/alsdk9879** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
