@@ -1,7 +1,7 @@
 ### Hi, I'm Mina
 
 🛠 Tech Stack 🛠
-<img src="https://img.shields.io/badge/로고이름-색상코드?style=flat&logo=로고이름&logoColor=white"/></a>&nbsp
+<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=Android&logoColor=white"/>
 
 <!--
 **alsdk9879/alsdk9879** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
