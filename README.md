@@ -7,21 +7,29 @@
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white"></a>&nbsp
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white"></a>&nbsp 
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=Figma&logoColor=white"></a>&nbsp 
+  
   <br>
+  
   <img src="https://img.shields.io/badge/Javascript-ffb13b?style=flat&logo=javascript&logoColor=white"/></a>&nbsp 
   <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat&logo=jQuery&logoColor=white"></a>&nbsp
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"></a>&nbsp
   <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=Vue.js&logoColor=white"></a>&nbsp
+  
   <br>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"></a>&nbsp 
+  
+  <a href="https://github.com/alsdk9879/dothome21"><img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"></a>&nbsp 
   <img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat&logo=GitLab&logoColor=white"></a>&nbsp
   <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"></a>&nbsp
+  
   <br>
   <br>
+  
   <img src="https://img.shields.io/badge/Illustrator-FF9A00?style=flat&logo=Adobe Illustrator&logoColor=white"></a>&nbsp 
   <img src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat&logo=Adobe Photoshop&logoColor=white"></a>&nbsp
   <img src="https://img.shields.io/badge/XD-FF61F6?style=flat&logo=Adobe XD&logoColor=white"></a>&nbsp
+  
   <br>
+  
   <img src="https://img.shields.io/badge/Dreamweaver-0ABF53?style=flat&logo=Adobe Dreamweaver&logoColor=white"></a>&nbsp
   <img src="https://img.shields.io/badge/InDesign-FF3366?style=flat&logo=Adobe InDesign&logoColor=white"></a>&nbsp
   <img src="https://img.shields.io/badge/Premiere Pro-9999FF?style=flat&logo=Adobe Premiere Pro&logoColor=white"></a>&nbsp
