@@ -2,7 +2,7 @@
 
 <h2 align="center">🌻 About Me 🌻</h2>
 <div align="center">
-  <p>🌱 I am currently a Publisher.</p>
+  <p>🌱 Hello, I am currently a Publisher.</p>
   <p>I am studying JavaScript and React to become a Front-end developer.</p>
 </div>
 
