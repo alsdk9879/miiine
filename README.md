@@ -47,10 +47,3 @@
   <a href="https://alsdk9879.github.io/dothome21/"><img src="https://img.shields.io/badge/Portfolio-FF9E0F?style=flat&logo=AirPlay Video&logoColor=black"></a>&nbsp
   <img src="https://img.shields.io/badge/Gmail-EA4335?style=flat&logo=Gmail&logoColor=white"></a>&nbsp
 </p>
-
-<br>
-<br>
-<br>
-
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=alsdk9879@gmail.com&show_icons=true&theme=radical)
-
