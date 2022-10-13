@@ -1,6 +1,14 @@
-### Hi, I'm Mina
-
 ![header](https://capsule-render.vercel.app/api?type=waving&color=212121&height=200&section=header&text=OH%20MINA&fontSize=70&fontColor=ffc400&fontAlign=77&fontAlignY=35&desc=Publisher_Frontend&descAlign=84&descAlignY=55)
+
+<h2 align="center">🌻 About Me 🌻</h2>
+<div align="center">
+  <p>🌱 I am currently a Publisher.</p>
+  <p>I am studying JavaScript and React to become a Front-end developer.</p>
+</div>
+
+<br>
+<br>
+<br>
 
 <h2 align="center">🛠 Tech Stack 🛠</h2>
 <p align="center">
@@ -30,8 +38,9 @@
 
 <br>
 <br>
+<br>
 
-<h2 align="center">🌻 About Me 🌻</h2>
+<h2 align="center">🍀 Contact Me 🍀</h2>
 <p align="center">
   <img src="https://img.shields.io/badge/Tistory-E94F20?style=flat&logo=Tistory&logoColor=white"></a>&nbsp 
   <img src="https://img.shields.io/badge/Notion-FFFFFF?style=flat&logo=Notion&logoColor=black"></a>&nbsp
@@ -39,19 +48,9 @@
   <img src="https://img.shields.io/badge/Gmail-EA4335?style=flat&logo=Gmail&logoColor=white"></a>&nbsp
 </p>
 
-<!--
-**alsdk9879/alsdk9879** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<br>
+<br>
+<br>
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=alsdk9879@gmail.com&show_icons=true&theme=radical)
 
