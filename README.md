@@ -21,7 +21,7 @@
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"></a>&nbsp
   <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=Vue.js&logoColor=white"></a>&nbsp
   <br>
-  <a href="https://github.com/alsdk9879/dothome21"><img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"></a>&nbsp 
+  <a href="https://github.com/alsdk9879"><img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white"></a>&nbsp 
   <img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat&logo=GitLab&logoColor=white"></a>&nbsp
   <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white"></a>&nbsp
   <br>
