@@ -1,8 +1,8 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=212121&height=200&section=header&text=OH%20MINA&fontSize=70&fontColor=ffc400&fontAlign=77&fontAlignY=35&desc=Publisher_Frontend&descAlign=84&descAlignY=55)
+![header](https://capsule-render.vercel.app/api?type=waving&color=212121&height=200&section=header&text=OH%20MINA&fontSize=70&fontColor=ffc400&fontAlign=79&fontAlignY=35&desc=Web%20Publisher_Frontend&descAlign=83.5&descAlignY=55)
 
 <h2 align="center">🌻 About Me 🌻</h2>
 <div align="center">
-  <p>🌱 Hello, I am currently a Publisher.</p>
+  <p>🌱 Hello, I am currently a Web Publisher.</p>
   <p>I am studying JavaScript and React to become a Front-end developer.</p>
 </div>
 
