@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=212121&height=200&section=header&text=OH%20MINA&fontSize=70&fontColor=ffc400&fontAlign=79&fontAlignY=35&desc=Web%20Publisher_Frontend&descAlign=83.5&descAlignY=55)
+![header](https://capsule-render.vercel.app/api?type=waving&color=212121&height=200&section=header&text=OH%20MINA&fontSize=70&fontColor=ffc400&fontAlign=79&fontAlignY=40&desc=Web%20Publisher_Frontend&descAlign=83.5&descAlignY=60)
 
 <h2 align="center">🌻 About Me 🌻</h2>
 <div align="center">
