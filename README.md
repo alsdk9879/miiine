@@ -42,8 +42,8 @@
 
 <h2 align="center">🍀 Contact Me 🍀</h2>
 <p align="center">
-  <img src="https://img.shields.io/badge/Tistory-E94F20?style=flat&logo=Tistory&logoColor=white"></a>&nbsp 
-  <img src="https://img.shields.io/badge/Notion-FFFFFF?style=flat&logo=Notion&logoColor=black"></a>&nbsp
+  <a href="https://alsdk9879.tistory.com/"><img src="https://img.shields.io/badge/Tistory-E94F20?style=flat&logo=Tistory&logoColor=white"></a>&nbsp 
+  <a href="https://alsdk9879.tistory.com/"><img src="https://img.shields.io/badge/Notion-FFFFFF?style=flat&logo=Notion&logoColor=black"></a>&nbsp
   <a href="https://alsdk9879.github.io/dothome21/"><img src="https://img.shields.io/badge/Portfolio-FF9E0F?style=flat&logo=AirPlay Video&logoColor=black"></a>&nbsp
   <a href="https://alsdk9879.tistory.com/"><img src="https://img.shields.io/badge/Gmail-EA4335?style=flat&logo=Gmail&logoColor=white"></a>&nbsp
 </p>
