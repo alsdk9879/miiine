@@ -1,0 +1,46 @@
+{
+  "editor.tokenColorCustomizations": {
+    "comments": "#FEB3BC"
+  },
+  "css.completion.completePropertyWithSemicolon": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": true,
+  "editor.linkedEditing": true,
+  "editor.tabSize": 2,
+  "editor.suggestSelection": "first",
+  "git.enableSmartCommit": true,
+  "editor.foldingMaximumRegions": 10000,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.printWidth": 160,
+  "liveSassCompile.settings.autoprefix": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "html.completion.attributeDefaultValue": "doublequotes"
+}
