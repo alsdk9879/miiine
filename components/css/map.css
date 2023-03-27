@@ -306,7 +306,7 @@ table.type-files span.o::before {
   font-weight: bold;
   color: #fff;
   z-index: 99;
-  background-color: #48319d;
+  background-color: #f57c00;
   border-radius: 0 0 1.25rem 0;
   -webkit-box-shadow: 0 4px 16px -3px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 16px -3px rgba(0, 0, 0, 0.15);
@@ -329,7 +329,7 @@ table.type-files span.o::before {
   color: #222;
 }
 .style-guide-wrap nav .nav-link.active {
-  background-color: rgba(72, 49, 157, 0.1);
+  background-color: #fff3e0;
 }
 .style-guide-wrap .cont-wrap .guide-cont {
   padding: 0.7rem 2rem 2rem 17rem;

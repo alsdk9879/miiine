@@ -5,69 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../assets/libs/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/map copy.css">
   <link rel="stylesheet" href="../../assets/css/reset.css">
-  <link rel="stylesheet" href="../../assets/css/styles.css">
-  <link rel="stylesheet" href="../css/map.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../css/prism.css">
   <title>style guide</title>
 </head>
 <body>
   <div class="style-guide-wrap">
     <div class="guide-header">COMMON-STYLE</div>
+    <!-- sidenav :: s -->
     <nav class="nav flex-column">
-      <a class="nav-link active" href="#cont1">Button</a>
-      <a class="nav-link" href="#cont2">Form</a>
+      <a class="nav-link active" href="#cont1">Form</a>
       <a class="nav-link" href="#cont2">Table</a>
       <a class="nav-link" href="#cont3">Pagination</a>
-      <a class="nav-link" href="#cont4">Grid</a>
     </nav>
+    <!-- sidenav :: e -->
+
     <div class="cont-wrap">
       <div class="container-fluid">
         <div class="guide-cont">
-          <!-- Button :: s -->
-          <div id="cont1" class="guide-inner-wrap">
-            <h2 class="guide-title">Button</h2>
-            <div class="code-box">
-              <h3>Title Component</h3>
-              <h1>H1 42 Bold : Pretendard, Noto Sans KR</h1>
-              <br>
-              <h2>H2 24 Bold : Pretendard, Noto Sans KR  </h2>
-              <br>
-              <h3>H3 20 Medium : Pretendard, Noto Sans KR </h3>
-              <br>
-              <h4>H4 18 Medium : Pretendard, Noto Sans KR </h4>                       
-            </div>
-<pre><code class="language-markup"><!--
-  <h1 class="banana-title">Button</h1>
-  --></code></pre>
-
-            <div class="code-box">
-              <h3>Text Component</h3>
-              <h1>H1 42 Bold : Pretendard, Noto Sans KR</h1>
-              <br>
-              <h2>H2 24 Bold : Pretendard, Noto Sans KR  </h2>
-              <br>
-              <h3>H3 20 Medium : Pretendard, Noto Sans KR </h3>
-              <br>
-              <h4>H4 18 Medium : Pretendard, Noto Sans KR </h4>                       
-            </div>
-<pre><code class="language-markup"><!--
-  <h1 class="banana-title">Button</h1>
-  --></code></pre>
-          </div>
-          <!-- Button :: e -->
 
           <!-- Form :: s -->
-          <div id="cont2" class="guide-inner-wrap">
+          <div id="cont1" class="guide-inner-wrap">
             <h2 class="guide-title">Form</h2>
             <div class="code-box">
-              <!-- checkbox :: s -->
-              <label class="checkbox-wrap">
-                <input type="checkbox" name="" />
-                <span class="label-checkbox"></span>
-                one
-              </label>
-              <!-- checkbox :: s -->                       
+              <h3>Text Component</h3>        
             </div>
 <pre><code class="language-markup"><!--
   <h1 class="banana-title">Form</h1>
@@ -75,13 +38,7 @@
 
             <div class="code-box">
               <h3>Text Component</h3>
-              <h1>H1 42 Bold : Pretendard, Noto Sans KR</h1>
-              <br>
-              <h2>H2 24 Bold : Pretendard, Noto Sans KR  </h2>
-              <br>
-              <h3>H3 20 Medium : Pretendard, Noto Sans KR </h3>
-              <br>
-              <h4>H4 18 Medium : Pretendard, Noto Sans KR </h4>                       
+              
             </div>
 <pre><code class="language-markup"><!--
   <h1 class="banana-title">Form</h1>
@@ -90,7 +47,7 @@
           <!-- Form :: e -->
 
           <!-- Table :: s -->
-          <div id="cont3" class="guide-inner-wrap">
+          <div id="cont2" class="guide-inner-wrap">
             <h2 class="guide-title">Table</h2>
             <div class="code-box">
               <h3>Table</h3>
@@ -140,10 +97,14 @@
           <div id="cont3" class="guide-inner-wrap">
             <h2 class="guide-title">Pagination</h2>
             <div class="code-box">
-              <h3>myDoug</h3>
-              <div id="myDoug" data-percent="40"></div>
-              <div class="info">
-                <div class="title">신청과정</div>
+              <div class="pagination-wrap">
+                <button type="button" class="btn-prev"></button>
+                <button type="button" class="active">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <button type="button">4</button>
+                <button type="button">5</button>
+                <button type="button" class="btn-next"></button>
               </div>
             </div>
 <pre><code class="language-markup"><!--
@@ -152,41 +113,6 @@
           </div>
           <!-- Pagination :: e -->
 
-          <!-- Grid :: s -->
-          <div id="cont4" class="guide-inner-wrap">
-            <h2 class="guide-title">Grid</h2>
-            <div class="code-box">
-              <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
-                </div>
-              </div>
-            </div>
-<pre><code class="language-markup"><!--
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        Column
-      </div>
-      <div class="col">
-        Column
-      </div>
-      <div class="col">
-        Column
-      </div>
-    </div>
-  </div>
-  --></code></pre>
-          </div>
-          <!-- Grid :: e -->
         </div>
       </div>
     </div>

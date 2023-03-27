@@ -579,7 +579,7 @@ textarea {
 }
 
 // pagination
-.paging-wp {
+.pagination-wrap {
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
@@ -591,10 +591,10 @@ textarea {
     border: none;
     font-size: 1rem;
     font-weight: 400;
-    color: var(--gray-color-900);
+    color: #222;
 
     &.active {
-      background-color: var(--primary-color-25);
+      background-color: #fff3e0;
       border-radius: 0.5rem;
     }
 
