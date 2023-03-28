@@ -2,45 +2,45 @@
 $orange: #f57c00;
 
 // button
-.btns {
-  background-color: var(--primary-color-400);
-  border-radius: 0.5rem;
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--white-color);
-  height: 3.375rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+// .btns {
+//   background-color: var(--primary-color-400);
+//   border-radius: 0.5rem;
+//   font-weight: 600;
+//   font-size: 1.25rem;
+//   color: var(--white-color);
+//   height: 3.375rem;
+//   padding-left: 1.5rem;
+//   padding-right: 1.5rem;
 
-  &:hover,
-  &:active {
-    background-color: var(--primary-color-600);
-  }
+//   &:hover,
+//   &:active {
+//     background-color: var(--primary-color-600);
+//   }
 
-  &:disabled {
-    background-color: var(--primary-color-100);
-    pointer-events: none;
-  }
+//   &:disabled {
+//     background-color: var(--primary-color-100);
+//     pointer-events: none;
+//   }
 
-  // outline
-  &.btns-outline {
-    background-color: var(--primary-color-25);
-    border: 0.0625rem solid var(--primary-color-400);
-    color: var(--primary-color-400);
+//   // outline
+//   &.btns-outline {
+//     background-color: var(--primary-color-25);
+//     border: 0.0625rem solid var(--primary-color-400);
+//     color: var(--primary-color-400);
 
-    &:hover,
-    &:active {
-      border-color: var(--primary-color-600);
-      color: var(--primary-color-600);
-    }
+//     &:hover,
+//     &:active {
+//       border-color: var(--primary-color-600);
+//       color: var(--primary-color-600);
+//     }
 
-    &:disabled {
-      background-color: var(--primary-color-25);
-      border-color: var(--primary-color-100);
-      color: var(--primary-color-100);
-    }
-  }
-}
+//     &:disabled {
+//       background-color: var(--primary-color-25);
+//       border-color: var(--primary-color-100);
+//       color: var(--primary-color-100);
+//     }
+//   }
+// }
 
 // form
 .checkbox,
