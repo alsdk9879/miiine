@@ -626,6 +626,10 @@
       }
 
       .swiper {
+        .swiper-wrapper {
+          padding-bottom: 1rem;
+        }
+
         .swiper-slide {
           border-radius: 0.625rem;
           overflow: hidden;
@@ -641,7 +645,7 @@
 
     // cont5
     .cont5 {
-      margin-top: 6.8125rem;
+      margin-top: 5.8125rem;
 
       .cont-area {
         margin-top: 4.6875rem;

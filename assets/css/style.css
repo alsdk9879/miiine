@@ -1718,6 +1718,9 @@ textarea::placeholder {
 #main01 main .cont4 .cont-title .btn-sort {
   display: none;
 }
+#main01 main .cont4 .swiper .swiper-wrapper {
+  padding-bottom: 1rem;
+}
 #main01 main .cont4 .swiper .swiper-slide {
   border-radius: 0.625rem;
   overflow: hidden;
@@ -1729,7 +1732,7 @@ textarea::placeholder {
   top: 28%;
 }
 #main01 main .cont5 {
-  margin-top: 6.8125rem;
+  margin-top: 5.8125rem;
 }
 #main01 main .cont5 .cont-area {
   margin-top: 4.6875rem;
