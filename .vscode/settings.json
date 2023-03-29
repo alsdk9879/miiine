@@ -42,5 +42,12 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "html.completion.attributeDefaultValue": "doublequotes"
+  "html.completion.attributeDefaultValue": "doublequotes",
+
+  // tailwindcss
+  // "editor.quickSuggestions": {
+  //   "strings": true
+  // },
+  // "css.validate": false,
+  // "editor.inlineSuggest.enabled": true,
 }
