@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../fonts/hri_iconset.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="../../css/style.css">
   <title>Tailwind</title>
 </head>
 <body>
@@ -29,14 +30,14 @@
     <!-- header :: e -->
 
     <!-- nav :: s -->
-    <nav class="h-[4.25rem] max-w-[90rem] mx-auto">
+    <nav class="h-auto sm:h-[4.25rem] max-w-[90rem] mx-auto overflow-x-scroll sm:overflow-visible -mr-4 sm:mr-0">
       <ul class="flex items-center md:gap-16 gap-8 py-6 text-base font-semibold">
-        <li><a href="#">소개</a></li>
-        <li><a href="#">리더십</a></li>
-        <li><a href="#">비지니스</a></li>
-        <li><a href="#">이슈트랜드</a></li>
-        <li><a href="#">라이프</a></li>
-        <li><a href="#">진단</a></li>
+        <li class="flex-none"><a href="#">소개</a></li>
+        <li class="flex-none"><a href="#">리더십</a></li>
+        <li class="flex-none"><a href="#">비지니스</a></li>
+        <li class="flex-none"><a href="#">이슈트랜드</a></li>
+        <li class="flex-none"><a href="#">라이프</a></li>
+        <li class="flex-none"><a href="#">진단</a></li>
       </ul>
     </nav>
     <!-- nav :: e -->
@@ -44,7 +45,7 @@
     <!-- main :: s -->
     <main>
       <!-- section1 :: s -->
-      <section id="cont1" class="bg-gray-100 -mx-28 px-28">
+      <section id="cont1" class="bg-gray-100 -mx-4 md:-mx-8 xl:-mx-28 px-4 md:px-8 xl:px-28">
         <div class="max-w-[90rem] mx-auto flex justify-between gap-12">
           <div class="max-w-[32rem] lg:pt-16 md:pb-0 py-10">
             <div class="text-lg font-normal">CREATIVE GALLERY</div>
@@ -246,12 +247,12 @@
               <button type="button" class="bg-gray-100 w-6 h-6 rounded-sm"><i class="icon-arrow-right"></i></button>
             </div>
           </div>
-          <div class="mt-3 flex gap-2">
-            <span class="text-center text-sm text-blue-500 border border-solid border-blue-500 rounded-full py-2 px-4">전체</span>
-            <span class="text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">리더십</span>
-            <span class="text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">비즈니스</span>
-            <span class="text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">인문·창의</span>
-            <span class="text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">라이프</span>
+          <div class="mt-3 flex gap-2 overflow-x-scroll sm:overflow-visible -mr-4 sm:mr-0">
+            <span class="flex-none text-center text-sm text-blue-500 border border-solid border-blue-500 rounded-full py-2 px-4">전체</span>
+            <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">리더십</span>
+            <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">비즈니스</span>
+            <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">인문·창의</span>
+            <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">라이프</span>
           </div>
           <div class="grid grid-cols-2 sm:flex gap-4 mt-8">
             <div class="relative w-full h-full overflow-hidden">
@@ -346,7 +347,7 @@
       <!-- section5 :: e -->
 
       <!-- section6 :: s -->
-      <section id="cont6" class="bg-black -mx-28 px-28">
+      <section id="cont6" class="bg-black -mx-4 md:-mx-8 xl:-mx-28 px-4 md:px-8 xl:px-28">
         <div class="max-w-[90rem] mx-auto py-16 text-white">
           <h4 class="text-2xl font-semibold">오늘의 키워드</h4>
           <p class="text-gray-500 text-sm font-normal mt-2">키워드를 통한 동영상 서비스입니다.</p>
@@ -369,19 +370,19 @@
 
       <!-- section7 :: s -->
       <section id="cont7" class="max-w-[90rem] mx-auto">
-        <div class="flex justify-between gap-16 py-16">
+        <div class="flex gap-8 py-16 flex-wrap">
           <div class="flex-1 w-1/2">
             <h5 class="text-xl font-semibold pb-4 border-b-2 border-solid border-black">공지사항</h5>
             <div class="text-sm font-normal pt-8">
               <div class="text-gray-500">공지</div>
               <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
-              <p class="text-gray-500 pt-1 truncate">안녕하세요. 10/15 오후 3시경 카카오 데이터센터 화재로 인해 아직 일부 서비스가 복구되지 않아 카카오 콘</p>
+              <p class="text-gray-500 pt-1 truncate">안녕하세요. 10/15 오후 3시경 카카오 데이터센터 화재로 인해 아직 일부 서비스가 복구되지 않아</p>
               <div class="text-base text-gray-400 pt-4">2022.10.17</div>
             </div>
             <div class="text-sm font-normal pt-10">
               <div class="text-gray-500">공지</div>
               <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
-              <p class="text-gray-500 pt-1 truncate">안녕하세요. 10/15 오후 3시경 카카오 데이터센터 화재로 인해 아직 일부 서비스가 복구되지 않아 카카오 콘</p>
+              <p class="text-gray-500 pt-1 truncate">안녕하세요. 10/15 오후 3시경 카카오 데이터센터 화재로 인해 아직 일부 서비스가 복구되지 않아</p>
               <div class="text-base text-gray-400 pt-4">2022.10.17</div>
             </div>
           </div>
@@ -389,7 +390,7 @@
             <h5 class="text-xl font-semibold pb-4 border-b-2 border-solid border-black">공지사항</h5>
             <div class="text-sm font-normal pt-8">
               <div class="text-gray-500">공지</div>
-              <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
+              <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내 카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
             </div>
             <div class="text-sm font-normal pt-10">
               <div class="text-gray-500">공지</div>

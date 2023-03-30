@@ -2234,7 +2234,7 @@ textarea::placeholder {
     font-size: 0.875rem;
   }
   #main01 main .swiper-button-next,
-#main01 main .swiper-button-prev {
+  #main01 main .swiper-button-prev {
     width: 2.75rem;
     height: 2.75rem;
     background-size: 1.5rem;
@@ -2285,7 +2285,7 @@ textarea::placeholder {
     font-size: 1.125rem;
   }
   #main01 main .cont4 .swiper .swiper-button-next,
-#main01 main .cont4 .swiper .swiper-button-prev {
+  #main01 main .cont4 .swiper .swiper-button-prev {
     top: 32%;
   }
   #main01 main .cont5 .cont-area .img-area {
@@ -2379,8 +2379,8 @@ textarea::placeholder {
     color: #09B451;
   }
   #main01 header .btn-wrap .btn-search,
-#main01 header .btn-wrap .btn-login,
-#main01 header .btn-wrap .btn-register {
+  #main01 header .btn-wrap .btn-login,
+  #main01 header .btn-wrap .btn-register {
     display: none;
   }
   #main01 header .btn-wrap .btn-user {
@@ -2487,7 +2487,7 @@ textarea::placeholder {
     bottom: initial;
   }
   #main01 main .cont2 .cont-area .swiper-button-next,
-#main01 main .cont2 .cont-area .swiper-button-prev {
+  #main01 main .cont2 .cont-area .swiper-button-prev {
     display: none;
   }
   #main01 main .cont3 .cont-area {
@@ -2505,7 +2505,7 @@ textarea::placeholder {
     gap: 1rem;
   }
   #main01 main .cont4 .swiper .swiper-button-next,
-#main01 main .cont4 .swiper .swiper-button-prev {
+  #main01 main .cont4 .swiper .swiper-button-prev {
     display: none;
   }
   #main01 main .cont5 .cont-area {
@@ -2575,7 +2575,7 @@ textarea::placeholder {
     gap: 1.5rem;
   }
   #main01 main .cont6 .cont-area .slider-title .swiper-button-next,
-#main01 main .cont6 .cont-area .slider-title .swiper-button-prev {
+  #main01 main .cont6 .cont-area .slider-title .swiper-button-prev {
     width: 2.1875rem;
     height: 2.1875rem;
   }
@@ -2748,9 +2748,9 @@ textarea::placeholder {
     margin-top: 3.75rem;
   }
   #main01 main .cont4,
-#main01 main .cont5,
-#main01 main .cont6,
-#main01 main .cont7 {
+  #main01 main .cont5,
+  #main01 main .cont6,
+  #main01 main .cont7 {
     margin-top: 3rem;
   }
   #main01 main .cont8 {
@@ -2795,6 +2795,13 @@ textarea::placeholder {
     height: auto;
   }
 }
+#main02 nav::-webkit-scrollbar {
+  display: none;
+}
+#main02 #cont4 div div:nth-child(2)::-webkit-scrollbar {
+  display: none;
+}
+
 #hri_list {
   padding: 2rem;
 }
@@ -3287,21 +3294,21 @@ textarea::placeholder {
 }
 @media (max-width: 767.98px) {
   #hri_list .items-wrap,
-#hri_list .items-wrap.type {
+  #hri_list .items-wrap.type {
     gap: 1rem;
   }
   #hri_list .items-wrap .item,
-#hri_list .items-wrap.type .item {
+  #hri_list .items-wrap.type .item {
     -webkit-box-shadow: none;
             box-shadow: none;
     border-radius: 0;
   }
   #hri_list .items-wrap .item .thumb-img,
-#hri_list .items-wrap.type .item .thumb-img {
+  #hri_list .items-wrap.type .item .thumb-img {
     border-radius: 0.5rem;
   }
   #hri_list .items-wrap .item .item-info .label-wrap,
-#hri_list .items-wrap.type .item .item-info .label-wrap {
+  #hri_list .items-wrap.type .item .item-info .label-wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -3312,46 +3319,46 @@ textarea::placeholder {
     gap: 0.25rem;
   }
   #hri_list .items-wrap .item .item-info .title,
-#hri_list .items-wrap.type .item .item-info .title {
+  #hri_list .items-wrap.type .item .item-info .title {
     font-size: 0.875rem;
   }
   #hri_list .items-wrap .item .item-info .info-wrap,
-#hri_list .items-wrap.type .item .item-info .info-wrap {
+  #hri_list .items-wrap.type .item .item-info .info-wrap {
     margin-left: 0;
   }
   #hri_list .items-wrap .item .item-info .btns-wrap,
-#hri_list .items-wrap.type .item .item-info .btns-wrap {
+  #hri_list .items-wrap.type .item .item-info .btns-wrap {
     background-color: inherit;
     margin-left: 0;
     margin-right: 0;
   }
   #hri_list .items-wrap .item .item-info .btns-wrap button,
-#hri_list .items-wrap.type .item .item-info .btns-wrap button {
+  #hri_list .items-wrap.type .item .item-info .btns-wrap button {
     font-size: 0.75rem;
     background-color: #F5FAFF;
     padding: 0.75rem 0.5rem;
     border-radius: 0.25rem;
   }
   #hri_list .items-wrap .item .item-info .btns-wrap button:first-child::after,
-#hri_list .items-wrap.type .item .item-info .btns-wrap button:first-child::after {
+  #hri_list .items-wrap.type .item .item-info .btns-wrap button:first-child::after {
     content: none;
   }
   #hri_list .items-wrap .item .item-info .btns-wrap button:last-child,
-#hri_list .items-wrap.type .item .item-info .btns-wrap button:last-child {
+  #hri_list .items-wrap.type .item .item-info .btns-wrap button:last-child {
     background-color: #F5FAFF;
   }
   #hri_list .items-wrap .item .item-info:first-child,
-#hri_list .items-wrap.type .item .item-info:first-child {
+  #hri_list .items-wrap.type .item .item-info:first-child {
     padding: 0;
   }
   #hri_list .items-wrap .item .item-info:nth-child(2),
-#hri_list .items-wrap.type .item .item-info:nth-child(2) {
+  #hri_list .items-wrap.type .item .item-info:nth-child(2) {
     padding: 0.75rem 0 0;
   }
 }
 @media (max-width: 575.98px) {
   #hri_list .items-wrap,
-#hri_list .items-wrap.type {
+  #hri_list .items-wrap.type {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
   }

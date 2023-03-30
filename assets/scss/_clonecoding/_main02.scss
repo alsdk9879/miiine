@@ -1,0 +1,19 @@
+#main02 {
+  nav {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  #cont4 {
+    div {
+      div {
+        &:nth-child(2) {
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
