@@ -8,6 +8,17 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="../../css/style.css">
   <title>Tailwind</title>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .cont3-wrap {
+        @apply rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[142.62%] after:w-full after:block after:bg-gray-200;
+      }
+
+      .cont3-img {
+        @apply w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="main02" class="px-4 md:px-8 xl:px-28">
@@ -158,8 +169,8 @@
           <p class="text-gray-500 text-sm font-normal mt-2">최근 가장 많은 추천을 받은 Best seller 강의!</p>
           <div class="grid grid-cols-2 sm:flex gap-4 mt-8">
             <div class="relative w-full h-full overflow-hidden">
-              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[142.62%] after:w-full after:block after:bg-gray-200">
-                <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="">
+              <div class="cont3-wrap">
+                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
               </div>
               <div class="absolute bottom-6 left-6">
                 <div class="text-lg font-medium text-white">BODYFULNESS</div>
@@ -173,8 +184,8 @@
               </div>
             </div>
             <div class="relative w-full h-full overflow-hidden">
-              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[142.62%] after:w-full after:block after:bg-gray-200">
-                <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="">
+              <div class="cont3-wrap">
+                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
               </div>
               <div class="absolute bottom-6 left-6">
                 <div class="text-lg font-medium text-white">BODYFULNESS</div>
@@ -188,8 +199,8 @@
               </div>
             </div>
             <div class="relative w-full h-full overflow-hidden">
-              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[142.62%] after:w-full after:block after:bg-gray-200">
-                <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="">
+              <div class="cont3-wrap">
+                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
               </div>
               <div class="absolute bottom-6 left-6">
                 <div class="text-lg font-medium text-white">BODYFULNESS</div>
@@ -203,8 +214,8 @@
               </div>
             </div>
             <div class="relative w-full h-full overflow-hidden">
-              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[142.62%] after:w-full after:block after:bg-gray-200">
-                <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="">
+              <div class="cont3-wrap">
+                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
               </div>
               <div class="absolute bottom-6 left-6">
                 <div class="text-lg font-medium text-white">BODYFULNESS</div>
@@ -218,8 +229,8 @@
               </div>
             </div>
             <div class="relative w-full h-full overflow-hidden sm:left-0 left-1/2">
-              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[142.62%] after:w-full after:block after:bg-gray-200">
-                <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="">
+              <div class="cont3-wrap">
+                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
               </div>
               <div class="absolute bottom-6 left-6">
                 <div class="text-lg font-medium text-white">BODYFULNESS</div>
