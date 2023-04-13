@@ -27,6 +27,7 @@
       <a class="nav-link" href="#cont4">Form</a>
       <a class="nav-link" href="#cont5">Tab</a>
       <a class="nav-link" href="#cont6">Table</a>
+      <a class="nav-link" href="#cont7">Modal</a>
     </nav>
     <!-- nav :: e -->
 
@@ -1231,6 +1232,71 @@
   --></code></pre>
             </div>
             <!-- Table :: e -->
+
+            <!-- Modal :: s -->
+            <div id="cont7" class="guide-inner-wrap">
+              <h2 class="guide-title">Modal</h2>
+              <div class="code-box">
+                <div class="component-area">
+                  <button class="btns" type="button" data-bs-toggle="modal" data-bs-target="#modalLine">Button</button>
+
+                  <div class="modal fade head-line" id="modalLine" tabindex="-1" aria-labelledby="modalLineLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title" id="modalLineLabel">글 보기</h1>
+                        </div>
+                        <div class="modal-body">
+                          <div class="body-head">
+                            <div class="input-box calendar">
+                              <input type="text" name="" placeholder="" value="2022.01.01 ~ 2022.12.31" />
+                              <button type="button" class="btn-show"><i class="icon-calendar"></i></button>
+                            </div>
+                          </div>
+                          <p>
+                            This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed
+                            minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be
+                            cropped and scrollable within the modal.
+                          </p>
+                          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                          <p>This content should appear at the bottom after you scroll.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btns btns-gray" data-bs-dismiss="modal">취소</button>
+                          <button class="btns" type="button">적용</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<pre><code class="language-markup"><!--
+  <button class="btns" type="button" data-bs-toggle="modal" data-bs-target="#modalLine">Button</button>
+
+  <div class="modal fade head-line" id="modalLine" tabindex="-1" aria-labelledby="modalLineLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="modalLineLabel">글 보기</h1>
+        </div>
+        <div class="modal-body">
+          <div class="body-head">
+            <div class="input-box calendar">
+              <input type="text" name="" placeholder="" value="2022.01.01 ~ 2022.12.31" />
+              <button type="button" class="btn-show"><i class="icon-calendar"></i></button>
+            </div>
+          </div>
+          <p>This content should appear at the bottom after you scroll.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btns btns-gray" data-bs-dismiss="modal">취소</button>
+          <button class="btns" type="button">적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  --></code></pre>
+            <!-- Modal :: e -->
           </div>
         </div>
       </div>
