@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+</head>
+<body>
+
+  <script>
+    // Data
+    var products = [
+      {
+        id: 'apple',
+        price: 500,
+        description: '맛있는 사과',
+        amount: 10,
+      },
+      {
+        id: 'banana',
+        price: 5000,
+        description: '맛있는 바나나',
+        amount: 1,
+      },
+      {
+        id: 'orange',
+        price: 2500,
+        description: '맛있는 오렌지',
+        amount: 3,
+      },
+      {
+        id: 'avocado',
+        price: 3000,
+        description: '맛있는 아보카도',
+        amount: 9,
+      },
+      {
+        id: 'peach',
+        price: 1500,
+        description: '맛있는 복숭아',
+        amount: 2,
+      },
+      {
+        id: 'kiwi',
+        price: 1000,
+        description: '맛있는 키위',
+        amount: 4,
+      },
+    ];
+
+    var productNamesArr = [
+      '사과',
+      '바나나',
+      '오렌지',
+      '아보카도',
+      '복숭아',
+      '키위',
+    ];
+
+    var productNamesObj = {
+      apple: '사과',
+      banana: '바나나',
+      orange: '오렌지',
+      abocado: '아보카도',
+      peach: '복숭아',
+      kiwi: '키위',
+    };
+
+    // Answer
+    // 1
+    const answer1 = products.find(e => e.id === 'apple');
+    console.log(answer1);
+
+    // 2
+    const indexOrange = e => e.id === 'orange';
+    const answer2 = products.findIndex(indexOrange);
+    console.log(answer2);
+
+    // 3
+    const answer3_1 = products.map(e => e.id);
+    console.log(answer3_1);
+
+    const answer3_2 
+  </script>
+</body>
+</html>
