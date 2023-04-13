@@ -1,4 +1,12 @@
-@import './component';
+// component
+@import './_common/variables';
+@import './_common/mixins';
+@import './_common/default';
+@import './_common/common';
+@import './_common/component';
+@import './_common/tables';
+@import './_common/modal';
+@import './_common/layout';
 
 // portfolio
 @import './_portfolio/portfolio01';

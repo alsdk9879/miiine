@@ -5,222 +5,1245 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../assets/libs/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="../../assets/css/reset.css">
-  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="stylesheet" href="../../assets/libs/datepicker/datepicker.min.css">
+  <link rel="stylesheet" href="../../assets/libs/tomselect/tom-select.css">
   <link rel="stylesheet" href="../css/map.css">
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../css/prism.css">
-  <title>style guide</title>
+  <title>COMMON-STYLE</title>
 </head>
 <body>
-  <div class="style-guide-wrap">
-    <div class="guide-header">COMMON-STYLE</div>
+  <div id="style-guide-wrap">
+    <!-- header :: s -->
+    <header class="guide-header">COMMON-STYLE</header>
+    <!-- header :: e -->
+
+    <!-- nav :: s -->
     <nav class="nav flex-column">
-      <a class="nav-link active" href="#cont1">Button</a>
-      <a class="nav-link" href="#cont2">Form</a>
-      <a class="nav-link" href="#cont2">Table</a>
-      <a class="nav-link" href="#cont3">Pagination</a>
-      <a class="nav-link" href="#cont4">Grid</a>
+      <a class="nav-link active" href="#cont1">Color</a>
+      <a class="nav-link" href="#cont2">Typography</a>
+      <a class="nav-link" href="#cont3">Button</a>
+      <a class="nav-link" href="#cont4">Form</a>
+      <a class="nav-link" href="#cont5">Tab</a>
+      <a class="nav-link" href="#cont6">Table</a>
     </nav>
-    <div class="cont-wrap">
-      <div class="container-fluid">
-        <div class="guide-cont">
-          <!-- Button :: s -->
-          <div id="cont1" class="guide-inner-wrap">
-            <h2 class="guide-title">Button</h2>
-            <div class="code-box">
-              <h3>Title Component</h3>
-              <h1>H1 42 Bold : Pretendard, Noto Sans KR</h1>
-              <br>
-              <h2>H2 24 Bold : Pretendard, Noto Sans KR  </h2>
-              <br>
-              <h3>H3 20 Medium : Pretendard, Noto Sans KR </h3>
-              <br>
-              <h4>H4 18 Medium : Pretendard, Noto Sans KR </h4>                       
-            </div>
-<pre><code class="language-markup"><!--
-  <h1 class="banana-title">Button</h1>
-  --></code></pre>
+    <!-- nav :: e -->
 
-            <div class="code-box">
-              <h3>Text Component</h3>
-              <h1>H1 42 Bold : Pretendard, Noto Sans KR</h1>
-              <br>
-              <h2>H2 24 Bold : Pretendard, Noto Sans KR  </h2>
-              <br>
-              <h3>H3 20 Medium : Pretendard, Noto Sans KR </h3>
-              <br>
-              <h4>H4 18 Medium : Pretendard, Noto Sans KR </h4>                       
-            </div>
-<pre><code class="language-markup"><!--
-  <h1 class="banana-title">Button</h1>
-  --></code></pre>
-          </div>
-          <!-- Button :: e -->
-
-          <!-- Form :: s -->
-          <div id="cont2" class="guide-inner-wrap">
-            <h2 class="guide-title">Form</h2>
-            <div class="code-box">
-              <!-- checkbox :: s -->
-              <label class="checkbox-wrap">
-                <input type="checkbox" name="" />
-                <span class="label-checkbox"></span>
-                one
-              </label>
-              <!-- checkbox :: s -->                       
-            </div>
-<pre><code class="language-markup"><!--
-  <h1 class="banana-title">Form</h1>
-  --></code></pre>
-
-            <div class="code-box">
-              <h3>Text Component</h3>
-              <h1>H1 42 Bold : Pretendard, Noto Sans KR</h1>
-              <br>
-              <h2>H2 24 Bold : Pretendard, Noto Sans KR  </h2>
-              <br>
-              <h3>H3 20 Medium : Pretendard, Noto Sans KR </h3>
-              <br>
-              <h4>H4 18 Medium : Pretendard, Noto Sans KR </h4>                       
-            </div>
-<pre><code class="language-markup"><!--
-  <h1 class="banana-title">Form</h1>
-  --></code></pre>
-          </div>
-          <!-- Form :: e -->
-
-          <!-- Table :: s -->
-          <div id="cont3" class="guide-inner-wrap">
-            <h2 class="guide-title">Table</h2>
-            <div class="code-box">
-              <h3>Table</h3>
-              <table class="table caption-top">
-                <caption></caption>
-                <thead class="table-light">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                    <th scope="col">Last</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-<pre><code class="language-markup"><!--
-  <h1 class="banana-title">Button</h1>
-  --></code></pre>
-          </div>
-          <!-- Table :: e -->
-
-          <!-- Pagination :: s -->
-          <div id="cont3" class="guide-inner-wrap">
-            <h2 class="guide-title">Pagination</h2>
-            <div class="code-box">
-              <h3>myDoug</h3>
-              <div id="myDoug" data-percent="40"></div>
-              <div class="info">
-                <div class="title">신청과정</div>
+    <!-- main :: s -->
+    <main>
+      <div class="cont-wrap">
+        <div class="container-fluid">
+          <div class="guide-cont">
+            <!-- Color :: s -->
+            <div id="cont1" class="guide-inner-wrap">
+              <h2 class="guide-title">Color</h2>
+              <div class="code-box">
+                <!-- main color :: s -->
+                <h3>Main color</h3>
+                <h4>Primary</h4>
+                <div class="component-area">
+                  <ul class="colorbox-wrap primary">
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">25</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">50</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">100</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">200</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">300</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">400</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">500</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">600</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">700</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">800</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">900</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+  
+                <h4>Secondary</h4>
+                <div class="component-area">
+                  <ul class="colorbox-wrap secondary">
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">25</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">50</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">100</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">200</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">300</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">400</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">500</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">600</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">700</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">800</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">900</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- main color :: e -->
+  
+                <!-- gray color :: s -->
+                <h3>Gray color</h3>
+                <h4>White</h4>
+                <div class="component-area">
+                  <ul class="colorbox-wrap white">
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">White</span>
+                        <span class="color-hex-code">#FFFFFF</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+  
+                <h4>Black</h4>
+                <div class="component-area">
+                  <ul class="colorbox-wrap black">
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">Black</span>
+                        <span class="color-hex-code">#000000</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+  
+                <h4>Gray</h4>
+                <div class="component-area">
+                  <ul class="colorbox-wrap gray">
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">25</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">50</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">100</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">200</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">300</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">400</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">500</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">600</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">700</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">800</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">900</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- gray color :: e -->
+  
+                <!-- state color :: s -->
+                <h3>State color</h3>
+                <h4>Error</h4>
+                <div class="component-area">
+                  <ul class="colorbox-wrap error">
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">25</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">50</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">400</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">500</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+  
+                <h4>Warning</h4>
+                <div class="component-area">
+                  <ul class="colorbox-wrap warning">
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">25</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">50</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">400</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">500</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+  
+                <h4>Success</h4>
+                <div class="component-area">
+                  <ul class="colorbox-wrap success">
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">25</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">50</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">400</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">500</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+  
+                <h4>Info</h4>
+                <div class="component-area">
+                  <ul class="colorbox-wrap info">
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">25</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">50</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">400</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                    <li class="colorbox">
+                      <div class="color"></div>
+                      <div class="color-txt">
+                        <span class="color-variable-num">500</span>
+                        <span class="color-hex-code">#F2F1FF</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- state color :: e -->
               </div>
             </div>
-<pre><code class="language-markup"><!--
-<h1 class="banana-title">Button</h1>
---></code></pre>
-          </div>
-          <!-- Pagination :: e -->
-
-          <!-- Grid :: s -->
-          <div id="cont4" class="guide-inner-wrap">
-            <h2 class="guide-title">Grid</h2>
-            <div class="code-box">
-              <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
+            <!-- Color :: e -->
+  
+            <!-- Typography :: s -->
+            <div id="cont2" class="guide-inner-wrap">
+              <h2 class="guide-title">Typography</h2>
+              <div class="code-box">
+                <div class="component-area">
+                  <h1>H1 42 Bold : Pretendard, Noto Sans KR</h1>
+                  <br>
+                  <br>
+                  <h2>H2 36 Bold : Pretendard, Noto Sans KR</h2>
+                  <br>
+                  <br>
+                  <h3>H3 26 Medium : Pretendard, Noto Sans KR</h3>
+                  <br>
+                  <br>
+                  <h4>H4 20 Medium : Pretendard, Noto Sans KR</h4>   
                 </div>
               </div>
-            </div>
 <pre><code class="language-markup"><!--
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        Column
+  <h1>H1 42 Bold : Pretendard, Noto Sans KR</h1>
+  <h2>H2 36 Bold : Pretendard, Noto Sans KR</h2>
+  <h3>H3 26 Medium : Pretendard, Noto Sans KR</h3>
+  <h4>H4 20 Medium : Pretendard, Noto Sans KR</h4>
+  --></code></pre>
+  
+              <div class="code-box">
+                <div class="component-area">
+                  <h5 class="lg">Large 18 Regular : Pretendard, Noto Sans KR</h5>  
+                  <br>
+                  <br>                    
+                  <h5 class="md">Medium 16 Regular : Pretendard, Noto Sans KR</h5> 
+                  <br>
+                  <br>                     
+                  <h5 class="sm">Small 14 Regular : Pretendard, Noto Sans KR</h5>  
+                  <br>
+                  <br>                    
+                  <h5 class="x-sm">X-Small 12 Regular : Pretendard, Noto Sans KR</h5>
+                </div>                   
+              </div>
+<pre><code class="language-markup"><!--
+  <h5 class="lg">Large 18 Regular : Pretendard, Noto Sans KR </h5>                       
+  <h5 class="md">Medium 16 Regular : Pretendard, Noto Sans KR </h5>                       
+  <h5 class="sm">Small 14 Regular : Pretendard, Noto Sans KR </h5>                       
+  <h5 class="x-sm">X-Small 12 Regular : Pretendard, Noto Sans KR </h5>
+  --></code></pre>
+            </div>
+            <!-- Typography :: e -->
+  
+            <!-- Button :: s -->
+            <div id="cont3" class="guide-inner-wrap">
+              <h2 class="guide-title">Button</h2>
+              <div class="code-box">
+                <h3>Color</h3>
+                <div class="component-area">
+                  <!-- primary :: s -->
+                  <button class="btns" type="button">Button</button>
+                  <!-- primary :: e -->
+  
+                  <!-- secondary :: s -->
+                  <button class="btns btns-secondary" type="button">Button</button>
+                  <!-- secondary :: e -->
+  
+                  <!-- gray :: s -->
+                  <button class="btns btns-gray" type="button">Button</button>
+                  <!-- gray :: e -->
+  
+                  <!-- black :: s -->
+                  <button class="btns btns-black" type="button">Button</button>
+                  <!-- black :: e -->
+                </div>
+                
+                <h3>Size</h3>
+                <div class="component-area">
+                  <!-- large :: s -->
+                  <button class="btns" type="button">Button</button>
+                  <!-- large :: e -->
+  
+                  <!-- medium :: s -->
+                  <button class="btns btns-md" type="button">Button</button>
+                  <!-- medium :: e -->
+  
+                  <!-- small :: s -->
+                  <button class="btns btns-sm" type="button">Button</button>
+                  <!-- small :: e -->
+                </div>
+  
+                <h3>Icon</h3>
+                <div class="component-area">
+                  <!-- icon-before :: s -->
+                  <button class="btns btns-icon-before" type="button"><i class="icon-calendar"></i>Button</button>
+                  <!-- icon-before :: e -->
+  
+                  <!-- icon-after :: s -->
+                  <button class="btns btns-icon-after" type="button">Button<i class="icon-calendar"></i></button>
+                  <!-- icon-after :: e -->
+                </div>
+  
+                <h3>Outline</h3>
+                <div class="component-area">
+                  <!-- outline :: s -->
+                  <button class="btns btns-outline" type="button">Button</button>
+                  <!-- outline :: e -->
+  
+                  <!-- outline black :: s -->
+                  <button class="btns btns-outline btns-black" type="button">Button</button>
+                  <!-- outline black :: e -->
+                </div>
+  
+                <h3>Disabled</h3>
+                <div class="component-area">
+                  <!-- disabled :: s -->
+                  <button class="btns" type="button" disabled>Button</button>
+                  <button class="btns btns-secondary" type="button" disabled>Button</button>
+                  <button class="btns btns-gray" type="button" disabled>Button</button>
+                  <button class="btns btns-black" type="button" disabled>Button</button>
+                  <button class="btns btns-outline" type="button" disabled>Button</button>
+                  <button class="btns btns-outline btns-black" type="button" disabled>Button</button>
+                  <!-- disabled :: e -->
+                </div>
+              </div>
+<pre><code class="language-markup"><!--
+  // Color
+  // primary
+  <button class="btns" type="button">Button</button>
+  // secondary
+  <button class="btns btns-secondary" type="button">Button</button>
+  // gray
+  <button class="btns btns-gray" type="button">Button</button>
+  // black
+  <button class="btns btns-black" type="button">Button</button>
+
+  // Size
+  // large
+  <button class="btns" type="button">Button</button>
+  // medium
+  <button class="btns btns-md" type="button">Button</button>
+  // small
+  <button class="btns btns-sm" type="button">Button</button>
+
+  // Icon
+  // icon-before
+  <button class="btns btns-icon-before" type="button"><i class="icon-calendar"></i>Button</button>
+  // icon-after
+  <button class="btns btns-icon-after" type="button">Button<i class="icon-calendar"></i></button>
+
+  // Outline
+  <button class="btns btns-outline" type="button">Button</button>
+  <button class="btns btns-outline btns-black" type="button">Button</button>
+
+  // Disabled
+  <button class="btns" type="button" disabled>Button</button>
+  <button class="btns btns-secondary" type="button" disabled>Button</button>
+  <button class="btns btns-gray" type="button" disabled>Button</button>
+  <button class="btns btns-black" type="button" disabled>Button</button>
+  <button class="btns btns-outline" type="button" disabled>Button</button>
+  <button class="btns btns-outline btns-black" type="button" disabled>Button</button>
+  --></code></pre>
+            </div>
+            <!-- Button :: e -->
+  
+            <!-- Form :: s -->
+            <div id="cont4" class="guide-inner-wrap">
+              <h2 class="guide-title">Form</h2>
+              <div class="code-box">
+                <h3>Input</h3>
+                <div class="component-area">
+                  <!-- input :: s -->
+                  <div class="input-box">
+                    <input type="text" name="" placeholder="Text" />
+                  </div>
+                  <!-- input :: e -->
+  
+                  <!-- input disabled :: s -->
+                  <div class="input-box">
+                    <input type="text" name="" placeholder="Text" disabled />
+                  </div>
+                  <!-- input disabled :: e -->
+  
+                  <!-- text-input :: s -->
+                  <div class="input-box">
+                    <p class="txt">TITLE</p>
+                    <input type="text" name="" placeholder="Text" />
+                  </div>
+                  <!-- text-input :: e -->
+                </div>
+  
+                <h3>Select</h3>
+                <div class="component-area">
+                  <!-- selectbox :: s -->
+                  <div class="select-box">
+                    <select>
+                      <option value="">10개</option>
+                      <option value="">20개</option>
+                      <option value="">30개</option>
+                    </select>
+                    <button type="button" class="btn-select"><i class="icon-arrow-bottom"></i></button>
+                  </div>
+                  <!-- selectbox :: e -->
+                </div>
+  
+                <h3>Search</h3>
+                <div class="component-area">
+                  <!-- searchbox :: s -->
+                  <div class="input-box search">
+                    <input type="text" name="" placeholder="회원명, 직급, 아이디 검색" />
+                    <button type="button" class="btn-search"><i class="icon-search"></i></button>
+                  </div>
+                  <!-- searchbox :: e -->
+  
+                  <!-- search-calendar :: s -->
+                  <div class="input-box calendar" id="dashbrdRangePicker">
+                    <input type="text" name="start" placeholder="시작일" value="" />
+                    <span>~</span>
+                    <input type="text" name="end" placeholder="종료일" value="" /><i class="icon-calendar"></i>
+                  </div>
+                  <!-- search-calendar :: e -->
+                </div>
+                
+                <h3>Dropdown</h3>
+                <div class="component-area">
+                  <!-- dropdown :: s -->
+                  <div class="dropdown-box">
+                    <button class="dropdown-toggle btns btns-md btns-outline" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="icon-sliders"></i>최신등록순
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item active" href="#">등록순</a></li>
+                      <li><a class="dropdown-item" href="#">최신순</a></li>
+                    </ul>
+                  </div>
+                  <!-- dropdown :: e -->
+                </div>
+              </div>
+<pre><code class="language-markup"><!--
+  // Input
+  <div class="input-box">
+    <input type="text" name="" placeholder="Text" />
+  </div>
+
+  // Input disabled
+  <div class="input-box">
+    <input type="text" name="" placeholder="Text" disabled />
+  </div>
+
+  // Text input
+  <div class="input-box">
+    <p class="txt">TITLE</p>
+    <input type="text" name="" placeholder="Text" />
+  </div>
+
+  // Selectbox
+  <div class="select-box">
+    <select>
+      <option value="">10개</option>
+      <option value="">20개</option>
+      <option value="">30개</option>
+    </select>
+    <button type="button" class="btn-select"><i class="icon-arrow-bottom"></i></button>
+  </div>
+
+  // Searchbox
+  <div class="input-box search">
+    <input type="text" name="" placeholder="회원명, 직급, 아이디 검색" />
+    <button type="button" class="btn-search"><i class="icon-search"></i></button>
+  </div>
+
+  // Search calendar
+  <div class="input-box calendar" id="dashbrdRangePicker">
+    <input type="text" name="start" placeholder="시작일" value="" />
+    <span>~</span>
+    <input type="text" name="end" placeholder="종료일" value="" /><i class="icon-calendar"></i>
+  </div>
+
+  // Dropdown
+  <div class="dropdown-box">
+    <button class="dropdown-toggle btns btns-md btns-outline" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="icon-sliders"></i>최신등록순
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item active" href="#">등록순</a></li>
+      <li><a class="dropdown-item" href="#">최신순</a></li>
+    </ul>
+  </div>
+  --></code></pre>
+<pre><code class="language-javascript"><!--
+  // script :: search calendar
+  const rangePicker = new DateRangePicker(document.querySelector('#dashbrdRangePicker'), {
+    autohide: true,
+    language: 'ko',
+  });
+  --></code></pre>
+  
+              <div class="code-box">
+                <h3>Login input</h3>
+                <div class="component-area">
+                  <!-- login :: s -->
+                  <div class="login">
+                    <div class="input-box">
+                      <input type="email" name="" placeholder="이메일을 입력하세요." id="validationEmail" />
+                    </div>
+                    <div class="input-box">
+                      <input type="password" name="" placeholder="패스워드를 입력하세요." id="validationPw" />
+                      <button type="button" class="btn-eye"><i class="icon-eye-on"></i></button>
+                    </div>
+  
+                    <!-- validation :: s -->
+                    <div class="input-box">
+                      <input type="email" name="" placeholder="이메일을 입력하세요." id="validationEmail" class="is-invalid" />
+                      <div id="validationEmail" class="invalid-feedback">이메일을 다시 입력해주세요.</div>
+                    </div>
+                    <div class="input-box">
+                      <input type="password" name="" placeholder="패스워드를 입력하세요." id="validationPw" class="is-invalid" />
+                      <button type="button" class="btn-eye"><i class="icon-eye-on"></i></button>
+                      <div id="validationPw" class="invalid-feedback">패스워드를 다시 입력해주세요.</div>
+                    </div>
+                    <!-- validation :: e -->
+  
+                    <!-- disabled :: s -->
+                    <div class="input-box">
+                      <input type="email" name="" placeholder="Text" disabled />
+                    </div>
+                    <!-- disabled :: s -->
+                  </div>
+                  <!-- login :: e -->
+                </div>
+              </div>
+<pre><code class="language-markup"><!--
+  <div class="login">
+    <div class="input-box">
+      <input type="email" name="" placeholder="이메일을 입력하세요." id="validationEmail" />
+    </div>
+    <div class="input-box">
+      <input type="password" name="" placeholder="패스워드를 입력하세요." id="validationPw" />
+      <button type="button" class="btn-eye"><i class="icon-eye-on"></i></button>
+    </div>
+
+    // Validation
+    <div class="input-box">
+      <input type="email" name="" placeholder="이메일을 입력하세요." id="validationEmail" class="is-invalid" />
+      <div id="validationEmail" class="invalid-feedback">이메일을 다시 입력해주세요.</div>
+    </div>
+    <div class="input-box">
+      <input type="password" name="" placeholder="패스워드를 입력하세요." id="validationPw" class="is-invalid" />
+      <button type="button" class="btn-eye"><i class="icon-eye-on"></i></button>
+      <div id="validationPw" class="invalid-feedback">패스워드를 다시 입력해주세요.</div>
+    </div>
+
+    // Disabled
+    <div class="input-box">
+      <input type="email" name="" placeholder="Text" disabled />
+    </div>
+  </div>
+  --></code></pre>
+  
+              <div class="code-box">
+                <h3>Checkbox</h3>
+                <div class="component-area">
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkbox" checked/>
+                    <span class="label-checkbox">text1</span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkbox"/>
+                    <span class="label-checkbox">text2</span>
+                  </label>
+                </div>
+  
+                <h3>Radio-button</h3>
+                <div class="component-area">
+                  <label class="radio-button">
+                    <input type="radio" name="radio" checked />
+                    <span class="label-radio">text1</span>
+                  </label>
+                  <label class="radio-button">
+                    <input type="radio" name="radio" />
+                    <span class="label-radio">text2</span>
+                  </label>
+                </div>
+  
+                <h3>Switch button</h3>
+                <div class="component-area">
+                  <label class="switch-wrap">
+                    <input type="checkbox" />
+                    <span class="label-switch"></span>
+                  </label>
+                </div>
+  
+                <h3>Pagination</h3>
+                <div class="component-area">
+                  <div class="paging-wrap">
+                    <button type="button" class="btn-prev"><i class="icon-arrow-left"></i></button>
+                    <button type="button" class="active">1</button>
+                    <button type="button">2</button>
+                    <button type="button">3</button>
+                    <button type="button">4</button>
+                    <button type="button">5</button>
+                    <button type="button" class="btn-next"><i class="icon-arrow-right"></i></button>
+                  </div>
+                </div>
+  
+                <h3>Stepper</h3>
+                <div class="component-area">
+                  <ol class="stepper">
+                    <li class="stepper-item clear">
+                      <span class="stepper-label"></span>
+                      <h3 class="stepper-title">Step1.</h3>
+                      <p class="stepper-desc">text</p>
+                    </li>
+                    <li class="stepper-item ing">
+                      <span class="stepper-label"></span>
+                      <h3 class="stepper-title">Step2.</h3>
+                      <p class="stepper-desc">text</p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+<pre><code class="language-markup"><!--
+  // Checkbox
+  <label class="checkbox">
+    <input type="checkbox" name="checkbox" checked/>
+    <span class="label-checkbox">text1</span>
+  </label>
+
+  // Radio-button
+  <label class="radio-button">
+    <input type="radio" name="radio" checked />
+    <span class="label-radio">text1</span>
+  </label>
+  <label class="radio-button">
+    <input type="radio" name="radio" />
+    <span class="label-radio">text2</span>
+  </label>
+
+  // Switch-button
+  <label class="switch-wrap">
+    <input type="checkbox" />
+    <span class="label-switch"></span>
+  </label>
+
+  // Pagination
+  <div class="paging-wrap">
+    <button type="button" class="btn-prev"><i class="icon-arrow-left"></i></button>
+    <button type="button" class="active">1</button>
+    <button type="button">2</button>
+    <button type="button">3</button>
+    <button type="button">4</button>
+    <button type="button">5</button>
+    <button type="button" class="btn-next"><i class="icon-arrow-right"></i></button>
+  </div>
+
+  // Stepper
+  <ol class="stepper">
+    <li class="stepper-item clear">
+      <span class="stepper-label"></span>
+      <h3 class="stepper-title">Step1.</h3>
+      <p class="stepper-desc">text</p>
+    </li>
+    <li class="stepper-item ing">
+      <span class="stepper-label"></span>
+      <h3 class="stepper-title">Step2.</h3>
+      <p class="stepper-desc">text</p>
+    </li>
+  </ol>
+  --></code></pre>
+            </div>
+            <!-- Form :: e -->
+  
+            <!-- Tab :: s -->
+            <div id="cont5" class="guide-inner-wrap">
+              <h2 class="guide-title">Tab</h2>
+              <div class="code-box">
+                <div class="component-area">
+                  <!-- tab1 period-group :: s -->
+                  <div class="period-group">
+                    <label class="select-peroid">
+                      <input type="radio" name="rd_i_sPeriod" value="" />
+                      <span class="label-radio">월</span>
+                    </label>
+                    <label class="select-peroid">
+                      <input type="radio" name="rd_i_sPeriod" value="" />
+                      <span class="label-radio">분기</span>
+                    </label>
+                    <label class="select-peroid">
+                      <input type="radio" name="rd_i_sPeriod" value="" />
+                      <span class="label-radio">반기</span>
+                    </label>
+                    <label class="select-peroid">
+                      <input type="radio" name="rd_i_sPeriod" value="" />
+                      <span class="label-radio">연</span>
+                    </label>
+                    <label class="select-peroid">
+                      <input type="radio" name="rd_i_sPeriod" value="" />
+                      <span class="label-radio">전체</span>
+                    </label>
+                    <label class="select-peroid">
+                      <input type="radio" name="rd_i_sPeriod" value="" />
+                      <span class="label-radio btn-datemore">자세히<i class="icon-arrow-bottom"></i></span>
+                    </label>
+                  </div>
+                  <!-- tab1 period-group :: e -->
+  
+                  <!-- tabmenu :: s -->
+                  <div class="tab-wrap">
+                    <ul>
+                      <li class="tab-list active">tab1</li>
+                      <li class="tab-list">tab2</li>
+                    </ul>
+                    <div class="tab-cont-wrap">
+                      <!-- tab1 cont :: s -->
+                      <div class="tab-cont active">
+                        tab1 내용영역입니다.
+                      </div>
+                      <!-- tab1 cont :: e -->
+  
+                      <!-- tab2 cont :: s -->
+                      <div class="tab-cont">
+                        tab2 내용영역입니다.
+                      </div>
+                      <!-- tab2 cont :: e -->
+                    </div>
+                  </div>
+                  <!-- tabmenu :: e -->
+                </div>
+              </div>
+<pre><code class="language-markup"><!--
+  // tab1 period-group
+  <div class="period-group">
+    <label class="select-peroid">
+      <input type="radio" name="rd_i_sPeriod" value="" />
+      <span class="label-radio">월</span>
+    </label>
+    <label class="select-peroid">
+      <input type="radio" name="rd_i_sPeriod" value="" />
+      <span class="label-radio">분기</span>
+    </label>
+    <label class="select-peroid">
+      <input type="radio" name="rd_i_sPeriod" value="" />
+      <span class="label-radio">반기</span>
+    </label>
+    <label class="select-peroid">
+      <input type="radio" name="rd_i_sPeriod" value="" />
+      <span class="label-radio">연</span>
+    </label>
+    <label class="select-peroid">
+      <input type="radio" name="rd_i_sPeriod" value="" />
+      <span class="label-radio">전체</span>
+    </label>
+    <label class="select-peroid">
+      <input type="radio" name="rd_i_sPeriod" value="" />
+      <span class="label-radio btn-datemore">자세히<i class="icon-arrow-bottom"></i></span>
+    </label>
+  </div>
+
+  // tab2 tabmenu
+  <div class="tab-wrap">
+    <ul>
+      <li class="tab-list active">tab1</li>
+      <li class="tab-list">tab2</li>
+    </ul>
+    <div class="tab-cont-wrap">
+      <div class="tab-cont active">
+        tab1 내용영역입니다.
       </div>
-      <div class="col">
-        Column
-      </div>
-      <div class="col">
-        Column
+      <div class="tab-cont">
+        tab2 내용영역입니다.
       </div>
     </div>
   </div>
   --></code></pre>
+            </div>
+            <!-- Tab :: e -->
+  
+            <!-- Table :: s -->
+            <div id="cont6" class="guide-inner-wrap">
+              <h2 class="guide-title">Table</h2>
+              <div class="code-box">
+                <div class="table-wrap">
+                  <div class="tb-head-wrap">
+                    <div class="search-wrap">
+                      <div class="input-box search">
+                        <input type="text" name="" placeholder="내용" />
+                        <button type="button" class="btn-search"><i class="icon-search"></i></button>
+                      </div>
+                    </div>
+                    <div class="tb-toolbar">
+                      <div class="btn-wrap">
+                        <button class="btns btns-outline btns-icon-before btns-md" type="button"><i class="icon-excel"></i>엑셀다운로드</button>
+                        <!-- dropdown :: s -->
+                        <div class="dropdown-box">
+                          <button
+                            class="dropdown-toggle btns btns-outline btns-icon-before btns-md"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <i class="icon-sliders"></i>정렬
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#">등록순</a></li>
+                            <li><a class="dropdown-item" href="#">최신순</a></li>
+                          </ul>
+                        </div>
+                        <!-- dropdown :: e -->
+                      </div>
+                      <div class="select-box">
+                        <select>
+                          <option value="">10개</option>
+                          <option value="">20개</option>
+                          <option value="">30개</option>
+                        </select>
+                        <button type="button" class="btn-select"><i class="icon-arrow-bottom"></i></button>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="tb-overflow">
+                    <table class="table">
+                      <colgroup>
+                        <col style="width: 3.75rem" />
+                        <col style="width: 10rem" />
+                        <col style="width: 7rem" />
+                        <col style="min-width: 22rem" />
+                        <col style="width: 10rem" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" class="sort">NO</th>
+                          <th scope="col" class="sort sort-up">전화번호</th>
+                          <th scope="col" class="sort">수신자 이름</th>
+                          <th scope="col" class="sort">내용</th>
+                          <th scope="col" class="sort">발송일</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>01</td>
+                          <td>02-2072-6280</td>
+                          <td>김담당</td>
+                          <td>[사이버연수원]김인호님 문의하신 임시비밀번호는 fkhz 입니다. 변경 후 이용바랍니다.</td>
+                          <td>2023/11/01 23:55</td>
+                        </tr>
+                        <tr>
+                          <td>01</td>
+                          <td>02-2072-6280</td>
+                          <td>김담당</td>
+                          <td>[사이버연수원]김인호님 문의하신 임시비밀번호는 fkhz 입니다. 변경 후 이용바랍니다.</td>
+                          <td>2023/11/01 23:55</td>
+                        </tr>
+                        <tr>
+                          <td>01</td>
+                          <td>02-2072-6280</td>
+                          <td>김담당</td>
+                          <td>[사이버연수원]김인호님 문의하신 임시비밀번호는 fkhz 입니다. 변경 후 이용바랍니다.</td>
+                          <td>2023/11/01 23:55</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+  
+                  <!-- pagination :: s -->
+                  <div class="paging-wrap">
+                    <button type="button" class="btn-prev"><i class="icon-arrow-left"></i></button>
+                    <button type="button" class="active">1</button>
+                    <button type="button">2</button>
+                    <button type="button">3</button>
+                    <button type="button">4</button>
+                    <button type="button">5</button>
+                    <button type="button" class="btn-next"><i class="icon-arrow-right"></i></button>
+                  </div>
+                  <!-- pagination :: e -->
+                </div>
+              </div>
+<pre><code class="language-markup"><!--
+  <div class="table-wrap">
+    // table header
+    <div class="tb-head-wrap">
+      <div class="search-wrap">
+        <div class="input-box search">
+          <input type="text" name="" placeholder="내용" />
+          <button type="button" class="btn-search"><i class="icon-search"></i></button>
+        </div>
+      </div>
+      <div class="tb-toolbar">
+        <div class="btn-wrap">
+          <button class="btns btns-outline btns-icon-before btns-md" type="button"><i class="icon-excel"></i>엑셀다운로드</button>
+          <div class="dropdown-box">
+            <button
+              class="dropdown-toggle btns btns-outline btns-icon-before btns-md"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="icon-sliders"></i>정렬
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="#">등록순</a></li>
+              <li><a class="dropdown-item" href="#">최신순</a></li>
+            </ul>
           </div>
-          <!-- Grid :: e -->
+        </div>
+        <div class="select-box">
+          <select>
+            <option value="">10개</option>
+            <option value="">20개</option>
+            <option value="">30개</option>
+          </select>
+          <button type="button" class="btn-select"><i class="icon-arrow-bottom"></i></button>
         </div>
       </div>
     </div>
+
+    // table content
+    <div class="tb-overflow">
+      <table class="table">
+        <colgroup>
+          <col style="width: 3.75rem" />
+          <col style="width: 10rem" />
+          <col style="width: 7rem" />
+          <col style="min-width: 22rem" />
+          <col style="width: 10rem" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col" class="sort">NO</th>
+            <th scope="col" class="sort sort-up">전화번호</th>
+            <th scope="col" class="sort">수신자 이름</th>
+            <th scope="col" class="sort">내용</th>
+            <th scope="col" class="sort">발송일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>02-2072-6280</td>
+            <td>김담당</td>
+            <td>[사이버연수원]김인호님 문의하신 임시비밀번호는 fkhz 입니다. 변경 후 이용바랍니다.</td>
+            <td>2023/11/01 23:55</td>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>02-2072-6280</td>
+            <td>김담당</td>
+            <td>[사이버연수원]김인호님 문의하신 임시비밀번호는 fkhz 입니다. 변경 후 이용바랍니다.</td>
+            <td>2023/11/01 23:55</td>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>02-2072-6280</td>
+            <td>김담당</td>
+            <td>[사이버연수원]김인호님 문의하신 임시비밀번호는 fkhz 입니다. 변경 후 이용바랍니다.</td>
+            <td>2023/11/01 23:55</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    // pagination
+    <div class="paging-wrap">
+      <button type="button" class="btn-prev"><i class="icon-arrow-left"></i></button>
+      <button type="button" class="active">1</button>
+      <button type="button">2</button>
+      <button type="button">3</button>
+      <button type="button">4</button>
+      <button type="button">5</button>
+      <button type="button" class="btn-next"><i class="icon-arrow-right"></i></button>
+    </div>
+  </div>
+  --></code></pre>
+            </div>
+            <!-- Table :: e -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main :: e -->
   </div>
 
   <!-- import script -->
-  <script src="../../assets/libs/jquery/jquery-3.6.3.min.js"></script>
-  <script src="../../assets/libs/bootstrap/popper.min.js"></script>
   <script src="../../assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/libs/datepicker/datepicker-full.min.js"></script>
+  <script src="../../assets/libs/tomselect/tom-select.complete.min.js"></script>
   <script src="../js/prism.js"></script>
-  <script>
-    // nav 클릭하면 이동
-    // document.querySelectorAll('.nav .nav-link').forEach((el) => {
-    //   el.addEventListener('click', (e) => {
-    //     e.preventDefault();
-    //     document.querySelector(el.getAttribute('href')).scrollIntoView({
-    //       behavior: 'smooth',
-    //     });
-    //   });
-    // });
+  <script src="../js/styleGuide.js"></script>
 
-    // function scrollProgress() {
-    //   const scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-    //   document.querySelectorAll('.guide-inner-wrap').forEach((el, index) => {
-    //     if (scrollTop >= el.offsetTop - 100) {
-    //       document.querySelectorAll('.nav .nav-link').forEach((el) => {
-    //         el.classList.remove('active');
-    //       });
-    //       document.querySelector('.nav .nav-link:nth-child(' + (index + 1) + ')').classList.add('active');
-    //     }
-    //   });
-    // }
-    // window.addEventListener('scroll', scrollProgress);
-  </script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 }
 
 // component_style-template
-.style-guide-wrap {
+#style-guide-wrap {
   .guide-header {
     position: fixed;
     top: 0;
@@ -87,19 +87,54 @@
 
         .code-box {
           border: 1px solid #ddd;
-          padding: 1.25rem;
+          padding: 2rem;
           margin: 1.5rem 0 1rem 0;
           clear: both;
 
-          &>* {
-            margin: 5px 0 5px 0;
+          &>h3 {
+            margin: 2.5rem 0 1rem 0;
+            font-size: 1.25rem;
+            font-weight: bold;
+
+            &:first-child {
+              margin-top: 0;
+            }
           }
 
-          &>h3:first-child {
-            margin: 10px 0 30px 0;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 20px;
+          &>h4:first-of-type {
+            font-weight: 500;
+          }
+        }
+
+        &#cont1 {
+          h3 {
+            margin: 4rem 0 1rem;
+
+            &:first-of-type {
+              margin-top: 0;
+            }
+          }
+
+          h4 {
+            margin-top: 2rem;
+          }
+        }
+
+        &#cont4 {
+          .component-area {
+            &>* {
+              margin-top: .625rem;
+            }
+
+            .paging-wrap {
+              justify-content: start;
+            }
+          }
+        }
+
+        &#cont5 {
+          .tab-wrap {
+            margin-top: 2rem;
           }
         }
       }

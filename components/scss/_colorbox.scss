@@ -1,0 +1,162 @@
+#cont1 {
+  .colorbox-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  
+    &.white {
+      .color {
+        background-color: var(--white-color);
+      }
+    }
+  
+    &.black {
+      .color {
+        background-color: var(--black-color);
+      }
+    }
+  }
+
+  .colorbox {
+    width: calc(100% / 12);
+    height: 7rem;
+    background-color: #eee;
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    border-radius: .5rem;
+    overflow: hidden;
+  
+    .color {
+      width: 100%;
+      height: 50%;
+      background-color: #888;
+    }
+  
+    .color-txt {
+      width: 100%;
+      height: 50%;
+      background: #fff;
+      padding: .625rem .75rem .75rem;
+      font-size: .875rem;
+      
+      .color-variable-num {
+        font-weight: 500;
+      }
+  
+      .color-hex-code {
+        display: block;
+        margin-top: .5rem;
+        font-size: .75rem;
+        color: var(--gray-color-500);
+      }
+    }
+  }
+}
+
+// main color
+$color-list-primary: (var(--primary-color-25), var(--primary-color-50), var(--primary-color-100), var(--primary-color-200), var(--primary-color-300), var(--primary-color-400), var(--primary-color-500), var(--primary-color-600), var(--primary-color-700), var(--primary-color-800), var(--primary-color-900));
+$color-list-secondary: (var(--secondary-color-25), var(--secondary-color-50), var(--secondary-color-100), var(--secondary-color-200), var(--secondary-color-300), var(--secondary-color-400), var(--secondary-color-500), var(--secondary-color-600), var(--secondary-color-700), var(--secondary-color-800), var(--secondary-color-900));
+
+// gray color
+$color-list-gray: (var(--gray-color-25), var(--gray-color-50), var(--gray-color-100), var(--gray-color-200), var(--gray-color-300), var(--gray-color-400), var(--gray-color-500), var(--gray-color-600), var(--gray-color-700), var(--gray-color-800), var(--gray-color-900));
+
+// state color
+$color-list-error: (var(--error-color-25), var(--error-color-50), var(--error-color-400), var(--error-color-500));
+$color-list-warning: (var(--warning-color-25), var(--warning-color-50), var(--warning-color-400), var(--warning-color-500));
+$color-list-success: (var(--success-color-25), var(--success-color-50), var(--success-color-400), var(--success-color-500));
+$color-list-info: (var(--info-color-25), var(--info-color-50), var(--info-color-400), var(--info-color-500));
+
+@for $i from 1 through length($color-list-primary) {
+  #cont1 {
+    .colorbox-wrap {
+      &.primary {
+        .colorbox {
+          &:nth-child(#{$i}) {
+            .color {
+              background-color: nth($color-list-primary, $i);
+            }
+          }
+        }
+      }
+  
+      &.secondary {
+        .colorbox {
+          &:nth-child(#{$i}) {
+            .color {
+              background-color: nth($color-list-secondary, $i);
+            }
+          }
+        }
+      }
+  
+      &.gray {
+        .colorbox {
+          &:nth-child(#{$i}) {
+            .color {
+              background-color: nth($color-list-gray, $i);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through length($color-list-error) {
+  #cont1 {
+    .colorbox-wrap {
+      &.error {
+        .colorbox {
+          &:nth-child(#{$i}) {
+            .color {
+              background-color: nth($color-list-error, $i);
+            }
+          }
+        }
+      }
+  
+      &.warning {
+        .colorbox {
+          &:nth-child(#{$i}) {
+            .color {
+              background-color: nth($color-list-warning, $i);
+            }
+          }
+        }
+      }
+  
+      &.success {
+        .colorbox {
+          &:nth-child(#{$i}) {
+            .color {
+              background-color: nth($color-list-success, $i);
+            }
+          }
+        }
+      }
+  
+      &.info {
+        .colorbox {
+          &:nth-child(#{$i}) {
+            .color {
+              background-color: nth($color-list-info, $i);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1299.98px) {
+  #cont1 {
+    .colorbox-wrap {
+      flex-wrap: wrap;
+    }
+
+    .colorbox {
+      width: calc(100% / 7);
+    }
+  }
+}

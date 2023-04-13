@@ -1,0 +1,261 @@
+* {
+  scrollbar-width: auto;
+  scrollbar-color: hsla(0, 0%, 42%, 0.534) hsla(0, 0%, 42%, 0.534);
+
+  &::-webkit-scrollbar {
+    width: .5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 42%, 0.534);
+    border-radius: 1rem;
+  }
+}
+
+body {
+  overflow-y: overlay;
+}
+
+@-moz-document url-prefix() {
+  body {
+    overflow-y: auto;
+  }
+}
+
+#layout {
+  position: relative;
+  min-height: 100vh;
+
+  &.fold {
+    #header,
+    #main,
+    #footer {
+      padding-left: calc($nav-width-fold + $layout-padding);
+    }
+
+    #nav {
+      width: $nav-width-fold;
+
+      .nav-header {
+        justify-content: center;
+
+        h2 {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// header
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  background-color: #eee;
+  padding: $layout-padding $layout-padding $layout-padding calc($nav-width + $layout-padding);
+  transition: padding-left 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+
+  .btn-menubar {
+    display: none;
+    font-size: 1.5rem;
+  }
+}
+
+// nav
+#nav {
+  width: $nav-width;
+  height: 100vh;
+  background-color: #777;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+  padding: 2rem;
+  z-index: 100;
+
+  &.open {
+    left: 0%;
+  }
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      font-size: 1.5rem;
+
+      &.btn-close {
+        display: none;
+      }
+    }
+  }
+}
+
+// main
+#main {
+  transition: padding-left 0.5s ease-in-out;
+  padding-top: $header-height;
+  padding-left: $nav-width;
+  padding-bottom: $footer-height;
+
+  section {
+    padding: $layout-padding;
+  }
+
+  .chart-wrap {
+    width: 100%;
+    min-height: 20rem;
+    margin: 2rem 0;
+    padding: 1rem 1rem 0;
+    border-radius: 1rem;
+    box-shadow: 0px 12px 23px rgba(62, 73, 84, 0.09);
+    overflow-x: scroll;
+
+    // div {
+    //   min-width: 30rem;
+    // }
+  }
+}
+
+// barChart border-radius 반응형시 깨짐현상 처리
+#barChart {
+  .apexcharts-bar-series {
+    &.apexcharts-plot-series {
+      .apexcharts-series {
+        path {
+          clip-path: inset(0% 0% 0% -100% round 20px);
+        }
+      }
+    }
+  }
+}
+
+#barChart2 {
+  .apexcharts-bar-series {
+    &.apexcharts-plot-series {
+      .apexcharts-series {
+        path {
+          clip-path: inset(0% 0% -100% 0% round 20px);
+        }
+      }
+    }
+  }
+}
+
+// footer
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  padding-top: $layout-padding;
+  padding-right: $layout-padding;
+  padding-bottom: $layout-padding;
+  padding-left: calc($nav-width + $layout-padding);
+  transition: padding-left 0.5s ease-in-out;
+  background-color: lightsteelblue;
+}
+
+
+/*
+* responsive
+*/
+
+@media (max-width: 1299.98px) {
+  #layout {
+    &.fold {
+      #header {
+        padding: 2rem;
+    
+        .btn-menubar {
+          display: block;
+        }
+      }
+      
+      #nav {
+        left: -110%;
+      }
+    
+      #main {
+        padding: 2rem;
+      }
+
+      #footer {
+        padding: 2rem;
+      }
+    }
+  }
+
+  #header {
+    padding: 2rem;
+
+    .btn-menubar {
+      display: block;
+    }
+  }
+  
+  #nav {
+    left: -110%;
+  }
+
+  #main {
+    padding-left: 0;
+  }
+
+  #footer {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+  #header {
+    height: $header-m-height;
+    padding: $layout-m-padding;
+  }
+
+  #nav {
+    &.open {
+      width: 100%;
+    }
+
+    .nav-header {
+      button {
+        display: none;
+  
+        &.btn-close {
+          display: block;
+        }
+      }
+    }
+  }
+
+  #main {
+    padding: $header-m-height 0;
+
+    section {
+      padding: 1rem;
+    }
+  }
+
+  #footer {
+    height: $footer-m-height;
+    padding: $layout-m-padding;
+  }
+}
+
+@media (max-width: 575.98px) {
+}
