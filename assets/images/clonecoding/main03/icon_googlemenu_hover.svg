@@ -1,0 +1,19 @@
+<svg id="구성_요소_184_4" data-name="구성 요소 184 – 4" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-4{fill:#09ab47}.cls-6{fill:#2e83fa}
+        </style>
+    </defs>
+    <path id="사각형_4570" data-name="사각형 4570" style="fill:none" d="M0 0h40v40H0z"/>
+    <g id="그룹_3452" data-name="그룹 3452" transform="translate(-1818.5 -24.5)">
+        <circle id="타원_1016" data-name="타원 1016" cx="2.5" cy="2.5" r="2.5" transform="translate(1828 34)" style="fill:#fd2a24"/>
+        <circle id="타원_1021" data-name="타원 1021" cx="2.5" cy="2.5" r="2.5" transform="translate(1836 34)" style="fill:#d7000f"/>
+        <circle id="타원_1022" data-name="타원 1022" class="cls-4" cx="2.5" cy="2.5" r="2.5" transform="translate(1844 34)"/>
+        <circle id="타원_1017" data-name="타원 1017" cx="2.5" cy="2.5" r="2.5" transform="translate(1828 42)" style="fill:#ffba00"/>
+        <circle id="타원_1020" data-name="타원 1020" class="cls-4" cx="2.5" cy="2.5" r="2.5" transform="translate(1836 42)"/>
+        <circle id="타원_1023" data-name="타원 1023" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(1844 42)"/>
+        <circle id="타원_1018" data-name="타원 1018" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(1828 50)"/>
+        <circle id="타원_1019" data-name="타원 1019" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(1836 50)"/>
+        <circle id="타원_1024" data-name="타원 1024" cx="2.5" cy="2.5" r="2.5" transform="translate(1844 50)" style="fill:#4758b5"/>
+    </g>
+</svg>
