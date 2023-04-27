@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="icon-40-더보기" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <style>
+            .cls-2{fill:#aaa}
+        </style>
+    </defs>
+    <g id="그룹_2453" transform="translate(-398 -2732)">
+        <g id="그룹_1584" transform="translate(398 2732)">
+            <path id="사각형_3091" fill="none" d="M0 0H30V30H0z"/>
+        </g>
+        <g id="아이콘_16" transform="rotate(90 -1162.125 1577.375)">
+            <g id="그룹_1066">
+                <circle id="타원_224" cx="1.875" cy="1.875" r="1.875" class="cls-2"/>
+                <circle id="타원_225" cx="1.875" cy="1.875" r="1.875" class="cls-2" transform="translate(5.625)"/>
+                <circle id="타원_226" cx="1.875" cy="1.875" r="1.875" class="cls-2" transform="translate(11.25)"/>
+            </g>
+        </g>
+    </g>
+</svg>

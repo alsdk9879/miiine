@@ -1,36 +1,53 @@
-// accordian menu
-const menuList = document.querySelectorAll('.depth1 .list');
-const btnOpen = document.querySelectorAll('.depth1 .btn-open');
+// accordion menu
+const accMenuTItle = document.getElementsByClassName('accordion-menu-title');
 
-btnOpen.forEach((btn, index) => {
-  btn.addEventListener('click', e => {
-    menuList.forEach( el => {
-      el.classList.toggle('open');
+for (let i = 0; i < accMenuTItle.length; i++) {
+  accMenuTItle[i].addEventListener('click', function() {
+    this.classList.toggle('open');
+
+    const accSubList = this.nextElementSibling;
+
+    if (accSubList.style.display === 'block') {
+      accSubList.style.display = 'none';
+    } else {
+      accSubList.style.display = 'block';
+    };
+  });
+};
+
+// all-content-wrap tabmenu
+const allContTabList = document.querySelectorAll('.all-content-wrap .tab-list');
+const allContTabCont = document.querySelectorAll('.all-content-wrap .tab-cont');
+
+allContTabList.forEach((tab, index) => {
+  tab.addEventListener('click', function () {
+    allContTabList.forEach((el) => {
+      el.classList.remove('active');
     });
-    
-    menuList.forEach((list, index2) => {
-      if( index !== index2 ){
-        list.classList.remove('open');
-      };
+    allContTabList[index].classList.add('active');
+
+    allContTabCont.forEach((cont) => {
+      cont.classList.remove('active');
     });
+    allContTabCont[index].classList.add('active');
   });
 });
 
-// tabmenu
-const tabList = document.querySelectorAll('.tab-list');
-const tabCont = document.querySelectorAll('.tab-cont');
+// popular-content-wrap tabmenu
+const popularContTabList = document.querySelectorAll('.popular-content-wrap .tab-list');
+const popularContTabCont = document.querySelectorAll('.popular-content-wrap .tab-cont');
 
-tabList.forEach((tab, index) => {
+popularContTabList.forEach((tab, index) => {
   tab.addEventListener('click', function () {
-    tabList.forEach((el) => {
+    popularContTabList.forEach((el) => {
       el.classList.remove('active');
     });
-    tabList[index].classList.add('active');
+    popularContTabList[index].classList.add('active');
 
-    tabCont.forEach((cont) => {
+    popularContTabCont.forEach((cont) => {
       cont.classList.remove('active');
     });
-    tabCont[index].classList.add('active');
+    popularContTabCont[index].classList.add('active');
   });
 });
 

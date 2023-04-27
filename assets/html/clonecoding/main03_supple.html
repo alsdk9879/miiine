@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/clonecoding.css">
@@ -78,47 +79,618 @@
             <div class="searchbox">
               <input type="text" placeholder="서플 내에서 검색"><i class="icon-search"></i>
             </div>
-            <ul class="accrodion-menu">
-              <li class="menu-list">
-                <span class="title">모든 콘텐츠</span>
+            <ul class="accordion-menu-wrap">
+              <li class="accordion-menu-list">
+                <span class="accordion-menu-title">모든 콘텐츠<i class="icon-plus"></i></span>
               </li>
-              <li class="menu-list open">
-                <span class="title">재테크</span>
-                <ul class="sub-list">
-                  <li><a href="#" class="item">주식</a></li>
-                  <li><a href="#" class="item">부동산</a></li>
-                  <li><a href="#" class="item">가상화폐</a></li>
+              <li class="accordion-menu-list">
+                <span class="accordion-menu-title">재테크<i class="icon-arrow-bottom"></i></span>
+                <ul class="accordion-sub-list">
+                  <li><a href="#" class="sub-item">주식</a></li>
+                  <li><a href="#" class="sub-item">부동산</a></li>
+                  <li><a href="#" class="sub-item">가상화폐</a></li>
                 </ul>
               </li>
-              <li class="menu-list open">
-                <span class="title">트렌드</span>
-                <ul class="sub-list">
-                  <li><a href="#" class="item">IT 이야기</a></li>
-                  <li><a href="#" class="item">Tech</a></li>
-                  <li><a href="#" class="item">게임</a></li>
+              <li class="accordion-menu-list">
+                <span class="accordion-menu-title">트렌드<i class="icon-arrow-bottom"></i></span>
+                <ul class="accordion-sub-list">
+                  <li><a href="#" class="sub-item">IT 이야기</a></li>
+                  <li><a href="#" class="sub-item">Tech</a></li>
+                  <li><a href="#" class="sub-item">게임</a></li>
+                </ul>
+              </li>
+              <li class="accordion-menu-list">
+                <span class="accordion-menu-title">개발<i class="icon-arrow-bottom"></i></span>
+                <ul class="accordion-sub-list">
+                  <li><a href="#" class="sub-item">IT 이야기</a></li>
+                  <li><a href="#" class="sub-item">Tech</a></li>
+                  <li><a href="#" class="sub-item">게임</a></li>
+                </ul>
+              </li>
+              <li class="accordion-menu-list">
+                <span class="accordion-menu-title">기업/스타트업<i class="icon-arrow-bottom"></i></span>
+                <ul class="accordion-sub-list">
+                  <li><a href="#" class="sub-item">IT 이야기</a></li>
+                  <li><a href="#" class="sub-item">Tech</a></li>
+                  <li><a href="#" class="sub-item">게임</a></li>
+                </ul>
+              </li>
+              <li class="accordion-menu-list">
+                <span class="accordion-menu-title">마케팅<i class="icon-arrow-bottom"></i></span>
+                <ul class="accordion-sub-list">
+                  <li><a href="#" class="sub-item">IT 이야기</a></li>
+                  <li><a href="#" class="sub-item">Tech</a></li>
+                  <li><a href="#" class="sub-item">게임</a></li>
+                </ul>
+              </li>
+              <li class="accordion-menu-list">
+                <span class="accordion-menu-title">기획<i class="icon-arrow-bottom"></i></span>
+                <ul class="accordion-sub-list">
+                  <li><a href="#" class="sub-item">IT 이야기</a></li>
+                  <li><a href="#" class="sub-item">Tech</a></li>
+                  <li><a href="#" class="sub-item">게임</a></li>
                 </ul>
               </li>
             </ul>
           </div>
           <div class="all-content-wrap">
-            <h4>모든 컨텐츠</h4>
-            <div class="tab-wrap">
-              <ul>
+            <div class="cont-header">
+              <h4>모든 컨텐츠</h4>
+              <ul class="tab-list-wrap">
                 <li class="tab-list active">최신순</li>
                 <li class="tab-list">인기순</li>
               </ul>
-              <div class="tab-cont-wrap">
-                <div class="tab-cont active">
-                  tab1 내용영역입니다.
-                </div>
-                <div class="tab-cont">
-                  tab2 내용영역입니다.
+            </div>
+            <div class="tab-cont-wrap">
+              <!-- 최신순 :: s -->
+              <div class="tab-cont active">
+                <div class="cont-item-wrap">
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법 요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
+              <!-- 최신순 :: e -->
+
+              <!-- 인기순 :: s -->
+              <div class="tab-cont">
+                <div class="cont-item-wrap">
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">일잘러 장피엠</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="cont-item">
+                    <a href="#">
+                      <div class="item-header">
+                        <div class="writer">원티드</div>
+                        <button type="button" class="btn-share"></button>
+                      </div>
+                      <div class="thumbnail">
+                        <img src="https://placeimg.com/100/100/people" alt="">
+                      </div>
+                      <div class="txt-wrap">
+                        <div class="title">요즘 회사들이 신규 입사자를 환영하는 법</div>
+                        <p class="desc">
+                          원티드에서 준비한 이벤트에 수많은 회사가 참여했는데요, 고심 끝에 선정한 영광의 수상 기업들을 공개합니다. 
+                          웰컴 키트를 구경하면서 평소 관심 있던 회사를 더 깊게 알아보고, 내 취향을 저격하는 회사는 어디인지 찾아보세요!
+                        </p>
+                        <div class="tags">
+                          <span>비전공자 & 신입</span>
+                          <span>동기부여</span>
+                        </div>
+                      </div>
+                      <div class="items-status-wrap">
+                        <span class="comment"><i class="icon-chattext"></i>0</span>
+                        <span class="views"><i class="icon-eye-on"></i>10</span>
+                        <span class="scrap"><i class="icon-bookmark"></i>0</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- 인기순 :: e -->
             </div>
           </div>
           <div class="popular-content-wrap">
+            <div class="cont-header">
+              <h3>지금 사람들이 많이 본 콘텐츠</h3>
+            </div>
+            <div class="cont-body">
+              <ul class="tab-list-wrap">
+                <li class="tab-list active">실시간</li>
+                <li class="tab-list">주간</li>
+                <li class="tab-list">월간</li>
+                <li class="tab-list">연간</li>
+                <li class="tab-list">댓글순</li>
+              </ul>
+              <button type="button" class="btn-more">더보기<i class="icon-arrow-right"></i></button>
+              <div class="tab-cont-wrap">
+                <!-- 실시간 :: s -->
+                <div class="tab-cont active">
+                  <div class="swiper popular-content">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a href="#">
+                          <div class="rank">1</div>
+                          <div class="txt-wrap">
+                            <div class="title">올해 1분기 한국인이 가장 많이 결제한 온라인 여행/ 레저 서비스는?</div>
+                            <div class="content-info">
+                              <div class="writer">소매시장</div>
+                              <div class="scrap"><i class="icon-bookmark"></i>1</div>
+                            </div>
+                          </div>
+                          <div class="thumbnail">
+                            <img src="https://placeimg.com/100/100/people" alt="">
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <!-- 실시간 :: e -->
 
+                <!-- 주간 :: s -->
+                <div class="tab-cont">
+
+                </div>
+                <!-- 주간 :: e -->
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -127,6 +699,19 @@
     <!-- main :: e -->
   </div>
 
+  <script src="../../libs/swiper/swiper-bundle.min.js"></script>
   <script src="../../js/clonecoding/main03.js"></script>
+  <script>
+    const swiper = new Swiper(".popular-cont", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 </html>
