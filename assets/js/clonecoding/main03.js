@@ -51,6 +51,18 @@ popularContTabList.forEach((tab, index) => {
   });
 });
 
+// header 스크롤시 background
+const header = document.querySelector('.header');
+const headerHeight = header.getBoundingClientRect().height;
+
+window.addEventListener('scroll', () => {
+  if( window.scrollY > headerHeight ) {
+    header.classList.add('bg');
+  } else {
+    header.classList.remove('bg');
+  }
+});
+
 // header noti list & mypage modal
 // const noti = document.querySelector('.btn-noti');
 // const notiList = document.querySelector('.notification');

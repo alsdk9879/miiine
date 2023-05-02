@@ -11,6 +11,10 @@
 
 $supple-primary-color: rgb(59, 200, 242);
 
+body {
+  overflow: initial;
+}
+
 #main03 {
   font-family: 'Poppins', sans-serif;
   
@@ -93,9 +97,6 @@ $supple-primary-color: rgb(59, 200, 242);
     color: var(--white-color);
     z-index: 999;
     transition: all 0.2s ease 0s;
-    // background-color: var(--white-color);
-    // border-bottom: 1px solid rgb(238, 238, 238);
-    // box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 15px 0px;
 
     .img-logo {
       display: inline-block;
@@ -108,9 +109,24 @@ $supple-primary-color: rgb(59, 200, 242);
         align-items: center;
 
         li {
+          position: relative;
           font-size: .9375rem;
           font-weight: 600;
           margin-right: 1.6875rem;
+
+          &.new {
+            &::after {
+              content: "";
+              display: inline-block;
+              width: .375rem;
+              height: .375rem;
+              border-radius: 50%;
+              background-color: red;
+              position: absolute;
+              top: -0.125rem;
+              margin-left: .375rem;
+            }
+          }
         }
       }
     }
@@ -173,6 +189,13 @@ $supple-primary-color: rgb(59, 200, 242);
         }
       }
     }
+
+    &.bg {
+      background-color: var(--white-color);
+      border-bottom: 1px solid rgb(238, 238, 238);
+      box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 15px 0px;
+      color: var(--gray-color-500);
+    }
   }
 
   // main
@@ -181,25 +204,31 @@ $supple-primary-color: rgb(59, 200, 242);
     .section1 {
       height: 39.375rem;
       background: url('../images/clonecoding/main03/bg_main.jpeg') center/cover no-repeat;
+      position: relative;
 
-      // &::before {
-      //   content: "";
-      //   display: inline-block;
-      //   width: 100%;
-      //   height: 39.375rem;
-      //   background-color: rgba(0, 0, 0, 0.4);
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      // }
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 39.375rem;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
 
       .main-content-wrap {
         padding-top: 10rem;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         gap: 16rem;
+        color: var(--white-color);
+
+        .main-content {
+          z-index: 2;
+        }
 
         .time-weather-wrap {
           max-width: 38.75rem;
@@ -335,6 +364,7 @@ $supple-primary-color: rgb(59, 200, 242);
             font-weight: 700;
             padding: 0;
             flex: none;
+            color: var(--white-color);
           }
 
           i {
@@ -398,6 +428,7 @@ $supple-primary-color: rgb(59, 200, 242);
               height: 3rem;
               background-color: var(--white-color);
               border-radius: 50%;
+              margin: 0 auto;
 
               img {
                 width: 1.5rem;
@@ -412,14 +443,53 @@ $supple-primary-color: rgb(59, 200, 242);
               font-size: .8125rem;
               font-weight: 500;
               display: inline-block;
-              margin-top: .5rem;
-              // color: var(--white-color);
+              margin-top: .75rem;
+            }
+
+            &.btn-add {
+              position: relative;
+
+              button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+              }
+
+              .img-wrap {
+                background-color: rgba(255, 255, 255, 0.1);
+                border: 1px solid var(--white-color);
+                position: relative;
+              }
+
+              i {
+                font-size: 1.5rem;
+                color: var(--white-color);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
             }
           }
         }
 
         .plan-area {
           width: 18.75rem;
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          position: relative;
+          top: -4.2rem;
+
+          .calendar {
+            width: 100%;
+            height: 16.625rem;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: .625rem;
+            overflow: hidden;
+          }
 
           .to-do-list {
             .txt {
@@ -446,6 +516,17 @@ $supple-primary-color: rgb(59, 200, 242);
                 }
               }
             }
+          }
+        }
+
+        .btn-setting {
+          position: absolute;
+          bottom: 2rem;
+          right: 1.25rem;
+
+          i {
+            font-size: 1.5rem;
+            color: rgb(187, 187, 187);
           }
         }
       }
@@ -732,6 +813,7 @@ $supple-primary-color: rgb(59, 200, 242);
           background-color: $supple-primary-color;
           padding: 1rem 2.5rem;
           display: flex;
+          justify-content: center;
           align-items: center;
 
           h3 {
@@ -1002,6 +1084,64 @@ $supple-primary-color: rgb(59, 200, 242);
       display: block;
     }
   }
+
+  // full calendar
+  .fc {
+    padding: 1.25rem;
+  }
+
+  .fc-toolbar  {
+    &.fc-header-toolbar {
+      margin-bottom: 1.4rem;
+    }
+
+    .fc-center {
+      position: relative;
+      top: .25rem;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .fc-right {
+      order: 2;
+    }
+  }
+
+  .fc-icon-left-single-arrow,
+  .fc-icon-right-single-arrow {
+    &::after {
+      font-size: 1.5rem;
+    }
+  }
+
+  .fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-list-heading td, .fc-unthemed .fc-list-view, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
+    border-color: transparent;
+  }
+
+  .fc-head-container {
+    padding-bottom: .7rem;
+  }
+
+  .fc-today {
+    background-color: transparent;
+    
+    .fc-day-number {
+      background-color: $supple-primary-color;
+      border-radius: 50%;
+      padding: .25rem .5rem;
+    }
+  }
+
+  .fc-state-default {
+    background: none;
+    border: none;
+    border-color: transparent;
+    color: var(--white-color);
+    text-shadow: none;
+    box-shadow: none;
+  }
 }
 
 // breakpoint
@@ -1148,9 +1288,16 @@ $supple-primary-color: rgb(59, 200, 242);
         .main-content-wrap {
           padding-left: 1.25rem;
           padding-right: 1.25rem;
+          padding-top: 17rem;
+          // display: block;
 
-          .time-weather-wrap {
-            max-width: 36.25rem;
+          .main-content {
+            width: 100%;
+          }
+
+          .time-weather-wrap,
+          .search-area {
+            margin: 0 auto;
           }
 
           .hot-topic-area,
@@ -1178,13 +1325,23 @@ $supple-primary-color: rgb(59, 200, 242);
           margin: 0;
 
           .cont-item-wrap {
-            grid-template-columns: repeat(1, 1fr);
+            display: block;
 
             .cont-item {
               width: 100%;
+              margin-top: 1.875rem;
 
               .thumbnail {
-                height: 21.4375rem;
+                height: auto;
+                padding-top: 56.25%;
+
+                img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                }
               }
 
               .txt-wrap {
@@ -1202,6 +1359,64 @@ $supple-primary-color: rgb(59, 200, 242);
 
         .popular-content-wrap {
           width: 100%;
+
+          .cont-header {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+
+          .cont-body {
+            .tab-cont {
+              .swiper {
+                &.popular-content {
+                  .swiper-slide {
+                    .slide-item {
+                      .txt-wrap {
+                        .content-info {
+                          max-width: 100%;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 499.98px) {
+  #main03 {
+    .header {
+      .header-menu {
+        button {
+          margin-right: 0;
+
+          &.btn-googlemenu {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .main {
+      .section1 {
+        .main-content-wrap {
+          .time-weather-wrap {
+            flex-direction: column;
+          }
+
+          .weather-wrap {
+            display: flex;
+            align-items: center;
+
+            .weather {
+              font-size: 1.25rem;
+            }
+          }
         }
       }
     }

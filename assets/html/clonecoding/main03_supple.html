@@ -7,8 +7,7 @@
   <!-- <link rel="stylesheet" href="../../libs/bootstrap/bootstrap.min.css"> -->
   <link rel="stylesheet" href="../../libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="../../libs/tomselect/tom-select.css">
-  <link rel="stylesheet" href="../../assets/libs/fullcalendar3/fullcalendar.min.css"/>
-  <link rel="stylesheet" href="../../libs/">
+  <link rel="stylesheet" href="../../libs/fullcalendar3/fullcalendar.min.css"/>
   <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/clonecoding.css">
@@ -32,7 +31,7 @@
       <nav class="nav">
         <ul>
           <li class="nav-list"><a href="#">홈</a></li>
-          <li class="nav-list"><a href="#">커뮤니티</a></li>
+          <li class="nav-list new"><a href="#">커뮤니티</a></li>
           <li class="nav-list"><a href="#">채용</a></li>
           <li class="nav-list"><a href="#">인턴</a></li>
         </ul>
@@ -137,13 +136,13 @@
                     <span class="site-name">google</span>
                   </a>
                 </li>
-                <li class="site">
-                  <a href="#">
+                <li class="site btn-add">
+                  <button type="button">
                     <div class="img-wrap">
-                      <img src="../../images/clonecoding/main03/icon_google.png" alt="">
+                      <i class="icon-plus"></i>
                     </div>
-                    <span class="site-name">google</span>
-                  </a>
+                    <span class="site-name">바로가기 추가</span>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -157,6 +156,7 @@
               <button type="button" class="btn-add"><i class="icon-plus"></i>추가</button>
             </div>
           </div>
+          <button type="button" class="btn-setting"><i class="icon-nav-settings"></i></button>
         </div>
       </section>
       <!-- seciton1 :: e -->
@@ -2189,12 +2189,12 @@
   </div>
 
   <!-- <script src="../../libs/bootstrap/bootstrap.bundle.min.js"></script> -->
-  <script src="../../libs/jquery/jquery-3.6.3.min.js1"></script>
+  <script src="../../libs/jquery/jquery-3.6.3.min.js"></script>
   <script src="../../libs/swiper/swiper-bundle.min.js"></script>
   <script src="../../libs/tomselect/tom-select.complete.min.js"></script>
-  <script src="../../assets/libs/fullcalendar3/moment.min.js"></script>
-  <script src="../../assets/libs/fullcalendar3/fullcalendar.min.js"></script>
-  <script src="../../assets/libs/fullcalendar3/locale-all.js"></script>
+  <script src="../../libs/fullcalendar3/moment.min.js"></script>
+  <script src="../../libs/fullcalendar3/fullcalendar.min.js"></script>
+  <script src="../../libs/fullcalendar3/locale-all.js"></script>
   <script src="../../js/clonecoding/main03.js"></script>
   <script>
     // slide hot-topic
@@ -2218,32 +2218,33 @@
 
     // main section1 calendar
     $(function () {
-    $('#fcCalendar').fullCalendar({
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay,listMonth',
-      },
-      locale: 'ko',
-      navLinks: false,
-      eventLimit: false,
-      displayEventTime: false,
-      height: window.innerWidth < '920'? 'auto' : 880,
-      events: [
-        {
-          title: '등록 일정입니다.',
-          start: '2023-04-14',
-          end: '2023-04-16',
+      $('#fcCalendar').fullCalendar({
+        header: {
+          left: 'prev',
+          center: 'title',
+          right: 'next',
         },
+        locale: 'en',
+        navLinks: false,
+        eventLimit: false,
+        displayEventTime: false,
+        // height: window.innerWidth < '920'? 'auto' : 880,
+        // height: auto,
+        events: [
+          {
+            title: '등록 일정입니다.',
+            start: '2023-04-14',
+            end: '2023-04-16',
+          },
 
-        {
-          title: '식목일',
-          start: '2023-04-05',
-          className: 'koHolidays',
-        },
-      ],
+          // {
+          //   title: '어린이날',
+          //   start: '2023-05-05',
+          //   className: 'koHolidays',
+          // },
+        ],
+      });
     });
-  });
   </script>
 </body>
 </html>
