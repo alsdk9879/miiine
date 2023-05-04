@@ -43,6 +43,9 @@ function destroySwiper2() {
   if( viewport <= 768 && cont4Slider == undefined ) {
     cont4Slider = new Swiper(".cont4-slide", {
       loop: true,
+      autoplay: {
+        delay: 5000,
+      },
       slidesPerView : 1,
       spaceBetween: 32,
       pagination: {
@@ -60,3 +63,27 @@ window.addEventListener('resize', () => {
   destroySwiper2();
 });
 destroySwiper2();
+
+// footer banner slide
+const footerBannerSlider = new Swiper(".footer-banner-slide", {
+  loop: true,
+  autoplay: {
+    delay: 8000,
+  },
+  slidesPerView : 2,
+  spaceBetween: 20,
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1060: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1300: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+  },
+});
