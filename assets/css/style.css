@@ -1897,13 +1897,13 @@ textarea::placeholder {
 }
 * {
   scrollbar-width: auto;
-  scrollbar-color: hsla(0deg, 0%, 42%, 0.534) hsla(0deg, 0%, 42%, 0.534);
+  scrollbar-color: hsla(0, 0%, 42%, 0.534) hsla(0, 0%, 42%, 0.534);
 }
 *::-webkit-scrollbar {
   width: 0.5rem;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: hsla(0deg, 0%, 42%, 0.534);
+  background-color: hsla(0, 0%, 42%, 0.534);
   border-radius: 1rem;
 }
 

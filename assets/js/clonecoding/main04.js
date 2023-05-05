@@ -1,7 +1,11 @@
 // main-slide
-const mainSlider = new Swiper(".main-slide", {
+const mainSlider = new Swiper('.main-slide', {
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
     clickable: true,
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
@@ -15,13 +19,17 @@ let cont2Slider = undefined;
 
 function destroySwiper() {
   if( viewport <= 768 && cont2Slider == undefined ) {
-    cont2Slider = new Swiper(".cont2-slide", {
+    cont2Slider = new Swiper('.cont2-slide', {
       loop: true,
       slidesPerView : 1,
       spaceBetween: 32,
       navigation: {
-        nextEl: ".cont4-slider .swiper-button-next",
-        prevEl: ".cont4-slider .swiper-button-prev",
+        nextEl: '.cont4-slider .swiper-button-next',
+        prevEl: '.cont4-slider .swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction'
       },
     });
   } else if( viewport > 768 && cont2Slider != undefined ) {
@@ -41,7 +49,7 @@ let cont4Slider = undefined;
 
 function destroySwiper2() {
   if( viewport <= 768 && cont4Slider == undefined ) {
-    cont4Slider = new Swiper(".cont4-slide", {
+    cont4Slider = new Swiper('.cont4-slide', {
       loop: true,
       autoplay: {
         delay: 5000,
@@ -49,7 +57,7 @@ function destroySwiper2() {
       slidesPerView : 1,
       spaceBetween: 32,
       pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
       },
     });
   } else if( viewport > 768 && cont4Slider != undefined ) {
@@ -65,13 +73,14 @@ window.addEventListener('resize', () => {
 destroySwiper2();
 
 // footer banner slide
-const footerBannerSlider = new Swiper(".footer-banner-slide", {
+const footerBannerSlider = new Swiper('.footer-banner-slide', {
   loop: true,
   autoplay: {
     delay: 8000,
   },
   slidesPerView : 2,
   spaceBetween: 20,
+  slidesPerGroup: 1,
   breakpoints: {
     640: {
       slidesPerView: 3,

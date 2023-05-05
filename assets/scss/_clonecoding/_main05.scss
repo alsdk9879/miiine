@@ -121,10 +121,13 @@ $headerHeight: 6.25rem;
 
   // main
   .main {
-    padding-top: calc($headerHeight + 3.125rem);
+    .containers {
+      align-items: start;
+    }
 
     .section-wrap {
       width: 78.75rem;
+      padding-top: calc($headerHeight + 3.125rem);
       padding-right: 3.75rem;
     }
 
@@ -137,7 +140,42 @@ $headerHeight: 6.25rem;
           .swiper-slide {
             a {
               display: inline-block;
+              width: 100%;
+              padding-top: 41.25%;
+
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 1.875rem;
+              }
             }
+          }
+
+          .swiper-button-next,
+          .swiper-button-prev {
+            width: 3.75rem;
+            height: 3.75rem;
+            background-color: rgba(0, 0, 0, .5);
+            right: 0;
+            border-top-left-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+
+            &::after {
+              font-size: 1.5rem;
+              font-weight: 700;
+              color: #fff;
+            }
+          }
+
+          .swiper-button-prev {
+            left: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: .25rem;
+            border-bottom-right-radius: .25rem;
           }
         }
       }
@@ -146,7 +184,9 @@ $headerHeight: 6.25rem;
     // aside-menu
     .aside-menu {
       width: 21.25rem;
+      padding-top: calc($headerHeight + 3.125rem);
       padding-left: 3.75rem;
+      border-left: 1px solid #ddd;
 
       .btn-wrap {
         border: 1px solid #666;
@@ -180,6 +220,22 @@ $headerHeight: 6.25rem;
           a {
             display: block;
           }
+        }
+
+        .swiper-pagination {
+          color: #999;
+          font-weight: 700;
+
+          .swiper-pagination-current {
+            color: #333;
+          }
+        }
+
+        .swiper-pagination-fraction {
+          top: 1.25rem;
+          right: 1.25rem;
+          left: initial;
+          width: initial;
         }
       }
 
@@ -270,15 +326,21 @@ $headerHeight: 6.25rem;
           margin-top: .625rem;
           color: #333;
           line-height: 1.4;
+
+          &:nth-of-type(2) {
+            margin-top: 1rem;
+          }
         }
 
         .contact-num {
-          margin-top: .625rem;
+          margin-top: 1.5rem;
           font-size: .9375rem;
           font-weight: 700;
           color: #333;
 
           li {
+            margin-top: .5rem;
+
             span {
               &:first-child {
                 width: 4.0625rem;
@@ -300,8 +362,22 @@ $headerHeight: 6.25rem;
     }
 
     .header {
+      .containers {
+        width: 104rem;
+      }
+
       .searchbox {
         margin: 0 2.8rem;
+      }
+    }
+
+    .main {
+      .section-wrap {
+        padding-right: 2.5rem;
+      }
+
+      .aside-menu {
+        padding-left: 2.5rem;
       }
     }
   }
@@ -309,11 +385,6 @@ $headerHeight: 6.25rem;
 
 @media (max-width: 1599.98px) {
   #main05 {
-    .containers {
-      // padding: 0 3rem;
-      // width: auto;
-    }
-
     .header {
       .header-cont-wrap {
         width: auto;
@@ -375,6 +446,16 @@ $headerHeight: 6.25rem;
         left: 0;
         right: 0;
         border-radius: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1699px) {
+  #main05 {
+    .main {
+      .section-wrap {
+        width: calc(100% - 340px);
       }
     }
   }

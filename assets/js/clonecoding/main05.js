@@ -1,5 +1,6 @@
 // main-slide
 const mainSlider = new Swiper(".main-slide", {
+  loop: true,
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
@@ -12,9 +13,9 @@ const mainSlider = new Swiper(".main-slide", {
 
 // aside-menu-slide
 const asideMenuSlider = new Swiper(".aside-menu-slide", {
-  slidesPerView: 1,
+  loop: true,
   autoplay: {
-    delay: 5000,
+    delay: 4000,
   },
   pagination: {
     el: ".swiper-pagination",
