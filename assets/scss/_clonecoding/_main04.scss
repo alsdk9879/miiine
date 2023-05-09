@@ -221,6 +221,40 @@ $m-headerHeight: 3.4375rem;
           }
         }
       }
+
+      .swiper-pagination {
+        font-family: 'Montserrat', sans-serif;
+        width: auto;
+        bottom: 3rem;
+
+        .swiper-pagination-bullet {
+          background-color: transparent;
+          color: #fff;
+          opacity: .4;
+          font-weight: 800;
+          margin: 0 1rem;
+
+          &.swiper-pagination-bullet-active {
+            color: #fff;
+            opacity: 1;
+          }
+        }
+      }
+
+      .swiper-play {
+        width: 1.875rem;
+        height: 1.875rem;
+        background: url('../images/clonecoding/main05/icon_slider_play.png') center / .625rem auto no-repeat;
+        position: absolute;
+        bottom: 2.65rem;
+        right: 32rem;
+        z-index: 1;
+        cursor: pointer;
+
+        &.play {
+          background-image: url('../images/clonecoding/main05/icon_slider_pause.png');
+        }
+      }
     }
 
     // section2
@@ -919,6 +953,14 @@ $m-headerHeight: 3.4375rem;
           .btn-view-more-wrap {
             display: none;
           }
+        }
+
+        .swiper-pagination {
+          left: 2.625rem;
+        }
+
+        .swiper-play {
+          right: 2.625rem;
         }
       }
 

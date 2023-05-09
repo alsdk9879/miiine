@@ -1,6 +1,11 @@
 // main-slide
 const mainSlider = new Swiper(".main-slide", {
   loop: true,
+  spaceBetween: 16,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",
@@ -9,6 +14,18 @@ const mainSlider = new Swiper(".main-slide", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+// main-slide play & pause
+const btnSliderPlay = document.querySelector('#main05 .main-slide .swiper-button-play');
+btnSliderPlay.addEventListener('click', () => {
+  btnSliderPlay.classList.toggle('play');
+
+  if(btnSliderPlay.classList.contains('play')) {
+    mainSlider.autoplay.start();
+  } else {
+    mainSlider.autoplay.stop();
+  }
 });
 
 // aside-menu-slide

@@ -681,7 +681,7 @@ body {
 
         .cont-item-wrap {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 1.875rem;
         }
 
@@ -1159,6 +1159,20 @@ body {
 }
 
 // breakpoint
+@media (max-width: 1989.98px) {
+  #main03 {
+    .main {
+      .section2 {
+        .all-content-wrap {
+          .cont-item-wrap {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1679.98px) {
   #main03 {
     .main {
@@ -1343,6 +1357,11 @@ body {
 
             .cont-item {
               width: 100%;
+              margin-top: 2rem;
+
+              &:first-child {
+                margin-top: 0;
+              }
 
               .thumbnail {
                 height: auto;

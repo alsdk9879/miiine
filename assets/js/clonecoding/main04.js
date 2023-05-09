@@ -3,14 +3,27 @@ const mainSlider = new Swiper('.main-slide', {
   loop: true,
   autoplay: {
     delay: 5000,
+    disableOnInteraction: false,
   },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
     renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
+      return '<span class="' + className + '">' + "0" + (index + 1) + "</span>";
     },
   },
+});
+
+// main-slide play & pause
+const btnSliderPlay = document.querySelector('#main04 .main-slide .swiper-play');
+btnSliderPlay.addEventListener('click', () => {
+  btnSliderPlay.classList.toggle('play');
+
+  if(btnSliderPlay.classList.contains('play')) {
+    mainSlider.autoplay.start();
+  } else {
+    mainSlider.autoplay.stop();
+  }
 });
 
 // cont2-slide
