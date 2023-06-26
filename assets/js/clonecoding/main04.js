@@ -9,7 +9,7 @@ const mainSlider = new Swiper('.main-slide', {
     el: '.swiper-pagination',
     clickable: true,
     renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + "0" + (index + 1) + "</span>";
+      return '<span class="' + className + '">' + '0' + (index + 1) + '<i></i>' + '<b></b>' + '</span>';
     },
   },
 });
@@ -17,13 +17,16 @@ const mainSlider = new Swiper('.main-slide', {
 // main-slide play & pause
 const btnSliderPlay = document.querySelector('#main04 .main-slide .swiper-play');
 btnSliderPlay.addEventListener('click', () => {
-  btnSliderPlay.classList.toggle('play');
+  btnSliderPlay.classList.toggle('paused');
+  document.querySelectorAll('b').forEach(el => {
+    el.classList.toggle('paused');
+  });
 
-  if(btnSliderPlay.classList.contains('play')) {
-    mainSlider.autoplay.start();
-  } else {
+  if(btnSliderPlay.classList.contains('paused')) {
     mainSlider.autoplay.stop();
-  }
+  } else {
+    mainSlider.autoplay.start();
+  };
 });
 
 // cont2-slide

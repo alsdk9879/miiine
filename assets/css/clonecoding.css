@@ -3592,6 +3592,17 @@ body {
     font-size: 1.25rem;
   }
 }
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  -webkit-appearance: none;
+}
+
 #main04 .containers {
   width: 75rem;
   height: 100%;
@@ -3723,17 +3734,32 @@ body {
 }
 #main04 .main .section1 .swiper-button-wrap {
   width: 75rem;
-  height: 100%;
   margin: 0 auto;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  position: relative;
+  bottom: 7.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   z-index: 1;
 }
+#main04 .main .section1 .swiper-button-wrap .swiper-pagination-wrap {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 58%;
+}
 #main04 .main .section1 .swiper-button-wrap .btn-view-more-wrap {
-  position: absolute;
+  position: relative;
   right: 0;
   bottom: 0;
   z-index: 1;
@@ -3791,8 +3817,11 @@ body {
 }
 #main04 .main .section1 .swiper-pagination {
   font-family: "Montserrat", sans-serif;
-  width: auto;
-  bottom: 3rem;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  top: 0;
+  text-align: start;
 }
 #main04 .main .section1 .swiper-pagination .swiper-pagination-bullet {
   background-color: transparent;
@@ -3805,18 +3834,48 @@ body {
   color: #fff;
   opacity: 1;
 }
+#main04 .main .section1 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active b {
+  -webkit-animation: progress 5s ease-in-out;
+          animation: progress 5s ease-in-out;
+}
+#main04 .main .section1 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active b.paused {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+#main04 .main .section1 .swiper-pagination .swiper-pagination-bullet i {
+  width: 100%;
+  height: 4px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  background-color: rgba(225, 225, 225, 0.2);
+  z-index: 9;
+  margin-top: 1rem;
+}
+#main04 .main .section1 .swiper-pagination .swiper-pagination-bullet b {
+  width: 0%;
+  height: 4px;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  z-index: 9;
+  margin-top: 1rem;
+}
 #main04 .main .section1 .swiper-play {
   width: 1.875rem;
   height: 1.875rem;
-  background: url("../images/clonecoding/main05/icon_slider_play.png") center/0.625rem auto no-repeat;
+  background: url("../images/clonecoding/main05/icon_slider_pause.png") center/0.625rem auto no-repeat;
   position: absolute;
-  bottom: 2.65rem;
-  right: 32rem;
-  z-index: 1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  z-index: 10;
   cursor: pointer;
 }
-#main04 .main .section1 .swiper-play.play {
-  background-image: url("../images/clonecoding/main05/icon_slider_pause.png");
+#main04 .main .section1 .swiper-play.paused {
+  background-image: url("../images/clonecoding/main05/icon_slider_play.png");
 }
 #main04 .main .section2 {
   position: relative;
@@ -4357,6 +4416,23 @@ body {
   height: 6.375rem;
 }
 
+@-webkit-keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 @media (max-width: 1599.98px) {
   #main04 .header .containers {
     -webkit-box-pack: start;
@@ -4393,15 +4469,14 @@ body {
   }
   #main04 .main .section1 .swiper-button-wrap {
     width: 100%;
+    padding: 0 2.625rem;
+  }
+  #main04 .main .section1 .swiper-button-wrap .swiper-pagination-wrap {
+    width: 100%;
+    height: 7.5rem;
   }
   #main04 .main .section1 .swiper-button-wrap .btn-view-more-wrap {
     display: none;
-  }
-  #main04 .main .section1 .swiper-pagination {
-    left: 2.625rem;
-  }
-  #main04 .main .section1 .swiper-play {
-    right: 2.625rem;
   }
   #main04 .main .section2 .containers {
     -webkit-box-orient: vertical;
@@ -4517,6 +4592,9 @@ body {
   #main04 .main .section1 .swiper.main-slide .swiper-slide .txt-wrap h3 {
     font-size: 2.2rem;
     top: 16%;
+  }
+  #main04 .main .section1 .swiper.main-slide .swiper-button-wrap {
+    padding: 0 1.5rem;
   }
   #main04 .main .section2 {
     padding: 3.75rem 0 18rem;

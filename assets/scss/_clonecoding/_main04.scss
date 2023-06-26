@@ -2,14 +2,21 @@
 
 // font-family: 'Montserrat', sans-serif;
 
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+    -webkit-appearance: none;
+  }
+}
+
 $headerHeight: 5.25rem;
 $m-headerHeight: 3.4375rem;
 
 #main04 {
-  // max-width: 75rem;
-  // height: 100vh;
-  // margin: 0 auto;
-
   .containers {
     width: 75rem;
     height: 100%;
@@ -149,16 +156,23 @@ $m-headerHeight: 3.4375rem;
 
       .swiper-button-wrap {
         width: 75rem;
-        height: 100%;
         margin: 0 auto;
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
+        position: relative;
+        bottom: 7.5rem;
+        display: flex;
+        justify-content: space-between;
         z-index: 1;
 
+        .swiper-pagination-wrap {
+          position: relative;
+          display: inline-flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 58%;
+        }
+
         .btn-view-more-wrap {
-          position: absolute;
+          position: relative;
           right: 0;
           bottom: 0;
           z-index: 1;
@@ -224,8 +238,11 @@ $m-headerHeight: 3.4375rem;
 
       .swiper-pagination {
         font-family: 'Montserrat', sans-serif;
-        width: auto;
-        bottom: 3rem;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        top: 0;
+        text-align: start;
 
         .swiper-pagination-bullet {
           background-color: transparent;
@@ -237,6 +254,36 @@ $m-headerHeight: 3.4375rem;
           &.swiper-pagination-bullet-active {
             color: #fff;
             opacity: 1;
+
+            b {
+              animation: progress 5s ease-in-out;
+
+              &.paused {
+                animation-play-state: paused;
+              }
+            }
+          }
+
+          i {
+            width: 100%;
+            height: 4px;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            background-color: rgba(225, 225, 225, .2);
+            z-index: 9;
+            margin-top: 1rem;
+          }
+    
+          b {
+            width: 0%;
+            height: 4px;
+            background-color: #fff;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            z-index: 9;
+            margin-top: 1rem;
           }
         }
       }
@@ -244,15 +291,16 @@ $m-headerHeight: 3.4375rem;
       .swiper-play {
         width: 1.875rem;
         height: 1.875rem;
-        background: url('../images/clonecoding/main05/icon_slider_play.png') center / .625rem auto no-repeat;
+        background: url('../images/clonecoding/main05/icon_slider_pause.png') center / .625rem auto no-repeat;
         position: absolute;
-        bottom: 2.65rem;
-        right: 32rem;
-        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        z-index: 10;
         cursor: pointer;
 
-        &.play {
-          background-image: url('../images/clonecoding/main05/icon_slider_pause.png');
+        &.paused {
+          background-image: url('../images/clonecoding/main05/icon_slider_play.png');
         }
       }
     }
@@ -890,6 +938,16 @@ $m-headerHeight: 3.4375rem;
   }
 }
 
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
 // breakpoint
 @media (max-width: 1599.98px) {
   #main04 {
@@ -949,18 +1007,16 @@ $m-headerHeight: 3.4375rem;
 
         .swiper-button-wrap {
           width: 100%;
+          padding: 0 2.625rem;
+
+          .swiper-pagination-wrap {
+            width: 100%;
+            height: 7.5rem;
+          }
 
           .btn-view-more-wrap {
             display: none;
           }
-        }
-
-        .swiper-pagination {
-          left: 2.625rem;
-        }
-
-        .swiper-play {
-          right: 2.625rem;
         }
       }
 
@@ -1144,6 +1200,10 @@ $m-headerHeight: 3.4375rem;
                   top: 16%;
                 }
               }
+            }
+
+            .swiper-button-wrap {
+              padding: 0 1.5rem;
             }
           }
         }
