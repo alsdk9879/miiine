@@ -2014,3 +2014,23 @@
     }
   }
 }
+
+@media (max-width: 399.98px) {
+  #main01 {
+    main {
+      .cont1 {
+        .txt-area {
+          h2 {
+            font-size: 2rem;
+          }
+
+          .btns {
+            margin-top: 1rem;
+            height: 3rem;
+            padding: 0 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
