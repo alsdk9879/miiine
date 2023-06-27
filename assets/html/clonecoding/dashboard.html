@@ -12,31 +12,105 @@
 <body id="dashboard">
   <!-- header :: s -->
   <header class="header">
-    <button type="button" class="btn-sidemenu"><i class="icon-menubar"></i></button>
-    <div class="searchbox">
-      <input type="text" placeholder="search"><i class="icon-search"></i>
-    </div>
-    <div class="info-wrap">
-      <button class="btn-notification"><i class="icon-bell"></i></button>
-      <button class="btn-mention"><i class="icon-chattext"></i></button>
-      <button class="btn-profile">
-        <i class="icon-user"></i>
-        <span class="user-name">Admirra John</span>
-      </button>
+    <div class="container">
+      <button type="button" class="btn-sidemenu-open"><i class="icon-menubar"></i></button>
+      <div class="searchbox">
+        <input type="text" placeholder="Search">
+        <button type="button" class="btn-search"><i class="icon-search"></i></button>
+      </div>
+      <div class="info-wrap">
+        <button class="btn-notification" data-new-noti="1"><i class="icon-bell"></i></button>
+        <button class="btn-mention"><i class="icon-chattext"></i></button>
+        <div class="profile-wrap">
+          <div class="img-profile">
+            <img src="../../images/clonecoding/main01/img_thumb1.png" alt="img-profile">
+          </div>
+          <button type="button" class="btn-profile">
+            <span class="user-name">Admirra John</span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
   <!-- header :: e -->
 
   <!-- nav :: s -->
   <nav class="nav">
-    <div class="logo">WeHR</div>
-    <div class="menu-list-wrap">
-      <span class="txt">MAIN MENU</span>
-      <ul class="menu-list">
-        <li class="list-item"></li>
-      </ul>
+    <div class="container">
+      <div class="logo">WeHR</div>
+      <div class="nav-menu-wrap">
+        <ul class="menu-list-wrap">
+          <li class="menu-list">MAIN MENU</li>
+          <li class="menu-list active"><a href="#"><i class="icon-nav-dashboard"></i>Dashboard</a></li>
+          <li class="menu-list"><a href="#"><i class="icon-useradd"></i>Recruitment</a></li>
+          <li class="menu-list"><a href="#"><i class="icon-calendar"></i>Schedule</a></li>
+          <li class="menu-list"><a href="#"><i class="icon-customer-64"></i>Employee</a></li>
+          <li class="menu-list"><a href="#"><i class="icon-chalkboard-teacher-64"></i>Department</a></li>
+        </ul>
+        <ul class="menu-list-wrap">
+          <li class="menu-list">OTHER</li>
+          <li class="menu-list"><a href="#"><i class="icon-user-question-64"></i>Support</a></li>
+          <li class="menu-list"><a href="#"><i class="icon-nav-settings"></i>Settings</a></li>
+        </ul>
+      </div>
+      <button type="button" class="btn-close"><i class="icon-close"></i></button>
     </div>
   </nav>
   <!-- nav :: e -->
+
+  <!-- main :: s -->
+  <main class="main">
+    <div class="container">
+      <h2 class="title">Dashboard</h2>
+      <div class="cont-wrap">
+        <div class="cont-item-wrap basic">
+          <div class="cont-item">
+            <span class="item-title">Available Position</span>
+            <span class="item-data">24</span>
+            <span class="item-desc">4 Urgently needed</span>
+          </div>
+          <div class="cont-item">
+            <span class="item-title">Job Open</span>
+            <span class="item-data">10</span>
+            <span class="item-desc">4 Active hiring</span>
+          </div>
+          <div class="cont-item">
+            <span class="item-title">New Employees</span>
+            <span class="item-data">24</span>
+            <span class="item-desc">4 Department</span>
+          </div>
+        </div>
+        <div class="cont-item-wrap increase">
+          <div class="cont-item">
+            <div class="item-title">Total Employees</div>
+            <div class="item-data-wrap">
+              <span class="item-data">216</span>
+              <div class="img-data">
+                <img src="../../images/clonecoding/dashboard/img_graph.png" alt="img-graph">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- main :: e -->
+
+  <!-- footer :: s -->
+  <footer class="footer">
+
+  </footer>
+  <!-- footer :: e -->
+
+  <!-- script -->
+  <script>
+    document.querySelector('.header .btn-sidemenu-open').addEventListener('click', () => {
+      document.querySelector('.nav').classList.add('open');
+    });
+
+    document.querySelector('.btn-close').addEventListener('click', () => {
+      document.querySelector('.nav').classList.remove('open');
+    });
+  </script>
 </body>
 </html>
