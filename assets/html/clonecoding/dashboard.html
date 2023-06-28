@@ -62,32 +62,180 @@
   <main class="main">
     <div class="container">
       <h2 class="title">Dashboard</h2>
-      <div class="cont-wrap">
-        <div class="cont-item-wrap basic">
-          <div class="cont-item">
-            <span class="item-title">Available Position</span>
-            <span class="item-data">24</span>
-            <span class="item-desc">4 Urgently needed</span>
+      <div class="contents-area">
+        <div class="cont-wrap">
+          <div class="cont-item-wrap basic">
+            <div class="cont-item">
+              <span class="item-title">Available Position</span>
+              <span class="item-data">124</span>
+              <span class="item-desc">4 Urgently needed</span>
+            </div>
+            <div class="cont-item">
+              <span class="item-title">Job Open</span>
+              <span class="item-data">4,124</span>
+              <span class="item-desc">4 Active hiring</span>
+            </div>
+            <div class="cont-item">
+              <span class="item-title">New Employees</span>
+              <span class="item-data">124,124</span>
+              <span class="item-desc">999 Department</span>
+            </div>
           </div>
-          <div class="cont-item">
-            <span class="item-title">Job Open</span>
-            <span class="item-data">10</span>
-            <span class="item-desc">4 Active hiring</span>
+  
+          <div class="cont-item-wrap graph">
+            <div class="cont-item">
+              <div class="item-data-txt">
+                <div class="item-title">Total Employees</div>
+                <span class="item-data">1,216,216</span>
+                <div class="item-desc">120 Men</div>
+                <div class="item-desc">96 Women</div>
+              </div>
+              <div class="item-data-graph">
+                <div class="img-data-graph">
+                  <img src="../../images/clonecoding/dashboard/img_graph.png" alt="img-graph">
+                </div>
+                <span class="txt-data-graph">+2% Past month</span>
+              </div>
+            </div>
+            <div class="cont-item">
+              <div class="item-data-txt">
+                <div class="item-title">Talent Request</div>
+                <span class="item-data">1,216</span>
+                <div class="item-desc">120 Men</div>
+                <div class="item-desc">96 Women</div>
+              </div>
+              <div class="item-data-graph">
+                <div class="img-data-graph">
+                  <img src="../../images/clonecoding/dashboard/img_graph.png" alt="img-graph">
+                </div>
+                <span class="txt-data-graph">+2% Past month</span>
+              </div>
+            </div>
           </div>
-          <div class="cont-item">
-            <span class="item-title">New Employees</span>
-            <span class="item-data">24</span>
-            <span class="item-desc">4 Department</span>
+  
+          <div class="cont-item-wrap announcement">
+            <div class="cont-item">
+              <div class="cont-item-header">
+                <div class="item-title">Announcement</div>
+                <select name="date" id="date-select" class="selectbox">
+                  <option value="" disabled selected>Today, 13 Sep 2021</option>
+                  <option value="1">Today, 13 Sep 2021</option>
+                  <option value="2">Today, 13 Sep 2021</option>
+                </select>
+              </div>
+              <div class="cont-item-body">
+                <div class="item-list">
+                  <div class="list-txt-wrap">
+                    <div class="list-title">Outing schedule for every departement</div>
+                    <div class="date">5 Minutes ago</div>
+                  </div>
+                  <div class="list-btn-wrap">
+                     <button type="button" class="btn-clip"></button>
+                    <button type="button" class="btn-more"></button>
+                  </div>
+                </div>
+                <div class="item-list">
+                  <div class="list-txt-wrap">
+                    <div class="list-title">Meeting HR Department</div>
+                    <div class="date">Yesterday, 12:30 PM</div>
+                  </div>
+                  <div class="list-btn-wrap">
+                     <button type="button" class="btn-clip"></button>
+                    <button type="button" class="btn-more"></button>
+                  </div>
+                </div>
+                <div class="item-list">
+                  <div class="list-txt-wrap">
+                    <div class="list-title">
+                      IT Department need two more talents for UX/UI Designer position 
+                      IT Department need two more talents for UX/UI Designer position
+                    </div>
+                    <div class="date">Yesterday, 09:15 AM</div>
+                  </div>
+                  <div class="list-btn-wrap">
+                     <button type="button" class="btn-clip"></button>
+                    <button type="button" class="btn-more"></button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="cont-item-footer btn-more">Creat a New Schedule</button>
+            </div>
           </div>
         </div>
-        <div class="cont-item-wrap increase">
-          <div class="cont-item">
-            <div class="item-title">Total Employees</div>
-            <div class="item-data-wrap">
-              <span class="item-data">216</span>
-              <div class="img-data">
-                <img src="../../images/clonecoding/dashboard/img_graph.png" alt="img-graph">
+  
+        <div class="cont-wrap">
+          <div class="cont-item-wrap activity">
+            <div class="cont-item">
+              <div class="cont-item-header">
+                <div class="item-title">Recently Activity</div>
               </div>
+              <div class="cont-item-body">
+                <div class="date">10.40 AM, Fri 10 Sept 2021</div>
+                <div class="item-title">Recently Activity</div>
+                <div class="item-desc">Kindly check the requirements and terms of work and make sure everything is right.</div>
+              </div>
+              <div class="cont-item-footer">
+                <div class="item-desc">Today you makes 12 Activity</div>
+                <button type="button" class="btn-more">See All Activity</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cont-item-wrap schedule">
+            <div class="cont-item">
+              <div class="cont-item-header">
+                <div class="item-title">Upcoming Schedule</div>
+                <select name="date" id="date-select" class="selectbox">
+                  <option value="" disabled selected>Today, 13 Sep 2021</option>
+                  <option value="1">Today, 13 Sep 2021</option>
+                  <option value="2">Today, 13 Sep 2021</option>
+                </select>
+              </div>
+              <div class="cont-item-body">
+                <div class="item-list-wrap">
+                  <span class="list-type">Priority</span>
+                  <div class="item-list">
+                    <div class="list-txt-wrap">
+                      <div class="list-title">Outing schedule for every departement</div>
+                      <div class="date">5 Minutes ago</div>
+                    </div>
+                    <div class="list-btn-wrap">
+                      <button type="button" class="btn-more"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-list-wrap">
+                  <span class="list-type">Priority</span>
+                  <div class="item-list">
+                    <div class="list-txt-wrap">
+                      <div class="list-title">Meeting HR Department</div>
+                      <div class="date">Yesterday, 12:30 PM</div>
+                    </div>
+                    <div class="list-btn-wrap">
+                      <button type="button" class="btn-more"></button>
+                    </div>
+                  </div>
+                  <div class="item-list">
+                    <div class="list-txt-wrap">
+                      <div class="list-title">IT Department need two more talents for UX/UI Designer position</div>
+                      <div class="date">Yesterday, 09:15 AM</div>
+                    </div>
+                    <div class="list-btn-wrap">
+                      <button type="button" class="btn-more"></button>
+                    </div>
+                  </div>
+                  <div class="item-list">
+                    <div class="list-txt-wrap">
+                      <div class="list-title">Outing schedule for every departement</div>
+                      <div class="date">5 Minutes ago</div>
+                    </div>
+                    <div class="list-btn-wrap">
+                      <button type="button" class="btn-more"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="cont-item-footer btn-more">See All Announcement</button>
             </div>
           </div>
         </div>
@@ -97,17 +245,26 @@
   <!-- main :: e -->
 
   <!-- footer :: s -->
-  <footer class="footer">
-
-  </footer>
+  <footer class="footer"></footer>
   <!-- footer :: e -->
 
   <!-- script -->
   <script>
+    // sidemenu tab active
+    const navMenuList = document.querySelectorAll('.nav .menu-list');
+
+    navMenuList.forEach((el, index) => {
+      el.addEventListener('click', () => {
+        el.classList.add('active');
+      });
+    });
+
+    // 헤더 좌측상단 버튼 클릭시 sidemenu open
     document.querySelector('.header .btn-sidemenu-open').addEventListener('click', () => {
       document.querySelector('.nav').classList.add('open');
     });
 
+    // sidemenu close
     document.querySelector('.btn-close').addEventListener('click', () => {
       document.querySelector('.nav').classList.remove('open');
     });
