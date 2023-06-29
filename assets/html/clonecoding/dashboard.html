@@ -1,273 +1,376 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/reset.css">
-  <link rel="stylesheet" href="../../css/clonecoding.css">
-  <link rel="stylesheet" href="../../fonts/hri_iconset.css">
-  <title>Dashboard</title>
-</head>
-<body id="dashboard">
-  <!-- header :: s -->
-  <header class="header">
-    <div class="container">
-      <button type="button" class="btn-sidemenu-open"><i class="icon-menubar"></i></button>
-      <div class="searchbox">
-        <input type="text" placeholder="Search">
-        <button type="button" class="btn-search"><i class="icon-search"></i></button>
-      </div>
-      <div class="info-wrap">
-        <button class="btn-notification" data-new-noti="1"><i class="icon-bell"></i></button>
-        <button class="btn-mention"><i class="icon-chattext"></i></button>
-        <div class="profile-wrap">
-          <div class="img-profile">
-            <img src="../../images/clonecoding/main01/img_thumb1.png" alt="img-profile">
-          </div>
-          <button type="button" class="btn-profile">
-            <span class="user-name">Admirra John</span>
-          </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/clonecoding.css" />
+    <title>Dashboard</title>
+  </head>
+  <body id="dashboard">
+    <!-- header :: s -->
+    <header class="header">
+      <div class="container">
+        <button type="button" class="btn-sidemenu-open"><i class="icon-menubar"></i></button>
+        <div class="searchbox">
+          <input type="text" placeholder="Search" />
+          <button type="button" class="btn-search"><i class="icon-search"></i></button>
         </div>
-      </div>
-    </div>
-  </header>
-  <!-- header :: e -->
-
-  <!-- nav :: s -->
-  <nav class="nav">
-    <div class="container">
-      <div class="logo">WeHR</div>
-      <div class="nav-menu-wrap">
-        <ul class="menu-list-wrap">
-          <li class="menu-list">MAIN MENU</li>
-          <li class="menu-list active"><a href="#"><i class="icon-nav-dashboard"></i>Dashboard</a></li>
-          <li class="menu-list"><a href="#"><i class="icon-useradd"></i>Recruitment</a></li>
-          <li class="menu-list"><a href="#"><i class="icon-calendar"></i>Schedule</a></li>
-          <li class="menu-list"><a href="#"><i class="icon-customer-64"></i>Employee</a></li>
-          <li class="menu-list"><a href="#"><i class="icon-chalkboard-teacher-64"></i>Department</a></li>
-        </ul>
-        <ul class="menu-list-wrap">
-          <li class="menu-list">OTHER</li>
-          <li class="menu-list"><a href="#"><i class="icon-user-question-64"></i>Support</a></li>
-          <li class="menu-list"><a href="#"><i class="icon-nav-settings"></i>Settings</a></li>
-        </ul>
-      </div>
-      <button type="button" class="btn-close"><i class="icon-close"></i></button>
-    </div>
-  </nav>
-  <!-- nav :: e -->
-
-  <!-- main :: s -->
-  <main class="main">
-    <div class="container">
-      <h2 class="title">Dashboard</h2>
-      <div class="contents-area">
-        <div class="cont-wrap">
-          <div class="cont-item-wrap basic">
-            <div class="cont-item">
-              <span class="item-title">Available Position</span>
-              <span class="item-data">124</span>
-              <span class="item-desc">4 Urgently needed</span>
+        <div class="info-wrap">
+          <button class="btn-notification" data-new-noti="1"><i class="icon-bell"></i></button>
+          <!-- notification modal :: s -->
+          <div class="pop-notification">
+            <div class="pop-header">
+              <h5 class="title">알림 목록</h5>
             </div>
-            <div class="cont-item">
-              <span class="item-title">Job Open</span>
-              <span class="item-data">4,124</span>
-              <span class="item-desc">4 Active hiring</span>
-            </div>
-            <div class="cont-item">
-              <span class="item-title">New Employees</span>
-              <span class="item-data">124,124</span>
-              <span class="item-desc">999 Department</span>
-            </div>
-          </div>
-  
-          <div class="cont-item-wrap graph">
-            <div class="cont-item">
-              <div class="item-data-txt">
-                <div class="item-title">Total Employees</div>
-                <span class="item-data">1,216,216</span>
-                <div class="item-desc">120 Men</div>
-                <div class="item-desc">96 Women</div>
-              </div>
-              <div class="item-data-graph">
-                <div class="img-data-graph">
-                  <img src="../../images/clonecoding/dashboard/img_graph.png" alt="img-graph">
-                </div>
-                <span class="txt-data-graph">+2% Past month</span>
-              </div>
-            </div>
-            <div class="cont-item">
-              <div class="item-data-txt">
-                <div class="item-title">Talent Request</div>
-                <span class="item-data">1,216</span>
-                <div class="item-desc">120 Men</div>
-                <div class="item-desc">96 Women</div>
-              </div>
-              <div class="item-data-graph">
-                <div class="img-data-graph">
-                  <img src="../../images/clonecoding/dashboard/img_graph.png" alt="img-graph">
-                </div>
-                <span class="txt-data-graph">+2% Past month</span>
-              </div>
-            </div>
-          </div>
-  
-          <div class="cont-item-wrap announcement">
-            <div class="cont-item">
-              <div class="cont-item-header">
-                <div class="item-title">Announcement</div>
-                <select name="date" id="date-select" class="selectbox">
-                  <option value="" disabled selected>Today, 13 Sep 2021</option>
-                  <option value="1">Today, 13 Sep 2021</option>
-                  <option value="2">Today, 13 Sep 2021</option>
-                </select>
-              </div>
-              <div class="cont-item-body">
-                <div class="item-list">
-                  <div class="list-txt-wrap">
-                    <div class="list-title">Outing schedule for every departement</div>
-                    <div class="date">5 Minutes ago</div>
-                  </div>
-                  <div class="list-btn-wrap">
-                     <button type="button" class="btn-clip"></button>
-                    <button type="button" class="btn-more"></button>
-                  </div>
-                </div>
-                <div class="item-list">
-                  <div class="list-txt-wrap">
-                    <div class="list-title">Meeting HR Department</div>
-                    <div class="date">Yesterday, 12:30 PM</div>
-                  </div>
-                  <div class="list-btn-wrap">
-                     <button type="button" class="btn-clip"></button>
-                    <button type="button" class="btn-more"></button>
-                  </div>
-                </div>
-                <div class="item-list">
-                  <div class="list-txt-wrap">
-                    <div class="list-title">
-                      IT Department need two more talents for UX/UI Designer position 
-                      IT Department need two more talents for UX/UI Designer position
+            <div class="pop-body">
+              <ul class="noti-list-wrap">
+                <li class="noti-list active">
+                  <a href="#">
+                    <div class="txt-wrap">
+                      <h6 class="title">공지사항</h6>
+                      <p class="desc">[제목] 글이 등록 되었습니다.</p>
                     </div>
-                    <div class="date">Yesterday, 09:15 AM</div>
-                  </div>
-                  <div class="list-btn-wrap">
-                     <button type="button" class="btn-clip"></button>
-                    <button type="button" class="btn-more"></button>
-                  </div>
+                    <span class="date">1시간전</span>
+                    <button type="button" class="btn-delete"><i class="icon-close"></i></button>
+                  </a>
+                </li>
+                <li class="noti-list">
+                  <a href="#">
+                    <div class="txt-wrap">
+                      <h6 class="title">공지사항</h6>
+                      <p class="desc">[제목] 글이 등록 되었습니다.</p>
+                    </div>
+                    <span class="date">1시간전</span>
+                    <button type="button" class="btn-delete"><i class="icon-close"></i></button>
+                  </a>
+                </li>
+                <li class="noti-list">
+                  <a href="#">
+                    <div class="txt-wrap">
+                      <h6 class="title">공지사항</h6>
+                      <p class="desc">[제목] 글이 등록 되었습니다. [제목] 글이 등록 되었습니다. [제목] 글이 등록 되었습니다.</p>
+                    </div>
+                    <span class="date">1시간전</span>
+                    <button type="button" class="btn-delete"><i class="icon-close"></i></button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="pop-footer">
+              <button type="button" class="btn-all-view">전체보기<i class="icon-arrow-circle-right"></i></button>
+            </div>
+          </div>
+          <!-- notification modal :: e -->
+          <button class="btn-mention"><i class="icon-chattext"></i></button>
+          <div class="profile-wrap">
+            <div class="img-profile">
+              <img src="../../images/clonecoding/main01/img_thumb1.png" alt="img-profile" />
+            </div>
+            <button type="button" class="btn-profile">
+              <span class="user-name">Admirra John</span>
+            </button>
+            <!-- profile modal :: s -->
+            <div class="pop-profile">
+              <div class="pop-header">
+                <div class="img-profile">
+                  <img src="../../images/clonecoding/main01/img_thumb1.png" alt="img-profile" />
+                </div>
+                <div class="user-info-wrap">
+                  <span class="user-name">Admirra John</span>
+                  <span class="user-email">Aiot00@gmail.com</span>
                 </div>
               </div>
-              <button type="button" class="cont-item-footer btn-more">Creat a New Schedule</button>
+              <div class="pop-body">
+                <ul class="profile-list-wrap">
+                  <li class="profile-list active">
+                    <a href="#"><i class="icon-user"></i>마이페이지</a>
+                  </li>
+                  <li class="profile-list">
+                    <a href="#"><i class="icon-profile2"></i>개인정보변경</a>
+                  </li>
+                  <li class="profile-list">
+                    <a href="#"><i class="icon-bell"></i>알람리스트</a>
+                  </li>
+                  <li class="profile-list">
+                    <a href="#"><i class="icon-profile"></i>회사정보</a>
+                  </li>
+                  <li class="profile-list">
+                    <a href="#"><i class="icon-logout"></i>로그아웃</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <!-- profile modal :: e -->
           </div>
         </div>
-  
-        <div class="cont-wrap">
-          <div class="cont-item-wrap activity">
-            <div class="cont-item">
-              <div class="cont-item-header">
-                <div class="item-title">Recently Activity</div>
+      </div>
+    </header>
+    <!-- header :: e -->
+
+    <!-- nav :: s -->
+    <nav class="nav">
+      <div class="container">
+        <div class="logo">WeHR</div>
+        <div class="nav-menu-wrap">
+          <ul class="menu-list-wrap">
+            <li class="menu-list">MAIN MENU</li>
+            <li class="menu-list active">
+              <a href="#"><i class="icon-nav-dashboard"></i>Dashboard</a>
+            </li>
+            <li class="menu-list">
+              <a href="#"><i class="icon-useradd"></i>Recruitment</a>
+            </li>
+            <li class="menu-list">
+              <a href="#"><i class="icon-calendar"></i>Schedule</a>
+            </li>
+            <li class="menu-list">
+              <a href="#"><i class="icon-customer-64"></i>Employee</a>
+            </li>
+            <li class="menu-list">
+              <a href="#"><i class="icon-chalkboard-teacher-64"></i>Department</a>
+            </li>
+          </ul>
+          <ul class="menu-list-wrap">
+            <li class="menu-list">OTHER</li>
+            <li class="menu-list">
+              <a href="#"><i class="icon-user-question-64"></i>Support</a>
+            </li>
+            <li class="menu-list">
+              <a href="#"><i class="icon-nav-settings"></i>Settings</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn-close"><i class="icon-close"></i></button>
+      </div>
+    </nav>
+    <!-- nav :: e -->
+
+    <!-- main :: s -->
+    <main class="main">
+      <div class="container">
+        <h2 class="title">Dashboard</h2>
+        <div class="contents-area">
+          <div class="cont-wrap">
+            <div class="cont-item-wrap basic">
+              <div class="cont-item">
+                <span class="item-title">Available Position</span>
+                <span class="item-data">124</span>
+                <span class="item-desc">4 Urgently needed</span>
               </div>
-              <div class="cont-item-body">
-                <div class="date">10.40 AM, Fri 10 Sept 2021</div>
-                <div class="item-title">Recently Activity</div>
-                <div class="item-desc">Kindly check the requirements and terms of work and make sure everything is right.</div>
+              <div class="cont-item">
+                <span class="item-title">Job Open</span>
+                <span class="item-data">4,124</span>
+                <span class="item-desc">4 Active hiring</span>
               </div>
-              <div class="cont-item-footer">
-                <div class="item-desc">Today you makes 12 Activity</div>
-                <button type="button" class="btn-more">See All Activity</button>
+              <div class="cont-item">
+                <span class="item-title">New Employees</span>
+                <span class="item-data">124,124</span>
+                <span class="item-desc">999 Department</span>
               </div>
             </div>
-          </div>
 
-          <div class="cont-item-wrap schedule">
-            <div class="cont-item">
-              <div class="cont-item-header">
-                <div class="item-title">Upcoming Schedule</div>
-                <select name="date" id="date-select" class="selectbox">
-                  <option value="" disabled selected>Today, 13 Sep 2021</option>
-                  <option value="1">Today, 13 Sep 2021</option>
-                  <option value="2">Today, 13 Sep 2021</option>
-                </select>
+            <div class="cont-item-wrap graph">
+              <div class="cont-item">
+                <div class="item-data-txt">
+                  <div class="item-title">Total Employees</div>
+                  <span class="item-data">1,216,216</span>
+                  <div class="item-desc">120 Men</div>
+                  <div class="item-desc">96 Women</div>
+                </div>
+                <div class="item-data-graph">
+                  <div class="img-data-graph">
+                    <img src="../../images/clonecoding/dashboard/img_graph.png" alt="img-graph" />
+                  </div>
+                  <span class="txt-data-graph">+2% Past month</span>
+                </div>
               </div>
-              <div class="cont-item-body">
-                <div class="item-list-wrap">
-                  <span class="list-type">Priority</span>
+              <div class="cont-item">
+                <div class="item-data-txt">
+                  <div class="item-title">Talent Request</div>
+                  <span class="item-data">1,216</span>
+                  <div class="item-desc">120 Men</div>
+                  <div class="item-desc">96 Women</div>
+                </div>
+                <div class="item-data-graph">
+                  <div class="img-data-graph">
+                    <img src="../../images/clonecoding/dashboard/img_graph.png" alt="img-graph" />
+                  </div>
+                  <span class="txt-data-graph">+2% Past month</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cont-item-wrap announcement">
+              <div class="cont-item">
+                <div class="cont-item-header">
+                  <div class="item-title">Announcement</div>
+                  <select name="date" id="date-select" class="selectbox">
+                    <option value="" disabled selected>Today, 13 Sep 2021</option>
+                    <option value="1">Today, 13 Sep 2021</option>
+                    <option value="2">Today, 13 Sep 2021</option>
+                  </select>
+                </div>
+                <div class="cont-item-body">
                   <div class="item-list">
                     <div class="list-txt-wrap">
                       <div class="list-title">Outing schedule for every departement</div>
                       <div class="date">5 Minutes ago</div>
                     </div>
                     <div class="list-btn-wrap">
+                      <button type="button" class="btn-clip"></button>
                       <button type="button" class="btn-more"></button>
                     </div>
                   </div>
-                </div>
-                <div class="item-list-wrap">
-                  <span class="list-type">Priority</span>
                   <div class="item-list">
                     <div class="list-txt-wrap">
                       <div class="list-title">Meeting HR Department</div>
                       <div class="date">Yesterday, 12:30 PM</div>
                     </div>
                     <div class="list-btn-wrap">
+                      <button type="button" class="btn-clip"></button>
                       <button type="button" class="btn-more"></button>
                     </div>
                   </div>
                   <div class="item-list">
                     <div class="list-txt-wrap">
-                      <div class="list-title">IT Department need two more talents for UX/UI Designer position</div>
+                      <div class="list-title">
+                        IT Department need two more talents for UX/UI Designer position IT Department need two more talents for UX/UI Designer position
+                      </div>
                       <div class="date">Yesterday, 09:15 AM</div>
                     </div>
                     <div class="list-btn-wrap">
-                      <button type="button" class="btn-more"></button>
-                    </div>
-                  </div>
-                  <div class="item-list">
-                    <div class="list-txt-wrap">
-                      <div class="list-title">Outing schedule for every departement</div>
-                      <div class="date">5 Minutes ago</div>
-                    </div>
-                    <div class="list-btn-wrap">
+                      <button type="button" class="btn-clip"></button>
                       <button type="button" class="btn-more"></button>
                     </div>
                   </div>
                 </div>
+                <button type="button" class="cont-item-footer btn-more">Creat a New Schedule</button>
               </div>
-              <button type="button" class="cont-item-footer btn-more">See All Announcement</button>
+            </div>
+          </div>
+
+          <div class="cont-wrap">
+            <div class="cont-item-wrap activity">
+              <div class="cont-item">
+                <div class="cont-item-header">
+                  <div class="item-title">Recently Activity</div>
+                </div>
+                <div class="cont-item-body">
+                  <div class="date">10.40 AM, Fri 10 Sept 2021</div>
+                  <div class="item-title">Recently Activity</div>
+                  <div class="item-desc">Kindly check the requirements and terms of work and make sure everything is right.</div>
+                </div>
+                <div class="cont-item-footer">
+                  <div class="item-desc">Today you makes 12 Activity</div>
+                  <button type="button" class="btn-more">See All Activity</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cont-item-wrap schedule">
+              <div class="cont-item">
+                <div class="cont-item-header">
+                  <div class="item-title">Upcoming Schedule</div>
+                  <select name="date" id="date-select" class="selectbox">
+                    <option value="" disabled selected>Today, 13 Sep 2021</option>
+                    <option value="1">Today, 13 Sep 2021</option>
+                    <option value="2">Today, 13 Sep 2021</option>
+                  </select>
+                </div>
+                <div class="cont-item-body">
+                  <div class="item-list-wrap">
+                    <span class="list-type">Priority</span>
+                    <div class="item-list">
+                      <div class="list-txt-wrap">
+                        <div class="list-title">Outing schedule for every departement</div>
+                        <div class="date">5 Minutes ago</div>
+                      </div>
+                      <div class="list-btn-wrap">
+                        <button type="button" class="btn-more"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-list-wrap">
+                    <span class="list-type">Priority</span>
+                    <div class="item-list">
+                      <div class="list-txt-wrap">
+                        <div class="list-title">Meeting HR Department</div>
+                        <div class="date">Yesterday, 12:30 PM</div>
+                      </div>
+                      <div class="list-btn-wrap">
+                        <button type="button" class="btn-more"></button>
+                      </div>
+                    </div>
+                    <div class="item-list">
+                      <div class="list-txt-wrap">
+                        <div class="list-title">IT Department need two more talents for UX/UI Designer position</div>
+                        <div class="date">Yesterday, 09:15 AM</div>
+                      </div>
+                      <div class="list-btn-wrap">
+                        <button type="button" class="btn-more"></button>
+                      </div>
+                    </div>
+                    <div class="item-list">
+                      <div class="list-txt-wrap">
+                        <div class="list-title">Outing schedule for every departement</div>
+                        <div class="date">5 Minutes ago</div>
+                      </div>
+                      <div class="list-btn-wrap">
+                        <button type="button" class="btn-more"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="cont-item-footer btn-more">See All Announcement</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <!-- main :: e -->
+    </main>
+    <!-- main :: e -->
 
-  <!-- footer :: s -->
-  <footer class="footer"></footer>
-  <!-- footer :: e -->
+    <!-- footer :: s -->
+    <footer class="footer"></footer>
+    <!-- footer :: e -->
 
-  <!-- script -->
-  <script>
-    // sidemenu tab active
-    const navMenuList = document.querySelectorAll('.nav .menu-list');
+    <!-- script -->
+    <script>
+      // sidemenu tab active
+      const navMenuList = document.querySelectorAll('.nav .menu-list');
 
-    navMenuList.forEach((el, index) => {
-      el.addEventListener('click', () => {
-        el.classList.add('active');
+      navMenuList.forEach((el, index) => {
+        el.addEventListener('click', () => {
+          navMenuList.forEach((tabList, tabIndex) => {
+            tabList.classList.remove('active');
+          });
+          navMenuList[index].classList.add('active');
+        });
       });
-    });
 
-    // 헤더 좌측상단 버튼 클릭시 sidemenu open
-    document.querySelector('.header .btn-sidemenu-open').addEventListener('click', () => {
-      document.querySelector('.nav').classList.add('open');
-    });
+      // 헤더 좌측상단 버튼 클릭시 sidemenu open
+      document.querySelector('.header .btn-sidemenu-open').addEventListener('click', () => {
+        document.querySelector('.nav').classList.add('open');
+      });
 
-    // sidemenu close
-    document.querySelector('.btn-close').addEventListener('click', () => {
-      document.querySelector('.nav').classList.remove('open');
-    });
-  </script>
-</body>
+      // sidemenu close
+      document.querySelector('.btn-close').addEventListener('click', () => {
+        document.querySelector('.nav').classList.remove('open');
+      });
+
+      // pop-notification open & close
+      document.querySelector('.header .btn-notification').addEventListener('click', () => {
+        document.querySelector('.header .pop-notification').classList.toggle('open');
+        document.querySelector('.header .pop-profile').classList.remove('open');
+      });
+
+      // pop-profile open & close
+      document.querySelector('.header .btn-profile').addEventListener('click', () => {
+        document.querySelector('.header .pop-profile').classList.toggle('open');
+        document.querySelector('.header .pop-notification').classList.remove('open');
+      });
+    </script>
+  </body>
 </html>
