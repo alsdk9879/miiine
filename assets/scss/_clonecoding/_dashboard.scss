@@ -554,6 +554,7 @@ $footer-height: 5.6875rem;
         .item-data {
           font-size: 2.25rem;
           font-weight: 500;
+          word-break: break-all;
         }
 
         .item-desc {
@@ -589,8 +590,16 @@ $footer-height: 5.6875rem;
             }
           }
 
-          span:not(:first-child) {
-            margin-top: 1rem;
+          span {
+            display: block;
+          }
+
+          .item-data {
+            margin: 1rem 0;
+          }
+
+          .item-desc {
+            margin-top: auto;
           }
         }
       }
@@ -599,24 +608,34 @@ $footer-height: 5.6875rem;
         flex-wrap: wrap;
 
         .cont-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 1rem;
-          // flex: 1 20.3125rem;
           flex: 1 18rem;
+
+          .item-data-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+          }
 
           .item-data {
             font-size: 3rem;
             margin-top: 1.375rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1.375rem;
           }
 
           .item-desc {
             font-size: 0.75rem;
             color: #686868;
-            margin-top: 0.625rem;
+
+            &:last-child {
+              margin-top: 0.625rem;
+            }
           }
+
+          // .item-data-txt {
+          //   display: flex;
+          //   flex-direction: column;
+          // }
 
           .item-data-graph {
             flex: none;
