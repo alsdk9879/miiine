@@ -7291,21 +7291,84 @@ body::-webkit-scrollbar {
     padding-left: 0;
   }
 }
-#weather {
-  padding: 2rem;
-}
-#weather .btn-weather {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-  height: 2.25rem;
-  padding: 0 1rem;
-  border-radius: 1rem;
-  background-color: gray;
-}
 #weather .current-weather {
-  margin-top: 1.5rem;
+  max-width: 26rem;
+  background-color: #eee;
+  min-height: 100vh;
+  padding: 2.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
-#weather .current-weather > * {
-  margin-top: 0.5rem;
+#weather .current-weather .searchbox {
+  width: 100%;
+  height: 2.6875rem;
+  background-color: #f8f8f8;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+#weather .current-weather .searchbox .icon-search {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #444;
+}
+#weather .current-weather .searchbox input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0 2.5rem;
+}
+#weather .current-weather .searchbox input::-webkit-input-placeholder {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #777;
+}
+#weather .current-weather .searchbox input::-moz-placeholder {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #777;
+}
+#weather .current-weather .searchbox input:-ms-input-placeholder {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #777;
+}
+#weather .current-weather .searchbox input::-ms-input-placeholder {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #777;
+}
+#weather .current-weather .searchbox input::placeholder {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #777;
+}
+#weather .current-weather .img-weather {
+  margin-top: 1.25rem;
+}
+#weather .current-weather .img-weather img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weather .current-weather .weather-info {
+  margin-top: 2.5rem;
+}
+#weather .current-weather .weather-info > span {
+  display: block;
+}
+#weather .current-weather .weather-info .temperature {
+  font-size: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#weather .current-weather .weather-info .temperature .data {
+  font-size: 6.25rem;
 }/*# sourceMappingURL=clonecoding.css.map */
