@@ -1,4 +1,16 @@
+
+// font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+// font-family: 'Space Grotesk', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+$asideWidth: 25%;
+
 #weather {
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: default;
+
   // padding: 2rem;
 
   // .btn-weather {
@@ -20,10 +32,11 @@
   // }
 
   .current-weather {
-    max-width: 26rem;
-    background-color: #eee;
+    width: $asideWidth;
+    max-width: 31rem;
     min-height: 100vh;
-    padding: 2.5rem;
+    background-color: #fff;
+    padding: 3.75rem 2.5rem 2.5rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,7 +45,6 @@
     .searchbox {
       width: 100%;
       height: 2.6875rem;
-      background-color: #f8f8f8;
       position: relative;
       border-radius: .5rem;
       overflow: hidden;
@@ -50,6 +62,7 @@
         height: 100%;
         border: none;
         padding: 0 2.5rem;
+        background-color: #f6f6f8;
 
         &::placeholder {
           font-size: .875rem;
@@ -77,13 +90,259 @@
       }
 
       .temperature {
+        font-family: 'Poppins', sans-serif;
         font-size: 4rem;
+        font-weight: 300;
         display: flex;
 
         .data {
           font-size: 6.25rem;
         }
       }
+
+      .sensible-temperature {
+        font-size: 1rem;
+        color: #7f7f7f;
+      }
+
+      .description {
+        margin-top: .75rem;
+        font-size: 1.25rem;
+        color: #000;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        gap: .375rem;
+
+        i {
+          font-size: 1.875rem;
+        }
+      }
+    }
+
+    .date-info {
+      border-top: 1px solid #e0e0e0;
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+
+      .day,
+      .time {
+        font-size: 1.875rem;
+      }
+
+      .time {
+        color: #7f7f7f;
+        margin-left: .5rem;
+      }
+
+      .location {
+        display: block;
+        margin-top: 1.25rem;
+        font-size: 1.25rem;
+      }
     }
   }
+
+  .main {
+    width: calc(100% - $asideWidth);
+    min-height: 100vh;
+    margin-left: $asideWidth;
+    padding: 3.75rem 5rem 2.5rem;
+    background-color: #f6f6f8;
+
+    .content-wrap {
+      margin-top: 2.5rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+
+      &.highlights {
+        .weather-content {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: .875rem;
+
+          .item {
+            &:nth-child(3) {
+              justify-content: center;
+              gap: 2rem;
+            }
+
+            .item-cont {
+              display: flex;
+              align-items: center;
+              gap: .5rem;
+
+              img {
+                width: 3.125rem;
+                height: auto;
+              }
+
+              .txt-wrap {
+                span {
+                  display: block;
+                  font-size: 1rem;
+                }
+
+                .txt {
+                  font-size: .875rem;
+                  color: #7f7f7f;
+                  margin-top: .25rem;
+                }
+              }
+            }
+          }
+
+          .data-num {
+            font-size: 1.875rem;
+            font-weight: 700;
+
+            .unit {
+              font-size: 1rem;
+              font-weight: 400;
+              color: #7f7f7f;
+              margin-left: .25rem;
+            }
+          }
+        }
+      }
+
+      &.this-week {
+        .weather-content {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: .875rem;
+
+          .item {
+            .temperature {
+              .lowest {
+                color: #7f7f7f;
+                margin-left: .5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .tab-weather {
+        .tab-list {
+          display: inline-block;
+          width: 2.5rem;
+          height: 2.5rem;
+          font-family: 'Poppins', sans-serif;
+          font-size: 1.125rem;
+          font-weight: 500;
+          line-height: 40px;
+          color: #000;
+          background-color: #fff;
+          border-radius: 50%;
+          text-align: center;
+          margin-left: .375rem;
+          cursor: pointer;
+
+          &.active {
+            color: #fff;
+            background-color: #1a1a1a;
+          }
+        }
+      }
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .weather-content {
+      margin-top: 1.5rem;
+      position: relative;
+
+      .item {
+        min-width: 9.375rem;
+        height: 12.5rem;
+        padding: 1rem .625rem;
+        background-color: #fff;
+        border-radius: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-top {
+          .txt {
+            font-size: 1rem;
+            color: #000;
+
+            &::after {
+              content: ",";
+            }
+
+            &:nth-child(2) {
+              font-size: .875rem;
+              color: #7f7f7f;
+            }
+          }
+        }
+
+        .img-weather {
+          img {
+            width: 6.25rem;
+            height: auto;
+          }
+
+          .weather-desc {
+            display: block;
+            font-size: .8125rem;
+            color: #7f7f7f;
+            text-align: center;
+            margin-top: .5rem;
+          }
+        }
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #1a1a1a;
+
+        &::after {
+          font-size: 1.875rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1399.98px) {
+  #weather {
+    .main {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #weather {
+    .main {
+      
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
 }
