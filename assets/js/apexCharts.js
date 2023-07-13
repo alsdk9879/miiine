@@ -146,7 +146,14 @@ const barChart2Options = {
     show: false
   },
   xaxis: {
-    categories: ['0%', '1% ~ 20%', '21% ~ 40%', '41% ~ 60%', '61% ~ 80%', '81% ~ 100%'],
+    categories: ['\uF7D4', '\uF7D6', '\uF7D5', '\uF7D4', '\uF7D6', '\uF7D5'],
+    labels: {
+      style: {
+        fontSize: '25px',
+        fontFamily: 'Bootstrap-icons'
+      },
+      offsetY: 5
+    },
     position: 'bottom',
     axisBorder: {
       show: false
