@@ -1,4 +1,3 @@
-
 // font-family: 'Poppins', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
@@ -42,18 +41,26 @@ $asideMaxWidth: 31rem;
     top: 0;
     left: 0;
     bottom: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+      -webkit-appearance: none;
+    }
 
     .searchbox {
       width: 100%;
       height: 2.6875rem;
       position: relative;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       overflow: hidden;
-      
+
       .icon-search {
         position: absolute;
         top: 50%;
-        left: .5rem;
+        left: 0.5rem;
         transform: translateY(-50%);
         color: #444;
       }
@@ -66,7 +73,7 @@ $asideMaxWidth: 31rem;
         background-color: #f6f6f8;
 
         &::placeholder {
-          font-size: .875rem;
+          font-size: 0.875rem;
           font-weight: 700;
           color: #777;
         }
@@ -107,13 +114,13 @@ $asideMaxWidth: 31rem;
       }
 
       .description {
-        margin-top: .75rem;
+        margin-top: 0.75rem;
         font-size: 1.25rem;
         color: #000;
         text-transform: capitalize;
         display: flex;
         align-items: center;
-        gap: .375rem;
+        gap: 0.375rem;
         word-break: break-all;
 
         i {
@@ -134,7 +141,7 @@ $asideMaxWidth: 31rem;
 
       .time {
         color: #7f7f7f;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
       }
 
       .location {
@@ -159,12 +166,11 @@ $asideMaxWidth: 31rem;
         margin-top: 0;
       }
 
-
       &.highlights {
         .weather-content {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: .875rem;
+          gap: 0.875rem;
 
           .item {
             &:nth-child(3) {
@@ -175,7 +181,7 @@ $asideMaxWidth: 31rem;
             .item-cont {
               display: flex;
               align-items: center;
-              gap: .5rem;
+              gap: 0.5rem;
 
               img {
                 width: 3.125rem;
@@ -189,9 +195,9 @@ $asideMaxWidth: 31rem;
                 }
 
                 .txt {
-                  font-size: .875rem;
+                  font-size: 0.875rem;
                   color: #7f7f7f;
-                  margin-top: .25rem;
+                  margin-top: 0.25rem;
                 }
               }
             }
@@ -205,7 +211,7 @@ $asideMaxWidth: 31rem;
               font-size: 1rem;
               font-weight: 400;
               color: #7f7f7f;
-              margin-left: .25rem;
+              margin-left: 0.25rem;
             }
           }
         }
@@ -215,13 +221,13 @@ $asideMaxWidth: 31rem;
         .weather-content {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: .875rem;
+          gap: 0.875rem;
 
           .item {
             .temperature {
               .lowest {
                 color: #7f7f7f;
-                margin-left: .5rem;
+                margin-left: 0.5rem;
               }
             }
           }
@@ -247,7 +253,7 @@ $asideMaxWidth: 31rem;
           background-color: #fff;
           border-radius: 50%;
           text-align: center;
-          margin-left: .375rem;
+          margin-left: 0.375rem;
           cursor: pointer;
 
           &.active {
@@ -271,7 +277,7 @@ $asideMaxWidth: 31rem;
       .item {
         min-width: 9.375rem;
         height: 12.5rem;
-        padding: 1rem .625rem;
+        padding: 1rem 0.625rem;
         background-color: #fff;
         border-radius: 1.25rem;
         display: flex;
@@ -285,11 +291,11 @@ $asideMaxWidth: 31rem;
             color: #000;
 
             &::after {
-              content: ",";
+              content: ',';
             }
 
             &:nth-child(2) {
-              font-size: .875rem;
+              font-size: 0.875rem;
               color: #7f7f7f;
             }
           }
@@ -303,10 +309,10 @@ $asideMaxWidth: 31rem;
 
           .weather-desc {
             display: block;
-            font-size: .8125rem;
+            font-size: 0.8125rem;
             color: #7f7f7f;
             text-align: center;
-            margin-top: .5rem;
+            margin-top: 0.5rem;
           }
         }
       }
@@ -362,9 +368,42 @@ $asideMaxWidth: 31rem;
 
 @media (max-width: 991.98px) {
   #weather {
+    .current-weather {
+      padding-top: 2rem;
+
+      .weather-info {
+        .temperature {
+          .data {
+            font-size: 4.25rem;
+          }
+        }
+
+        .description {
+          align-items: flex-start;
+          font-size: 1rem;
+          margin-top: 1rem;
+
+          i {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .date-info {
+        .day,
+        .time {
+          font-size: 1.25rem;
+        }
+
+        .location {
+          margin-top: 0.75rem;
+          font-size: 1.25rem;
+        }
+      }
+    }
+
     .main {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding: 2rem 1rem;
 
       .content-wrap {
         &.this-week {
@@ -378,7 +417,71 @@ $asideMaxWidth: 31rem;
 }
 
 @media (max-width: 767.98px) {
+  #weather {
+    .main {
+      .content-wrap {
+        &.highlights,
+        &.this-week {
+          .weather-content {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+    }
+  }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
+  #weather {
+    .current-weather {
+      position: relative;
+      min-height: fit-content;
+      bottom: initial;
+      width: 100%;
+      max-width: 100%;
+      padding-top: 2rem;
+      text-align: center;
+
+      .img-weather {
+        width: auto;
+        height: 12.5rem;
+        text-align: center;
+
+        img {
+          width: initial;
+        }
+      }
+
+      .weather-info {
+        .temperature {
+          justify-content: center;
+          font-size: 4rem;
+
+          .data {
+            font-size: 6.25rem;
+          }
+        }
+
+        .sensible-temperature {
+          font-size: 1rem;
+          margin-top: 1.5rem;
+        }
+
+        .description {
+          justify-content: center;
+        }
+      }
+
+      .date-info {
+        .location {
+          margin-top: 1.25rem;
+        }
+      }
+    }
+
+    .main {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 }
