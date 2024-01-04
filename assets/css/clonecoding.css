@@ -6319,7 +6319,6 @@ body::-webkit-scrollbar {
   right: 0;
   width: calc(100% - 15.125rem);
   height: 5.6875rem;
-  padding-left: 15.125rem;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   background-color: #fff;
@@ -7125,7 +7124,6 @@ body::-webkit-scrollbar {
   #dashboard .header {
     width: calc(100% - 5.625rem);
     height: 3.875rem;
-    padding-left: 5.625rem;
   }
   #dashboard .header .container {
     margin-left: 0;

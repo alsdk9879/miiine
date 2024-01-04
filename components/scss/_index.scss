@@ -23,6 +23,15 @@ body * {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #222;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 header {
   width: 100%;
   background-color: #1f1d47;

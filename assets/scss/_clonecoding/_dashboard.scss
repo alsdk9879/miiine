@@ -27,7 +27,7 @@ $footer-height: 5.6875rem;
     right: 0;
     width: calc(100% - $nav-max-width);
     height: $header-height-lg;
-    padding-left: $nav-max-width;
+    // padding-left: $nav-max-width;
     transition: all 0.2s ease-in-out;
     background-color: #fff;
     z-index: 99;
@@ -870,7 +870,7 @@ $footer-height: 5.6875rem;
     .header {
       width: calc(100% - $nav-min-width);
       height: $header-height-md;
-      padding-left: $nav-min-width;
+      // padding-left: $nav-min-width;
 
       .container {
         margin-left: 0;
