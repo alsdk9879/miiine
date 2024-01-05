@@ -9,8 +9,8 @@ $nav-width: 21.6875rem;
 $nav-width-fold: 7rem;
 
 // color
-$primary-color: #2564CF;
-$gray-color-400: #FAF9F8;
+$primary-color: #2564cf;
+$gray-color-400: #faf9f8;
 $gray-color-500: #414141;
 
 #todolist {
@@ -18,6 +18,7 @@ $gray-color-500: #414141;
   background-color: $gray-color-400;
   width: 100%;
   height: 100vh;
+  cursor: default;
 
   .header {
     position: fixed;
@@ -101,10 +102,10 @@ $gray-color-500: #414141;
             height: 3.5625rem;
             padding: 0 2rem;
             box-shadow: 0 5px 8px -5px rgba(0, 0, 0, 0.25);
-            border-top-left-radius: .625rem;
-            border-top-right-radius: .625rem;
+            border-top-left-radius: 0.625rem;
+            border-top-right-radius: 0.625rem;
           }
-          
+
           .btn-add {
             position: absolute;
             top: 50%;
@@ -118,13 +119,34 @@ $gray-color-500: #414141;
           padding: 0 2rem;
           display: flex;
           align-items: center;
-          gap: .5rem;
+          gap: 2rem;
           box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.25);
-          border-bottom-left-radius: .625rem;
-          border-bottom-right-radius: .625rem;
+          border-bottom-left-radius: 0.625rem;
+          border-bottom-right-radius: 0.625rem;
 
           button {
+            position: relative;
+            height: 100%;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #000;
+
             &.active {
+              color: $primary-color;
+              font-weight: 500;
+
+              &::after {
+                content: '';
+                display: block;
+                border-bottom: 3px solid $primary-color;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+              }
+            }
+
+            &:hover {
               color: $primary-color;
             }
           }
@@ -138,23 +160,23 @@ $gray-color-500: #414141;
           height: 3.5625rem;
           padding: 0 2rem;
           box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.25);
-          border-radius: .625rem;
+          border-radius: 0.625rem;
           background-color: #fff;
           display: flex;
           align-items: center;
-          margin-top: .5rem;
+          margin-top: 0.5rem;
 
           &:first-child {
             margin-top: 0;
           }
-          
+
           &.done {
             opacity: 0.5;
 
             .btn-check {
               i {
                 &::before {
-                  content: "\f058";
+                  content: '\f058';
                 }
               }
             }
@@ -196,7 +218,6 @@ $gray-color-500: #414141;
     }
   }
 }
-
 
 /*
 * responsive

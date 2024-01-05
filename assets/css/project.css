@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 #todolist {
   font-family: "Roboto", sans-serif;
-  background-color: #FAF9F8;
+  background-color: #faf9f8;
   width: 100%;
   height: 100vh;
+  cursor: default;
 }
 #todolist .header {
   position: fixed;
@@ -34,7 +35,7 @@
 }
 #todolist .header .header-wrap .title {
   font-size: 1.5rem;
-  color: #2564CF;
+  color: #2564cf;
 }
 #todolist .nav {
   position: fixed;
@@ -67,7 +68,7 @@
   transition: all 0.5s ease-in-out;
 }
 #todolist .main i {
-  color: #2564CF;
+  color: #2564cf;
 }
 #todolist .main .main-wrap {
   padding: 2rem;
@@ -101,14 +102,34 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
   -webkit-box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.25);
   border-bottom-left-radius: 0.625rem;
   border-bottom-right-radius: 0.625rem;
 }
+#todolist .main .main-wrap .input-task .btn-tab button {
+  position: relative;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+}
 #todolist .main .main-wrap .input-task .btn-tab button.active {
-  color: #2564CF;
+  color: #2564cf;
+  font-weight: 500;
+}
+#todolist .main .main-wrap .input-task .btn-tab button.active::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #2564cf;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+#todolist .main .main-wrap .input-task .btn-tab button:hover {
+  color: #2564cf;
 }
 #todolist .main .main-wrap .task-list {
   margin-top: 2rem;

@@ -1,28 +1,47 @@
 /*
-* layout
-*/
+ * layout
+ */
 document.querySelector('.header .btn-menubar').addEventListener('click', () => {
   document.querySelector('.nav').classList.add('open');
 });
 
 document.querySelector('.nav .btn-menubar').addEventListener('click', () => {
-  if( window.innerWidth > 1299.98 ) {
+  if (window.innerWidth > 1299.98) {
     document.querySelector('#todolist').classList.toggle('fold');
   } else {
     document.querySelector('.nav').classList.toggle('open');
-  };
+  }
 });
 
 window.addEventListener('resize', () => {
-  if( window.innerWidth <= 1299.98 ) {
+  if (window.innerWidth <= 1299.98) {
     document.querySelector('#todolist').classList.remove('fold');
-  };
+  }
 });
 
+/*
+ * tab
+ */
+const tabList = document.querySelectorAll('.btn-tab button');
+const tabCont = document.querySelectorAll('.task-list');
+
+tabList.forEach((tab, index) => {
+  tab.addEventListener('click', function () {
+    tabList.forEach((el) => {
+      el.classList.remove('active');
+    });
+    tabList[index].classList.add('active');
+
+    tabCont.forEach((cont) => {
+      cont.classList.remove('active');
+    });
+    // tabCont[index].classList.add('active');
+  });
+});
 
 /*
-* to do list
-*/
+ * to do list
+ */
 
 //유저가 값을 입력한다.
 //'+ 버튼'을 클릭하면, 할 일이 추가된다.
@@ -77,10 +96,10 @@ window.addEventListener('resize', () => {
 // input task value
 let input = document.querySelector('.inputbox input');
 let btnAdd = document.querySelector('.inputbox .btn-add');
-let taskList = [];  // taskList 라는 배열에 추가된 할 일을 담는다.
+let taskList = []; // taskList 라는 배열에 추가된 할 일을 담는다.
 
 // task-list check
-document.querySelectorAll('.btn-check').forEach(el => {
+document.querySelectorAll('.btn-check').forEach((el) => {
   el.addEventListener('click', () => {
     el.parentNode.classList.toggle('done');
   });
@@ -91,7 +110,7 @@ const btnTab = document.querySelectorAll('.input-task .btn-wrap button');
 
 btnTab.forEach((el, index) => {
   el.addEventListener('click', () => {
-    btnTab.forEach(el => {
+    btnTab.forEach((el) => {
       el.classList.remove('active');
     });
     btnTab[index].classList.add('active');
