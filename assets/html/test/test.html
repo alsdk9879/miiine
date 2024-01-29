@@ -1,182 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <h2 class="h2">go</h2>
+      </div>
+    </div>
+    <script>
+      const div = document.querySelector('.h2');
 
-  <script>
-    // Data
-    let products = [
-      {
-        id: 'apple',
-        price: 500,
-        description: '맛있는 사과',
-        amount: 10,
-      },
-      {
-        id: 'banana',
-        price: 5000,
-        description: '맛있는 바나나',
-        amount: 1,
-      },
-      {
-        id: 'orange',
-        price: 2500,
-        description: '맛있는 오렌지',
-        amount: 3,
-      },
-      {
-        id: 'avocado',
-        price: 3000,
-        description: '맛있는 아보카도',
-        amount: 9,
-      },
-      {
-        id: 'peach',
-        price: 1500,
-        description: '맛있는 복숭아',
-        amount: 2,
-      },
-      {
-        id: 'kiwi',
-        price: 1000,
-        description: '맛있는 키위',
-        amount: 4,
-      },
-    ];
-
-    let productNamesArr = [
-      '사과',
-      '바나나',
-      '오렌지',
-      '아보카도',
-      '복숭아',
-      '키위',
-    ];
-
-    let productNamesObj = {
-      apple: '사과',
-      banana: '바나나',
-      orange: '오렌지',
-      abocado: '아보카도',
-      peach: '복숭아',
-      kiwi: '키위',
-    };
-
-    // Answer
-    // 1
-    const answer1 = products.find(e => e.id === 'apple');
-    // console.log('answer1 : ', answer1);
-
-    // 2
-    const indexOrange = e => e.id === 'orange';
-    const answer2 = products.findIndex(indexOrange);
-    // console.log('answer2 : ', answer2);
-
-    // 3
-    const answer3_1 = products.map(e => e.id);
-    // console.log('answer3_1 : ', answer3_1);
-
-    products.forEach(e => {
-      e.name = productNamesObj[e.id]
-    });
-    // console.log('answer3_2 : ', products);
-
-    // 4
-    const productsID = products.map(e => e.id);
-    const answer4_1 = productsID;
-    // console.log('answer4_1 : ', answer4_1);
-    // console.log('answer4_2 : ', products);
-
-    // 5
-    const answer5_1 = productNamesArr.includes('파인애플');
-    // console.log('answer5 : ', answer5_1);
-
-    const answer5_2 = productNamesArr.includes('오렌지');
-    // console.log('answer5_2 : ', answer5_2);
-
-    // 6
-    const answer6 = productNamesArr.indexOf('아보카도');
-    // console.log('answer6 : ', answer6);
-
-    // 7
-    const answer7 = products.filter(e => e.amount <= 5);
-    // console.log('answer7 : ', answer7);
-
-    // 8
-    // const answer8_1 = products.sort((a, b) => {
-    //   console.log(a)
-    //   if (a.price > b.price) {
-    //     return 1;
-    //   }
-    //   if (a.price < b.price) {
-    //     return -1;
-    //   }
-    //   return 0;
-    // });
-    
-    // const answer8_2 = products.sort((a, b) => {
-    //   if (a.price < b.price) {
-    //     return 1;
-    //   }
-    //   if (a.price > b.price) {
-    //     return -1;
-    //   }
-    //   return 0;
-    // });
-    // console.log('answer8_1 :', answer8_1);
-    // console.log('answer8_2 :', answer8_2);
-
-    // 9
-    const sum = products.map(e => e.price * e.amount);
-    const answer9 = sum.reduce((accumulator, currentValue) => accumulator + currentValue);
-    // console.log('answer9 :', answer9);
-
-    // 10
-    const newItem = {
-      id: "pineapple",
-      price: 8000,
-      description: "새로운 파인애플",
-      amount: 11
-    };
-
-    // const answer10_1 = products.push(newItem);   // push -> 리턴값 : 길이
-    const answer10_2 = products.concat(newItem);
-    // console.log('answer10_1 :', products);
-    // console.log('answer10_2 :', answer10_2);
-
-    // 11
-    const answer11 = products.length;
-    // console.log('answer11 :', answer11);
-
-    // 12
-    const answer12 = products.map(e => e.description.replace('맛있는', '달콤한'));
-    // console.log('answer12 :', answer12);
-
-    // 13
-    const answer13 = productNamesArr.join('-');
-    // console.log('answer13 :', answer13);
-
-    // 14
-    // console.log('answer14 :', answer13.substring(10, 16));
-
-    // 15
-    // console.log('answer15 :', answer13.split('-'));
-
-    // jeju-1
-    const nums = [100, 200, 300, 400, 500];
-    nums.pop();
-    nums.pop();
-    console.log('answerJ1 :', nums);
-
-    // jeju-2
-    const arr = [200, 100, 300];
-    arr.splice(2, 0, 10000);
-    console.log(arr);
-  </script>
-</body>
+      console.log(div.closest('.parent'));
+    </script>
+  </body>
 </html>
