@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- login :: s -->
+    <form id="login-form" class="hidden">
+      <input required maxlength="15" type="text" class="input" placeholder="write your name" />
+      <button class="btn">login</button>
+    </form>
+
+    <h1 id="greeting" class="hidden"></h1>
+    <!-- login :: e -->
+
+    <!-- clock :: s -->
+    <h2 id="clock"></h2>
+    <!-- clock :: e -->
+
+    <!-- script -->
+    <script>
+      // login
+      const loginForm = document.querySelector('#login-form');
+      const loginInput = document.querySelector('#login-form .input');
+      const greeting = document.querySelector('#greeting');
+
+      const HIDDEN_CLASSNAME = 'hidden'; // 일반적으로 string만 포함된 변수는 대문자로 표기, string을 저장하고 싶을 때 사용
+      const USERNAME_KEY = 'username';
+
+      function onLoginSubmit(event) {
+        event.preventDefault();
+        loginForm.classList.add(HIDDEN_CLASSNAME);
+        const username = loginInput.value;
+        localStorage.setItem(USERNAME_KEY, username);
+        paintGreetings(username);
+      }
+
+      function paintGreetings(username) {
+        greeting.innerText = `Hello ${username}`;
+        greeting.classList.remove(HIDDEN_CLASSNAME);
+      }
+
+      const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+      if (savedUsername === null) {
+        loginForm.classList.remove(HIDDEN_CLASSNAME);
+        loginForm.addEventListener('submit', onLoginSubmit);
+      } else {
+        paintGreetings(savedUsername);
+      }
+
+      // clock
+      const clock = document.querySelector('#clock');
+
+      function getClock() {
+        const date = new Date();
+
+        clock.innerText = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+      }
+
+      getClock();
+      setInterval(getClock, 1000);
+    </script>
+  </body>
+</html>
