@@ -25,6 +25,14 @@
     <h2 id="clock"></h2>
     <!-- clock :: e -->
 
+    <!-- to do list :: s -->
+    <form id="todo-form">
+      <input type="text" placeholder="write a to do" class="input" />
+    </form>
+
+    <ul id="todo-list"></ul>
+    <!-- to do list :: e -->
+
     <!-- script -->
     <script>
       // login
@@ -39,7 +47,7 @@
         event.preventDefault();
         loginForm.classList.add(HIDDEN_CLASSNAME);
         const username = loginInput.value;
-        localStorage.setItem(USERNAME_KEY, username);
+        localStorage.setItem(USERNAME_KEY, username); // localStorage : 브라우저에 값을 저장하는 공간 / .setItem() : 브라우저에 값을 저장
         paintGreetings(username);
       }
 
@@ -62,12 +70,56 @@
 
       function getClock() {
         const date = new Date();
+        const hour = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getHours()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
 
-        clock.innerText = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+        clock.innerText = `${hour}:${minutes}:${seconds}`;
       }
-
       getClock();
       setInterval(getClock, 1000);
+
+      // to do list
+      const toDoForm = document.querySelector('#todo-form');
+      const toDoInput = toDoForm.querySelector('.input');
+      const toDoList = document.querySelector('#todo-list');
+
+      const toDos = [];
+
+      function saveToDos() {
+        localStorage.setItem('todos', String(toDos));
+      }
+
+      function deleteToDo(event) {
+        const li = event.target.parentElement;
+        li.remove();
+      }
+
+      function paintToDo(newToDo) {
+        const li = document.createElement('li');
+
+        const span = document.createElement('span');
+        span.innerText = newToDo;
+
+        const btnDelete = document.createElement('button');
+        btnDelete.innerText = 'delete';
+        btnDelete.addEventListener('click', deleteToDo);
+
+        li.appendChild(span);
+        li.appendChild(btnDelete);
+        toDoList.appendChild(li);
+      }
+
+      function handleToDoSubmit(event) {
+        event.preventDefault();
+        const newToDo = toDoInput.value; // input의 현재 value를 새로운 변수(newToDo)에 저장
+        toDoInput.value = ''; // input칸 비움 (상단 newToDo변수랑 상관없음)
+        toDos.push(newToDo);
+        saveToDos();
+        paintToDo(newToDo);
+      }
+
+      toDoForm.addEventListener('submit', handleToDoSubmit);
     </script>
   </body>
 </html>
