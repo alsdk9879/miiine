@@ -20,7 +20,7 @@ window.addEventListener('resize', () => {
 });
 
 /*
- * tab
+ * tab menu
  */
 const tabList = document.querySelectorAll('.btn-tab button');
 const tabCont = document.querySelectorAll('.task-list');

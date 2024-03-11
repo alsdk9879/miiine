@@ -27,7 +27,7 @@
 
     <!-- to do list :: s -->
     <form id="todo-form">
-      <input type="text" placeholder="write a to do" class="input" />
+      <input required type="text" placeholder="write a To Do" class="input" />
     </form>
 
     <ul id="todo-list"></ul>
@@ -47,7 +47,7 @@
         event.preventDefault();
         loginForm.classList.add(HIDDEN_CLASSNAME);
         const username = loginInput.value;
-        localStorage.setItem(USERNAME_KEY, username); // localStorage : 브라우저에 값을 저장하는 공간 / .setItem() : 브라우저에 값을 저장
+        localStorage.setItem(USERNAME_KEY, username); // localStorage : 브라우저에 값을 저장하는 공간 (오로지 string만 저장할 수 있음) / .setItem() : 브라우저에 값을 저장
         paintGreetings(username);
       }
 
@@ -84,10 +84,13 @@
       const toDoInput = toDoForm.querySelector('.input');
       const toDoList = document.querySelector('#todo-list');
 
-      const toDos = [];
+      const TODOS_KEY = 'todos';
 
+      let toDos = [];
+
+      // toDos array를 localStorage에 저장
       function saveToDos() {
-        localStorage.setItem('todos', String(toDos));
+        localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); // JSON.stringify() : 값(array or object)을 string으로 저장하고 싶을 때 사용 / JSON.parse() : string -> array or object 로 변환 (=javascript가 이해할 수 있는 살아있는 array로 만들어줌)
       }
 
       function deleteToDo(event) {
@@ -113,13 +116,28 @@
       function handleToDoSubmit(event) {
         event.preventDefault();
         const newToDo = toDoInput.value; // input의 현재 value를 새로운 변수(newToDo)에 저장
-        toDoInput.value = ''; // input칸 비움 (상단 newToDo변수랑 상관없음)
-        toDos.push(newToDo);
+        toDoInput.value = ''; // input칸 비움 (상단 변수newToDo랑 상관없음)
+        const newToDoObj = {
+          text: newToDo,
+          id: Data.now(),
+        };
+        toDos.push(newToDoObj);
         saveToDos();
         paintToDo(newToDo);
       }
 
       toDoForm.addEventListener('submit', handleToDoSubmit);
+
+      const savedToDos = localStorage.getItem(TODOS_KEY); // 단지 string임
+
+      if (savedToDos !== null) {
+        const parsedToDos = JSON.parse(savedToDos); // array
+        toDos = parsedToDos;
+        parsedToDos.forEach((item) => {
+          paintToDo(item);
+          localStorage.removeItem(item);
+        });
+      }
     </script>
   </body>
 </html>

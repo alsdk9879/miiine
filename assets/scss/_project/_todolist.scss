@@ -13,7 +13,7 @@ $primary-color: #2564cf;
 $gray-color-400: #faf9f8;
 $gray-color-500: #414141;
 
-#todolist {
+#toDoList {
   font-family: 'Roboto', sans-serif;
   background-color: $gray-color-400;
   width: 100%;
@@ -223,7 +223,7 @@ $gray-color-500: #414141;
 * responsive
 */
 @media (max-width: 1299.98px) {
-  #todolist {
+  #toDoList {
     .header,
     .main {
       padding-left: 0;
