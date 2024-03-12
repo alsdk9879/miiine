@@ -9,6 +9,32 @@
       .hidden {
         display: none;
       }
+
+      .bg {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(104, 55, 104);
+        position: relative;
+      }
+
+      .gradient {
+        width: 250px;
+        height: 150px;
+        /* background-color: rgb(119, 91, 119); */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+
+        border: 2px solid transparent;
+        border-radius: 2.25rem;
+        background-image: linear-gradient(208deg, rgb(104, 55, 104) 0%, rgb(173, 162, 110) 100%),
+          linear-gradient(to bottom, rgb(114, 191, 87), rgb(116, 191, 86)), linear-gradient(to left, rgb(204, 233, 187), rgb(187, 210, 224)),
+          linear-gradient(to top, rgb(84, 144, 184), rgb(80, 138, 176));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+      }
     </style>
   </head>
   <body>
@@ -32,6 +58,10 @@
 
     <ul id="todo-list"></ul>
     <!-- to do list :: e -->
+
+    <div class="bg">
+      <div class="gradient"></div>
+    </div>
 
     <!-- script -->
     <script>
@@ -100,9 +130,10 @@
 
       function paintToDo(newToDo) {
         const li = document.createElement('li');
+        li.id = newToDo.id;
 
         const span = document.createElement('span');
-        span.innerText = newToDo;
+        span.innerText = newToDo.text;
 
         const btnDelete = document.createElement('button');
         btnDelete.innerText = 'delete';
@@ -116,14 +147,14 @@
       function handleToDoSubmit(event) {
         event.preventDefault();
         const newToDo = toDoInput.value; // input의 현재 value를 새로운 변수(newToDo)에 저장
-        toDoInput.value = ''; // input칸 비움 (상단 변수newToDo랑 상관없음)
+        toDoInput.value = ''; // submit 이후 input칸 비워주기 (상단 변수newToDo랑 상관없음)
         const newToDoObj = {
           text: newToDo,
-          id: Data.now(),
+          id: Date.now(),
         };
         toDos.push(newToDoObj);
+        paintToDo(newToDoObj);
         saveToDos();
-        paintToDo(newToDo);
       }
 
       toDoForm.addEventListener('submit', handleToDoSubmit);
@@ -133,11 +164,10 @@
       if (savedToDos !== null) {
         const parsedToDos = JSON.parse(savedToDos); // array
         toDos = parsedToDos;
-        parsedToDos.forEach((item) => {
-          paintToDo(item);
-          localStorage.removeItem(item);
-        });
+        parsedToDos.forEach(paintToDo);
       }
+
+      // .filter() : array의 item을 유지하고 싶으면 true를 반환해야 함.
     </script>
   </body>
 </html>
