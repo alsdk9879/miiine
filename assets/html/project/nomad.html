@@ -59,13 +59,22 @@
     <ul id="todo-list"></ul>
     <!-- to do list :: e -->
 
+    <!-- weather :: s -->
+    <div id="weather">
+      <span class="name"></span>
+      <span class="weather"></span>
+    </div>
+    <!-- weather :: e -->
+
     <div class="bg">
       <div class="gradient"></div>
     </div>
 
     <!-- script -->
     <script>
-      // login
+      /*
+        login
+      */
       const loginForm = document.querySelector('#login-form');
       const loginInput = document.querySelector('#login-form .input');
       const greeting = document.querySelector('#greeting');
@@ -95,7 +104,9 @@
         paintGreetings(savedUsername);
       }
 
-      // clock
+      /*
+        clock
+      */
       const clock = document.querySelector('#clock');
 
       function getClock() {
@@ -109,7 +120,9 @@
       getClock();
       setInterval(getClock, 1000);
 
-      // to do list
+      /*
+        to do list
+      */
       const toDoForm = document.querySelector('#todo-form');
       const toDoInput = toDoForm.querySelector('.input');
       const toDoList = document.querySelector('#todo-list');
@@ -119,13 +132,16 @@
       let toDos = [];
 
       // toDos array를 localStorage에 저장
+      // * JSON (Javascript Object Notation) : 문자 기반의 데이터 교환 형식, typeof로 데이터 타입을 확인하면 string (key, value 둘 다 string임.)
       function saveToDos() {
-        localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); // JSON.stringify() : 값(array or object)을 string으로 저장하고 싶을 때 사용 / JSON.parse() : string -> array or object 로 변환 (=javascript가 이해할 수 있는 살아있는 array로 만들어줌)
+        localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); // JSON.stringify() : 값(array or object)을 string으로 저장하고 싶을 때 사용 (=값을 요청할 때 사용) / JSON.parse() : string -> array or object 로 변환 (=javascript가 이해할 수 있는 살아있는 array로 만들어줌)
       }
 
       function deleteToDo(event) {
         const li = event.target.parentElement;
         li.remove();
+        toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id)); // .filter() : array의 item을 유지하고 싶으면 true를 반환해야 함. / 기존 array를 변경시키지 않고 새로운 array로 생성
+        saveToDos();
       }
 
       function paintToDo(newToDo) {
@@ -167,7 +183,36 @@
         parsedToDos.forEach(paintToDo);
       }
 
-      // .filter() : array의 item을 유지하고 싶으면 true를 반환해야 함.
+      /*
+        weather
+      */
+      // ** Live Server 이용할 경우, host 설정이 개인ip로 입력되어 있을 것임.
+      // -> 위 경우, Geolocation API 개인정보보안 때문에 작동하지 않고 warning이 뜰 것임. (Geolocation API는 https(기본), localhost(예외) 에서만 작동됨.)
+      // -> 그러므로 localhost:port/index.html(예시)로 접속하면 정상 작동됨.
+
+      const API_KEY = '178ac4f0b3ef7684b868f2df429ea46d';
+
+      function onGeoSuccess(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`; // &units=metric : 기온 단위 변경
+        fetch(url).then((resonse) =>
+          resonse.json().then((data) => {
+            // .json() : 자동으로 응답이 JSON으로 구문 분석되게 해줌. (따로 JSON.parse() 사용할 필요없음.)
+            const city = document.querySelector('#weather .name');
+            const weather = document.querySelector('#weather .weather');
+
+            city.innerText = data.name;
+            weather.innerText = data.weather[0].main;
+          })
+        ); // fetch() : 자바스크립트에서 제공하는, 비동기를 간편하게 처리할 수 있도록 도와주는 객체. / fetch()는 promise(= 당장 뭔가 일어나지 않고 시간이 좀 걸린 뒤 일어나는 것) -> 그러므로 .then()을 사용해주면 됨.
+      }
+
+      function onGeoError() {
+        alert('error!');
+      }
+
+      navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError); // .getCurrentPosition() : 사용자의 현재 위치 호출 / 좌측 코드로 wifi, 위치, GPS 등 브라우저에서 위치 좌표를 줌. / 위치 파악 성공시 호출할 콜백함수, 실패시 콜백함수가 있어야 함. (마지막 인자는 옵션)
     </script>
   </body>
 </html>
