@@ -1,6 +1,23 @@
 // component
 @import './_common/variables';
+@import './_common/default';
 @import './_common/component';
 @import './_common/tables';
 @import './_common/modal';
 @import './_common/layout';
+
+// clonecoding
+@import './_clonecoding/main01';
+@import './_clonecoding/main02';
+@import './_clonecoding/hri_list';
+@import './_clonecoding/main03';
+@import './_clonecoding/main04';
+@import './_clonecoding/main05';
+@import './_clonecoding/dashboard';
+@import './_clonecoding/weather';
+
+// toy project
+@import './_toyproject/todolist';
+
+// portfolio
+@import './_portfolio/portfolio01';

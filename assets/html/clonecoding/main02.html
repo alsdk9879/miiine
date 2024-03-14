@@ -1,426 +1,434 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../fonts/hri_iconset.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="../../css/clonecoding.css">
-  <title>Tailwind</title>
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .cont3-wrap {
-        @apply rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[142.62%] after:w-full after:block after:bg-gray-200;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../fonts/hri_iconset.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Tailwind</title>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .cont3-wrap {
+          @apply rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[142.62%] after:w-full after:block after:bg-gray-200;
+        }
+
+        .cont3-img {
+          @apply w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute;
+        }
       }
-
-      .cont3-img {
-        @apply w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div id="main02" class="px-4 md:px-8 xl:px-28">
-    <!-- header :: s -->
-    <header class="flex justify-between items-center h-20 py-5 max-w-[90rem] mx-auto">
-      <div class="mr-9">현대경제연구원</div>
-      <div class="w-[26.1875rem] h-10 bg-gray-200 text-xs relative mr-auto lg:inline-block hidden">
-        <input type="text" placeholder="찾으는 강의가 있나요?" class="w-full h-full bg-gray-100 px-4">
-        <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2"><i class="icon-search text-xl"></i></button>
-      </div>
-      <div class="flex items-center gap-6">
-        <button type="button"><i class="icon-bell"></i></button>
-        <a href="#" class="text-sm lg:inline-block hidden">로그아웃</a>
-        <a href="#" class="text-sm lg:inline-block hidden">고객지원</a>
-        <button type="button" class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
-          <img class="w-full h-full object-cover" src="https://picsum.photos/id/64/200/300" alt="profile-img">
-        </button>
-      </div>
-    </header>
-    <!-- header :: e -->
-
-    <!-- nav :: s -->
-    <nav class="h-auto sm:h-[4.25rem] max-w-[90rem] mx-auto">
-      <ul class="flex items-center md:gap-16 gap-8 py-6 text-base font-semibold overflow-x-scroll sm:overflow-visible -mr-4 sm:mr-0 pr-4">
-        <li class="flex-none"><a href="#">소개</a></li>
-        <li class="flex-none"><a href="#">리더십</a></li>
-        <li class="flex-none"><a href="#">비지니스</a></li>
-        <li class="flex-none"><a href="#">이슈트랜드</a></li>
-        <li class="flex-none"><a href="#">라이프</a></li>
-        <li class="flex-none"><a href="#">진단</a></li>
-      </ul>
-    </nav>
-    <!-- nav :: e -->
-
-    <!-- main :: s -->
-    <main>
-      <!-- section1 :: s -->
-      <section id="cont1" class="bg-gray-100 -mx-4 md:-mx-8 xl:-mx-28 px-4 md:px-8 xl:px-28">
-        <div class="max-w-[90rem] mx-auto flex justify-between gap-12">
-          <div class="max-w-[32rem] lg:pt-16 md:pb-0 py-10">
-            <div class="text-lg font-normal">CREATIVE GALLERY</div>
-            <div class="text-3xl lg:text-4xl font-bold mt-3 line-clamp-2">또 다른 세상, 버추얼 일본에서 만나요</div>
-            <p class="text-sm lg:text-base font-normal text-gray-400 leading-5 mt-7 line-clamp-3">
-              빠르게 뛰다 보면, 어느 순간 호흡이 턱 막히는 순간이 옵니다. 
-              인생의 달리기 앞에서 우리가 스스로 속도와 숨을 조절할 수 있는 방법은 무엇일까요? 
-              오롯이 나만의 삶의 이유를 발견하는 시간이 우리에게는 필요합니다.
-            </p>
-            <div class="mt-7 text-xs font-normal flex items-center gap-6">
-              <span><i class="icon-mobile mr-2"></i>모바일</span>
-              <span><i class="icon-file mr-2"></i>PPT</span>
-              <span><i class="icon-gift mr-2"></i>선물하기</span>
-              <span><i class="icon-folder mr-2"></i>담기</span>
-            </div>
-            <div class="text-sm font-semibold flex gap-2 mt-7">
-              <button type="button" class="text-white bg-black py-2 rounded w-24">콘텐츠 보기</button>
-              <button type="button" class="border border-solid border-black py-2 rounded w-24">편성표</button>
-            </div>
-          </div>
-          <div class="relative lg:w-[29.6875rem] lg:h-[29.6875rem] w-[24.6875rem] h-[24.6875rem] flex-[0.1_0.1_auto] hidden md:block">
-            <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/id/64/200/300" alt="">
-          </div>
+    </style>
+  </head>
+  <body>
+    <div id="main02" class="px-4 md:px-8 xl:px-28">
+      <!-- header :: s -->
+      <header class="flex justify-between items-center h-20 py-5 max-w-[90rem] mx-auto">
+        <div class="mr-9">현대경제연구원</div>
+        <div class="w-[26.1875rem] h-10 bg-gray-200 text-xs relative mr-auto lg:inline-block hidden">
+          <input type="text" placeholder="찾으는 강의가 있나요?" class="w-full h-full bg-gray-100 px-4" />
+          <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2"><i class="icon-search text-xl"></i></button>
         </div>
-      </section>
-      <!-- section1 :: e -->
+        <div class="flex items-center gap-6">
+          <button type="button"><i class="icon-bell"></i></button>
+          <a href="#" class="text-sm lg:inline-block hidden">로그아웃</a>
+          <a href="#" class="text-sm lg:inline-block hidden">고객지원</a>
+          <button type="button" class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
+            <img class="w-full h-full object-cover" src="https://picsum.photos/id/64/200/300" alt="profile-img" />
+          </button>
+        </div>
+      </header>
+      <!-- header :: e -->
 
-      <!-- section2 :: s -->
-      <section id="cont2" class="max-w-[90rem] mx-auto py-16">
-        <div class="flex items-end gap-12 flex-wrap">
-          <div class="flex flex-col min-w-[18.625rem] flex-1">
-            <div>
-              <div class="text-2xl font-medium"><span class="text-blue-400 font-bold">스마트님,</span><br>Knowlt 오신 것을 환영합니다.</div>
-            </div>
-            <div>
-              <a href="#" class="block mt-6 bg-gray-50 rounded-3xl h-28 pt-8 pb-6 pl-28 pr-6 relative before:content-[''] before:bg-white before:w-16 before:h-16 before:absolute before:top-6 before:left-6 before:rounded-full">
-                <span class="text-xs text-gray-500 block">나의 학점</span>
-                <span class="text-2xl font-semibold mt-1 block">30</span>
-              </a>
-              <a href="#" class="block mt-6 bg-gray-50 rounded-3xl h-28 pt-8 pb-6 pl-28 pr-6 relative before:content-[''] before:bg-white before:w-16 before:h-16 before:absolute before:top-6 before:left-6 before:rounded-full">
-                <span class="text-xs text-gray-500 block">나의 학점</span>
-                <span class="text-2xl font-semibold mt-1 block">30</span>
-              </a>
-            </div>
-          </div>
-          <div class="flex gap-12 flex-auto flex-wrap">
-            <div class="flex-auto bg-blue-500 rounded-[2rem] p-10 shadow-2xl">
-              <div class="text-2xl font-semibold text-white">이러닝</div>
-              <a href="#" class="text-xs font-normal text-blue-900 mt-2 block">최근 수강 강의<i class="icon-arrow-right"></i></a>
-              <div class="mt-6 relative flex items-end justify-between gap-8 flex-wrap">
-                <div>
-                  <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
-                    <span class="min-w-[4.375rem]">대기중</span>
-                    <span class="text-4xl font-bold">62</span>
-                  </div>
-                  <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
-                    <span class="min-w-[4.375rem]">학습중</span>
-                    <span class="text-4xl font-bold">100</span>
-                  </div>
-                  <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
-                    <span class="min-w-[4.375rem]">학습종료</span>
-                    <span class="text-4xl font-bold">120</span>
-                  </div>
-                </div>
-                <div class="bg-white rounded-lg p-2 max-w-fit text-right ml-auto">
-                  <div>40%</div>
-                  <div class="text-xs font-medium">지난달 대비 (학습중)</div>
-                </div>
+      <!-- nav :: s -->
+      <nav class="h-auto sm:h-[4.25rem] max-w-[90rem] mx-auto">
+        <ul class="flex items-center md:gap-16 gap-8 py-6 text-base font-semibold overflow-x-scroll sm:overflow-visible -mr-4 sm:mr-0 pr-4">
+          <li class="flex-none"><a href="#">소개</a></li>
+          <li class="flex-none"><a href="#">리더십</a></li>
+          <li class="flex-none"><a href="#">비지니스</a></li>
+          <li class="flex-none"><a href="#">이슈트랜드</a></li>
+          <li class="flex-none"><a href="#">라이프</a></li>
+          <li class="flex-none"><a href="#">진단</a></li>
+        </ul>
+      </nav>
+      <!-- nav :: e -->
+
+      <!-- main :: s -->
+      <main>
+        <!-- section1 :: s -->
+        <section id="cont1" class="bg-gray-100 -mx-4 md:-mx-8 xl:-mx-28 px-4 md:px-8 xl:px-28">
+          <div class="max-w-[90rem] mx-auto flex justify-between gap-12">
+            <div class="max-w-[32rem] lg:pt-16 md:pb-0 py-10">
+              <div class="text-lg font-normal">CREATIVE GALLERY</div>
+              <div class="text-3xl lg:text-4xl font-bold mt-3 line-clamp-2">또 다른 세상, 버추얼 일본에서 만나요</div>
+              <p class="text-sm lg:text-base font-normal text-gray-400 leading-5 mt-7 line-clamp-3">
+                빠르게 뛰다 보면, 어느 순간 호흡이 턱 막히는 순간이 옵니다. 인생의 달리기 앞에서 우리가 스스로 속도와 숨을 조절할 수 있는 방법은 무엇일까요?
+                오롯이 나만의 삶의 이유를 발견하는 시간이 우리에게는 필요합니다.
+              </p>
+              <div class="mt-7 text-xs font-normal flex items-center gap-6">
+                <span><i class="icon-mobile mr-2"></i>모바일</span>
+                <span><i class="icon-file mr-2"></i>PPT</span>
+                <span><i class="icon-gift mr-2"></i>선물하기</span>
+                <span><i class="icon-folder mr-2"></i>담기</span>
+              </div>
+              <div class="text-sm font-semibold flex gap-2 mt-7">
+                <button type="button" class="text-white bg-black py-2 rounded w-24">콘텐츠 보기</button>
+                <button type="button" class="border border-solid border-black py-2 rounded w-24">편성표</button>
               </div>
             </div>
-            <div class="flex-auto bg-sky-400 rounded-[2rem] p-10 shadow-2xl">
-              <div class="text-2xl font-semibold text-white">마이크로러닝</div>
-              <a href="#" class="text-xs font-normal text-blue-900 mt-2 block">최근 시청 콘텐츠<i class="icon-arrow-right"></i></a>
-              <div class="mt-6 relative flex items-end justify-between gap-8 flex-wrap">
-                <div>
-                  <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
-                    <span class="min-w-[4.375rem]">대기중</span>
-                    <span class="text-4xl font-bold">62</span>
+            <div class="relative lg:w-[29.6875rem] lg:h-[29.6875rem] w-[24.6875rem] h-[24.6875rem] flex-[0.1_0.1_auto] hidden md:block">
+              <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/id/64/200/300" alt="" />
+            </div>
+          </div>
+        </section>
+        <!-- section1 :: e -->
+
+        <!-- section2 :: s -->
+        <section id="cont2" class="max-w-[90rem] mx-auto py-16">
+          <div class="flex items-end gap-12 flex-wrap">
+            <div class="flex flex-col min-w-[18.625rem] flex-1">
+              <div>
+                <div class="text-2xl font-medium"><span class="text-blue-400 font-bold">스마트님,</span><br />Knowlt 오신 것을 환영합니다.</div>
+              </div>
+              <div>
+                <a
+                  href="#"
+                  class="block mt-6 bg-gray-50 rounded-3xl h-28 pt-8 pb-6 pl-28 pr-6 relative before:content-[''] before:bg-white before:w-16 before:h-16 before:absolute before:top-6 before:left-6 before:rounded-full"
+                >
+                  <span class="text-xs text-gray-500 block">나의 학점</span>
+                  <span class="text-2xl font-semibold mt-1 block">30</span>
+                </a>
+                <a
+                  href="#"
+                  class="block mt-6 bg-gray-50 rounded-3xl h-28 pt-8 pb-6 pl-28 pr-6 relative before:content-[''] before:bg-white before:w-16 before:h-16 before:absolute before:top-6 before:left-6 before:rounded-full"
+                >
+                  <span class="text-xs text-gray-500 block">나의 학점</span>
+                  <span class="text-2xl font-semibold mt-1 block">30</span>
+                </a>
+              </div>
+            </div>
+            <div class="flex gap-12 flex-auto flex-wrap">
+              <div class="flex-auto bg-blue-500 rounded-[2rem] p-10 shadow-2xl">
+                <div class="text-2xl font-semibold text-white">이러닝</div>
+                <a href="#" class="text-xs font-normal text-blue-900 mt-2 block">최근 수강 강의<i class="icon-arrow-right"></i></a>
+                <div class="mt-6 relative flex items-end justify-between gap-8 flex-wrap">
+                  <div>
+                    <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
+                      <span class="min-w-[4.375rem]">대기중</span>
+                      <span class="text-4xl font-bold">62</span>
+                    </div>
+                    <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
+                      <span class="min-w-[4.375rem]">학습중</span>
+                      <span class="text-4xl font-bold">100</span>
+                    </div>
+                    <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
+                      <span class="min-w-[4.375rem]">학습종료</span>
+                      <span class="text-4xl font-bold">120</span>
+                    </div>
                   </div>
-                  <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
-                    <span class="min-w-[4.375rem]">학습중</span>
-                    <span class="text-4xl font-bold">100</span>
-                  </div>
-                  <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
-                    <span class="min-w-[4.375rem]">학습종료</span>
-                    <span class="text-4xl font-bold">120</span>
+                  <div class="bg-white rounded-lg p-2 max-w-fit text-right ml-auto">
+                    <div>40%</div>
+                    <div class="text-xs font-medium">지난달 대비 (학습중)</div>
                   </div>
                 </div>
-                <div class="bg-white rounded-lg p-2 max-w-fit text-right ml-auto">
-                  <div>40%</div>
-                  <div class="text-xs font-medium">지난달 대비 (학습중)</div>
+              </div>
+              <div class="flex-auto bg-sky-400 rounded-[2rem] p-10 shadow-2xl">
+                <div class="text-2xl font-semibold text-white">마이크로러닝</div>
+                <a href="#" class="text-xs font-normal text-blue-900 mt-2 block">최근 시청 콘텐츠<i class="icon-arrow-right"></i></a>
+                <div class="mt-6 relative flex items-end justify-between gap-8 flex-wrap">
+                  <div>
+                    <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
+                      <span class="min-w-[4.375rem]">대기중</span>
+                      <span class="text-4xl font-bold">62</span>
+                    </div>
+                    <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
+                      <span class="min-w-[4.375rem]">학습중</span>
+                      <span class="text-4xl font-bold">100</span>
+                    </div>
+                    <div class="text-sm font-medium text-white flex items-center gap-4 mt-2">
+                      <span class="min-w-[4.375rem]">학습종료</span>
+                      <span class="text-4xl font-bold">120</span>
+                    </div>
+                  </div>
+                  <div class="bg-white rounded-lg p-2 max-w-fit text-right ml-auto">
+                    <div>40%</div>
+                    <div class="text-xs font-medium">지난달 대비 (학습중)</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- section2 :: e -->
+        </section>
+        <!-- section2 :: e -->
 
-      <!-- section3 :: s -->
-      <section id="cont3" class="max-w-[90rem] mx-auto py-16">
-        <div>
-          <div class="flex justify-between items-center">
-            <h4 class="text-2xl font-semibold">추천 시리즈</h4>
-            <div>
-              <button type="button" class="bg-gray-100 w-6 h-6 rounded-sm"><i class="icon-arrow-left"></i></button>
-              <button type="button" class="bg-gray-100 w-6 h-6 rounded-sm"><i class="icon-arrow-right"></i></button>
+        <!-- section3 :: s -->
+        <section id="cont3" class="max-w-[90rem] mx-auto py-16">
+          <div>
+            <div class="flex justify-between items-center">
+              <h4 class="text-2xl font-semibold">추천 시리즈</h4>
+              <div>
+                <button type="button" class="bg-gray-100 w-6 h-6 rounded-sm"><i class="icon-arrow-left"></i></button>
+                <button type="button" class="bg-gray-100 w-6 h-6 rounded-sm"><i class="icon-arrow-right"></i></button>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm font-normal mt-2">최근 가장 많은 추천을 받은 Best seller 강의!</p>
+            <div class="grid grid-cols-2 sm:flex gap-4 mt-8">
+              <div class="relative w-full h-full overflow-hidden">
+                <div class="cont3-wrap">
+                  <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                </div>
+                <div class="absolute bottom-6 left-6">
+                  <div class="text-lg font-medium text-white">BODYFULNESS</div>
+                  <div class="text-xs font-semibold text-white mt-2">남희경</div>
+                  <div class="text-xs font-normal text-blue-500 mt-2">
+                    <span>#호흡</span>
+                    <span>#리추얼</span>
+                    <span>#리듬</span>
+                    <span>#자극</span>
+                  </div>
+                </div>
+              </div>
+              <div class="relative w-full h-full overflow-hidden">
+                <div class="cont3-wrap">
+                  <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                </div>
+                <div class="absolute bottom-6 left-6">
+                  <div class="text-lg font-medium text-white">BODYFULNESS</div>
+                  <div class="text-xs font-semibold text-white mt-2">남희경</div>
+                  <div class="text-xs font-normal text-blue-500 mt-2">
+                    <span>#호흡</span>
+                    <span>#리추얼</span>
+                    <span>#리듬</span>
+                    <span>#자극</span>
+                  </div>
+                </div>
+              </div>
+              <div class="relative w-full h-full overflow-hidden">
+                <div class="cont3-wrap">
+                  <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                </div>
+                <div class="absolute bottom-6 left-6">
+                  <div class="text-lg font-medium text-white">BODYFULNESS</div>
+                  <div class="text-xs font-semibold text-white mt-2">남희경</div>
+                  <div class="text-xs font-normal text-blue-500 mt-2">
+                    <span>#호흡</span>
+                    <span>#리추얼</span>
+                    <span>#리듬</span>
+                    <span>#자극</span>
+                  </div>
+                </div>
+              </div>
+              <div class="relative w-full h-full overflow-hidden">
+                <div class="cont3-wrap">
+                  <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                </div>
+                <div class="absolute bottom-6 left-6">
+                  <div class="text-lg font-medium text-white">BODYFULNESS</div>
+                  <div class="text-xs font-semibold text-white mt-2">남희경</div>
+                  <div class="text-xs font-normal text-blue-500 mt-2">
+                    <span>#호흡</span>
+                    <span>#리추얼</span>
+                    <span>#리듬</span>
+                    <span>#자극</span>
+                  </div>
+                </div>
+              </div>
+              <div class="relative w-full h-full overflow-hidden sm:left-0 left-1/2">
+                <div class="cont3-wrap">
+                  <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                </div>
+                <div class="absolute bottom-6 left-6">
+                  <div class="text-lg font-medium text-white">BODYFULNESS</div>
+                  <div class="text-xs font-semibold text-white mt-2">남희경</div>
+                  <div class="text-xs font-normal text-blue-500 mt-2">
+                    <span>#호흡</span>
+                    <span>#리추얼</span>
+                    <span>#리듬</span>
+                    <span>#자극</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <p class="text-gray-500 text-sm font-normal mt-2">최근 가장 많은 추천을 받은 Best seller 강의!</p>
-          <div class="grid grid-cols-2 sm:flex gap-4 mt-8">
-            <div class="relative w-full h-full overflow-hidden">
-              <div class="cont3-wrap">
-                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
-              </div>
-              <div class="absolute bottom-6 left-6">
-                <div class="text-lg font-medium text-white">BODYFULNESS</div>
-                <div class="text-xs font-semibold text-white mt-2">남희경</div>
-                <div class="text-xs font-normal text-blue-500 mt-2">
-                  <span>#호흡</span>
-                  <span>#리추얼</span>
-                  <span>#리듬</span>
-                  <span>#자극</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full h-full overflow-hidden">
-              <div class="cont3-wrap">
-                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
-              </div>
-              <div class="absolute bottom-6 left-6">
-                <div class="text-lg font-medium text-white">BODYFULNESS</div>
-                <div class="text-xs font-semibold text-white mt-2">남희경</div>
-                <div class="text-xs font-normal text-blue-500 mt-2">
-                  <span>#호흡</span>
-                  <span>#리추얼</span>
-                  <span>#리듬</span>
-                  <span>#자극</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full h-full overflow-hidden">
-              <div class="cont3-wrap">
-                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
-              </div>
-              <div class="absolute bottom-6 left-6">
-                <div class="text-lg font-medium text-white">BODYFULNESS</div>
-                <div class="text-xs font-semibold text-white mt-2">남희경</div>
-                <div class="text-xs font-normal text-blue-500 mt-2">
-                  <span>#호흡</span>
-                  <span>#리추얼</span>
-                  <span>#리듬</span>
-                  <span>#자극</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full h-full overflow-hidden">
-              <div class="cont3-wrap">
-                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
-              </div>
-              <div class="absolute bottom-6 left-6">
-                <div class="text-lg font-medium text-white">BODYFULNESS</div>
-                <div class="text-xs font-semibold text-white mt-2">남희경</div>
-                <div class="text-xs font-normal text-blue-500 mt-2">
-                  <span>#호흡</span>
-                  <span>#리추얼</span>
-                  <span>#리듬</span>
-                  <span>#자극</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full h-full overflow-hidden sm:left-0 left-1/2">
-              <div class="cont3-wrap">
-                <img class="cont3-img" src="https://picsum.photos/seed/picsum/200/300" alt="">
-              </div>
-              <div class="absolute bottom-6 left-6">
-                <div class="text-lg font-medium text-white">BODYFULNESS</div>
-                <div class="text-xs font-semibold text-white mt-2">남희경</div>
-                <div class="text-xs font-normal text-blue-500 mt-2">
-                  <span>#호흡</span>
-                  <span>#리추얼</span>
-                  <span>#리듬</span>
-                  <span>#자극</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- section3 :: e -->
+        </section>
+        <!-- section3 :: e -->
 
-      <!-- section4 :: s -->
-      <section id="cont4" class="max-w-[90rem] mx-auto py-16">
-        <div>
-          <div class="flex justify-between items-center">
-            <h4 class="text-2xl font-semibold">큐레이션 서비스</h4>
-            <div>
-              <button type="button" class="bg-gray-100 w-6 h-6 rounded-sm"><i class="icon-arrow-left"></i></button>
-              <button type="button" class="bg-gray-100 w-6 h-6 rounded-sm"><i class="icon-arrow-right"></i></button>
+        <!-- section4 :: s -->
+        <section id="cont4" class="max-w-[90rem] mx-auto py-16">
+          <div>
+            <div class="flex justify-between items-center">
+              <h4 class="text-2xl font-semibold">큐레이션 서비스</h4>
+              <div>
+                <button type="button" class="bg-gray-100 w-6 h-6 rounded-sm"><i class="icon-arrow-left"></i></button>
+                <button type="button" class="bg-gray-100 w-6 h-6 rounded-sm"><i class="icon-arrow-right"></i></button>
+              </div>
+            </div>
+            <div class="mt-3 flex gap-2 overflow-x-scroll sm:overflow-visible -mr-4 sm:mr-0 pr-4">
+              <span class="flex-none text-center text-sm text-blue-500 border border-solid border-blue-500 rounded-full py-2 px-4">전체</span>
+              <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">리더십</span>
+              <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">비즈니스</span>
+              <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">인문·창의</span>
+              <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">라이프</span>
+            </div>
+            <div class="grid grid-cols-2 sm:flex gap-4 mt-8">
+              <div class="relative w-full h-full overflow-hidden">
+                <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[56.25%] after:w-full after:block after:bg-gray-200">
+                  <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                </div>
+                <div class="bottom-6 left-6">
+                  <div class="text-lg font-medium mt-4 truncate">BODYFULNESS</div>
+                  <div class="text-xs font-normal text-gray-400 mt-2 truncate">질문의 기술</div>
+                  <div class="text-xs font-normal text-gray-400 mt-4 flex gap-1 items-center flex-wrap">
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">호흡</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리추얼</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리듬</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">자극</span>
+                  </div>
+                </div>
+              </div>
+              <div class="relative w-full h-full overflow-hidden">
+                <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[56.25%] after:w-full after:block after:bg-gray-200">
+                  <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                </div>
+                <div class="bottom-6 left-6">
+                  <div class="text-lg font-medium mt-4 truncate">BODYFULNESS</div>
+                  <div class="text-xs font-normal text-gray-400 mt-2 truncate">질문의 기술</div>
+                  <div class="text-xs font-normal text-gray-400 mt-4 flex gap-1 items-center flex-wrap">
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">호흡</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리추얼</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리듬</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">자극</span>
+                  </div>
+                </div>
+              </div>
+              <div class="relative w-full h-full overflow-hidden">
+                <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[56.25%] after:w-full after:block after:bg-gray-200">
+                  <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                </div>
+                <div class="bottom-6 left-6">
+                  <div class="text-lg font-medium mt-4 truncate">BODYFULNESS</div>
+                  <div class="text-xs font-normal text-gray-400 mt-2 truncate">질문의 기술</div>
+                  <div class="text-xs font-normal text-gray-400 mt-4 flex gap-1 items-center flex-wrap">
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">호흡</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리추얼</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리듬</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">자극</span>
+                  </div>
+                </div>
+              </div>
+              <div class="relative w-full h-full overflow-hidden">
+                <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[56.25%] after:w-full after:block after:bg-gray-200">
+                  <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="" />
+                </div>
+                <div class="bottom-6 left-6">
+                  <div class="text-lg font-medium mt-4 truncate">BODYFULNESS</div>
+                  <div class="text-xs font-normal text-gray-400 mt-2 truncate">질문의 기술</div>
+                  <div class="text-xs font-normal text-gray-400 mt-4 flex gap-1 items-center flex-wrap">
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">호흡</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리추얼</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리듬</span>
+                    <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">자극</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="mt-3 flex gap-2 overflow-x-scroll sm:overflow-visible -mr-4 sm:mr-0 pr-4">
-            <span class="flex-none text-center text-sm text-blue-500 border border-solid border-blue-500 rounded-full py-2 px-4">전체</span>
-            <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">리더십</span>
-            <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">비즈니스</span>
-            <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">인문·창의</span>
-            <span class="flex-none text-center text-sm text-gray-400 border border-solid border-gray-400 rounded-full py-2 px-4">라이프</span>
-          </div>
-          <div class="grid grid-cols-2 sm:flex gap-4 mt-8">
-            <div class="relative w-full h-full overflow-hidden">
-              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[56.25%] after:w-full after:block after:bg-gray-200">
-                <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="">
-              </div>
-              <div class="bottom-6 left-6">
-                <div class="text-lg font-medium mt-4 truncate">BODYFULNESS</div>
-                <div class="text-xs font-normal text-gray-400 mt-2 truncate">질문의 기술</div>
-                <div class="text-xs font-normal text-gray-400 mt-4 flex gap-1 items-center flex-wrap">
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">호흡</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리추얼</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리듬</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">자극</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full h-full overflow-hidden">
-              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[56.25%] after:w-full after:block after:bg-gray-200">
-                <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="">
-              </div>
-              <div class="bottom-6 left-6">
-                <div class="text-lg font-medium mt-4 truncate">BODYFULNESS</div>
-                <div class="text-xs font-normal text-gray-400 mt-2 truncate">질문의 기술</div>
-                <div class="text-xs font-normal text-gray-400 mt-4 flex gap-1 items-center flex-wrap">
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">호흡</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리추얼</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리듬</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">자극</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full h-full overflow-hidden">
-              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[56.25%] after:w-full after:block after:bg-gray-200">
-                <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="">
-              </div>
-              <div class="bottom-6 left-6">
-                <div class="text-lg font-medium mt-4 truncate">BODYFULNESS</div>
-                <div class="text-xs font-normal text-gray-400 mt-2 truncate">질문의 기술</div>
-                <div class="text-xs font-normal text-gray-400 mt-4 flex gap-1 items-center flex-wrap">
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">호흡</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리추얼</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리듬</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">자극</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full h-full overflow-hidden">
-              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[56.25%] after:w-full after:block after:bg-gray-200">
-                <img class="w-full h-full top-0 left-0 bottom-0 right-0 object-cover absolute" src="https://picsum.photos/seed/picsum/200/300" alt="">
-              </div>
-              <div class="bottom-6 left-6">
-                <div class="text-lg font-medium mt-4 truncate">BODYFULNESS</div>
-                <div class="text-xs font-normal text-gray-400 mt-2 truncate">질문의 기술</div>
-                <div class="text-xs font-normal text-gray-400 mt-4 flex gap-1 items-center flex-wrap">
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">호흡</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리추얼</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">리듬</span>
-                  <span class="bg-gray-100 px-2 py-1 inline-block rounded-sm">자극</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- section4 :: e -->
+        </section>
+        <!-- section4 :: e -->
 
-      <!-- section5 :: s -->
-      <section id="cont5" class="max-w-[90rem] mx-auto py-16">
-        <div>
-          <h4 class="text-2xl font-semibold">콘텐츠 플러스</h4>
-          <p class="text-gray-500 text-sm font-normal mt-2">차별화된 멤버십 서비스를 제공해 드립니다.</p>
-          <div class="mt-10 grid grid-cols-2 sm:flex gap-4">
-            <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200">
-              <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
-            </div>
-            <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200">
-              <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
-            </div>
-            <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200">
-              <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
-            </div>
-            <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200">
-              <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
-            </div>
-            <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200 sm:left-0 left-1/2">
-              <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
+        <!-- section5 :: s -->
+        <section id="cont5" class="max-w-[90rem] mx-auto py-16">
+          <div>
+            <h4 class="text-2xl font-semibold">콘텐츠 플러스</h4>
+            <p class="text-gray-500 text-sm font-normal mt-2">차별화된 멤버십 서비스를 제공해 드립니다.</p>
+            <div class="mt-10 grid grid-cols-2 sm:flex gap-4">
+              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200">
+                <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
+              </div>
+              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200">
+                <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
+              </div>
+              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200">
+                <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
+              </div>
+              <div class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200">
+                <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
+              </div>
+              <div
+                class="rounded-2xl relative overflow-hidden w-full after:content-[''] after:pt-[112.85%] after:w-full after:block after:bg-gray-200 sm:left-0 left-1/2"
+              >
+                <div class="left-1/2 bottom-8 lg:bottom-14 -translate-x-2/4 absolute text-sm lg:text-xl font-semibold w-full text-center">인기 인물정보</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- section5 :: e -->
+        </section>
+        <!-- section5 :: e -->
 
-      <!-- section6 :: s -->
-      <section id="cont6" class="bg-black -mx-4 md:-mx-8 xl:-mx-28 px-4 md:px-8 xl:px-28">
-        <div class="max-w-[90rem] mx-auto py-16 text-white">
-          <h4 class="text-2xl font-semibold">오늘의 키워드</h4>
-          <p class="text-gray-500 text-sm font-normal mt-2">키워드를 통한 동영상 서비스입니다.</p>
-          <div class="flex flex-wrap gap-2 mt-8">
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">라이프</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">광고</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">경제</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">스트레스</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">여행</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">성공</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">카메라</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">마음</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">명언</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">트렌드</span>
-            <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">열정</span>
+        <!-- section6 :: s -->
+        <section id="cont6" class="bg-black -mx-4 md:-mx-8 xl:-mx-28 px-4 md:px-8 xl:px-28">
+          <div class="max-w-[90rem] mx-auto py-16 text-white">
+            <h4 class="text-2xl font-semibold">오늘의 키워드</h4>
+            <p class="text-gray-500 text-sm font-normal mt-2">키워드를 통한 동영상 서비스입니다.</p>
+            <div class="flex flex-wrap gap-2 mt-8">
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">라이프</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">광고</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">경제</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">스트레스</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">여행</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">성공</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">카메라</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">마음</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">명언</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">트렌드</span>
+              <span class="flex-initial lg:flex-auto text-center text-base border border-solid border-gray-700 rounded-full py-2 px-5">열정</span>
+            </div>
           </div>
-        </div>
-      </section>
-      <!-- section6 :: e -->
+        </section>
+        <!-- section6 :: e -->
 
-      <!-- section7 :: s -->
-      <section id="cont7" class="max-w-[90rem] mx-auto">
-        <div class="flex gap-8 py-16 flex-wrap">
-          <div class="flex-1 w-1/2">
-            <h5 class="text-xl font-semibold pb-4 border-b-2 border-solid border-black">공지사항</h5>
-            <div class="text-sm font-normal pt-8">
-              <div class="text-gray-500">공지</div>
-              <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
-              <p class="text-gray-500 pt-1 truncate">안녕하세요. 10/15 오후 3시경 카카오 데이터센터 화재로 인해 아직 일부 서비스가 복구되지 않아</p>
-              <div class="text-base text-gray-400 pt-4">2022.10.17</div>
+        <!-- section7 :: s -->
+        <section id="cont7" class="max-w-[90rem] mx-auto">
+          <div class="flex gap-8 py-16 flex-wrap">
+            <div class="flex-1 w-1/2">
+              <h5 class="text-xl font-semibold pb-4 border-b-2 border-solid border-black">공지사항</h5>
+              <div class="text-sm font-normal pt-8">
+                <div class="text-gray-500">공지</div>
+                <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
+                <p class="text-gray-500 pt-1 truncate">안녕하세요. 10/15 오후 3시경 카카오 데이터센터 화재로 인해 아직 일부 서비스가 복구되지 않아</p>
+                <div class="text-base text-gray-400 pt-4">2022.10.17</div>
+              </div>
+              <div class="text-sm font-normal pt-10">
+                <div class="text-gray-500">공지</div>
+                <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
+                <p class="text-gray-500 pt-1 truncate">안녕하세요. 10/15 오후 3시경 카카오 데이터센터 화재로 인해 아직 일부 서비스가 복구되지 않아</p>
+                <div class="text-base text-gray-400 pt-4">2022.10.17</div>
+              </div>
             </div>
-            <div class="text-sm font-normal pt-10">
-              <div class="text-gray-500">공지</div>
-              <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
-              <p class="text-gray-500 pt-1 truncate">안녕하세요. 10/15 오후 3시경 카카오 데이터센터 화재로 인해 아직 일부 서비스가 복구되지 않아</p>
-              <div class="text-base text-gray-400 pt-4">2022.10.17</div>
+            <div class="flex-1 w-1/2">
+              <h5 class="text-xl font-semibold pb-4 border-b-2 border-solid border-black">공지사항</h5>
+              <div class="text-sm font-normal pt-8">
+                <div class="text-gray-500">공지</div>
+                <div class="text-lg font-medium pt-1 truncate">
+                  카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내 카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내
+                </div>
+              </div>
+              <div class="text-sm font-normal pt-10">
+                <div class="text-gray-500">공지</div>
+                <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
+              </div>
+              <div class="text-sm font-normal pt-10">
+                <div class="text-gray-500">공지</div>
+                <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
+              </div>
             </div>
           </div>
-          <div class="flex-1 w-1/2">
-            <h5 class="text-xl font-semibold pb-4 border-b-2 border-solid border-black">공지사항</h5>
-            <div class="text-sm font-normal pt-8">
-              <div class="text-gray-500">공지</div>
-              <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내 카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
-            </div>
-            <div class="text-sm font-normal pt-10">
-              <div class="text-gray-500">공지</div>
-              <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
-            </div>
-            <div class="text-sm font-normal pt-10">
-              <div class="text-gray-500">공지</div>
-              <div class="text-lg font-medium pt-1 truncate">카카오 서비스 오류로 인한 콘텐츠 알림톡 발송 중단 안내</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- section7 :: e -->
-    </main>
-    <!-- main :: e -->
-  </div>
-  
-  <!-- script -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</body>
+        </section>
+        <!-- section7 :: e -->
+      </main>
+      <!-- main :: e -->
+    </div>
+
+    <!-- script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
 </html>
