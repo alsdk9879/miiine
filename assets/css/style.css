@@ -949,6 +949,13 @@ textarea::placeholder {
   border-radius: 0.25rem;
 }
 
+.tabmenu-cont {
+  display: none;
+}
+.tabmenu-cont.active {
+  display: block;
+}
+
 .tab-wrap ul {
   border-bottom: 1px solid var(--gray-color-300);
 }

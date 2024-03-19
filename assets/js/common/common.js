@@ -14,6 +14,6 @@ tabList.forEach((tab, index) => {
     tabCont.forEach((cont) => {
       cont.classList.remove('active');
     });
-    // tabCont[index].classList.add('active');
+    tabCont[index].classList.add('active');
   });
 });
