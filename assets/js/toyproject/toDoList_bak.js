@@ -2,94 +2,81 @@
  * to do list
  */
 
-//유저가 값을 입력한다.
-//'+ 버튼'을 클릭하면, 할 일이 추가된다.
-//'check 버튼'을 클릭하면, 할 일이 끝나면서 밑줄이 간다.
-// => 1. 'check 버튼'을 클릭하는 순간, true false
-// => 2. true 이면 끝난걸로 간주하고 밑줄
-// => 3. false 이면 안 끝난걸로 간주하고 그대로
-//'delete 버튼'을 클릭하면, 할 일이 삭제된다.
-//'진행중, 끝남' 탭을 클릭하면, underBar가 이동한다.
-//'Done 탭'은 -> 완료 아이템만, 'not Done 탭'은 -> 진행중인 아이템만
-//'All 탭'을 클릭하면, 다시 전체아이템으로 돌아온다.
+const taskForm = document.querySelector('#toDoList .input-task');
+const taskInput = document.querySelector('#toDoList .input-task input');
+const btnAdd = document.querySelector('#toDoList .btn-add');
+const taskList = document.querySelector('#toDoList .task-list');
 
-const toDoForm = document.querySelector('#toDoList .input-task');
-const toDoInput = document.querySelector('#toDoList .input-task input');
-const toDoList = document.querySelector('#toDoList .task-list');
-const btnAdd = document.querySelector('#toDoList .input-task .btn-add');
+let tasks = [];
 
-const TODOS_KEY = 'todos';
-
-let toDos = [];
-
-function saveToDos() {
-  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+function saveToDoList() {
+  localStorage.setItem('task', JSON.stringify(tasks));
 }
 
-function deleteToDo(btnDelete) {
-  const taskItem = btnDelete.target.parentNode;
+function deleteToDoList(event) {
+  const taskItem = event.target.closest('.task-item');
   taskItem.remove();
-  toDos = toDos.filter((toDo) => toDo.id !== parseInt(taskItem.id));
-  saveToDos();
+  tasks = tasks.filter((task) => task.id !== parseInt(taskItem.id));
+  saveToDoList();
 }
 
-// function createToDo(newToDo) {
-//   const taskItem = document.createElement('li');
-//   taskItem.classList.add('task-item');
-//   taskItem.id = newToDo.id;
+function doneToDo(event) {
+  const taskItem = event.target.closest('.task-item');
+  taskItem.classList.toggle('done');
 
-//   const taskName = document.createElement('span');
-//   taskName.classList.add('task-name');
-//   taskName.innerText = newToDo.text;
-
-//   const btnDelete = document.createElement('button');
-//   btnDelete.classList.add('btn-delete');
-//   btnDelete.innerText = 'X';
-//   btnDelete.addEventListener('click', deleteToDo);
-
-//   taskItem.appendChild(taskName);
-//   taskItem.appendChild(btnDelete);
-//   toDoList.appendChild(taskItem);
-// }
-
-function createToDo(newToDo) {
-  const taskItem = document.querySelectorAll('.task-list .task-item');
-  taskItem.id = newToDo.id;
-
-  const taskName = document.querySelectorAll('.task-list .task-name');
-  taskName.innerText = newToDo.text;
-
-  const btnDelete = document.querySelectorAll('.task-list .btn-delete');
-  btnDelete.innerText = 'X';
-  btnDelete.addEventListener('click', deleteToDo);
+  if (taskItem.classList.contains('done')) {
+    console.log('done');
+  } else {
+    console.log('no');
+  }
 }
 
-function handleToDoSubmit(event) {
-  event.preventDefault();
-  const newToDo = toDoInput.value;
-  toDoInput.value = '';
-  const newToDoObj = {
-    text: newToDo,
-    id: Date.now(),
-  };
-  toDos.push(newToDoObj);
-  createToDo(newToDoObj);
-  saveToDos();
-}
+function paintToDoList(newTaskObj) {
+  const taskItem = document.createElement('li');
+  taskItem.classList.add('task-item');
+  taskItem.id = newTaskObj.id;
+  taskItem.innerHTML = `<button type="button" class="btn-check"><i class="fa-regular fa-circle"></i></button>
+    <span class="task-name">${newTaskObj.text}</span>
+    <div class="btn-wrap">
+      <button type="button" class="btn-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+      <button type="button" class="btn-delete"><i class="fa-regular fa-trash-can"></i></button>
+    </div>`;
+  taskList.appendChild(taskItem);
 
-toDoForm.addEventListener('submit', handleToDoSubmit);
+  console.log(newTaskObj);
 
-const savedToDos = localStorage.getItem(TODOS_KEY);
-
-if (savedToDos !== null) {
-  const parsedToDos = JSON.parse(savedToDos);
-  toDos = parsedToDos;
-  parsedToDos.forEach(createToDo);
-}
-
-// done task-list check
-document.querySelectorAll('.btn-check').forEach((el) => {
-  el.addEventListener('click', () => {
-    el.parentNode.classList.toggle('done');
+  const btnCheck = document.querySelectorAll('.task-item .btn-check');
+  btnCheck.forEach((el) => {
+    el.addEventListener('click', doneToDo);
   });
-});
+
+  const btnDelete = document.querySelectorAll('.task-item .btn-delete');
+  btnDelete.forEach((el) => {
+    el.addEventListener('click', deleteToDoList);
+  });
+}
+
+function handleToDoList(event) {
+  event.preventDefault();
+  const newTask = taskInput.value;
+  taskInput.value = '';
+  const newTaskObj = {
+    text: newTask,
+    id: Date.now(),
+    class: '',
+  };
+  tasks.push(newTaskObj);
+  paintToDoList(newTaskObj);
+  saveToDoList();
+}
+
+taskForm.addEventListener('submit', handleToDoList);
+btnAdd.addEventListener('click', handleToDoList);
+
+const savedTasks = localStorage.getItem('task');
+
+if (savedTasks !== null) {
+  const parsedTasks = JSON.parse(savedTasks);
+  tasks = parsedTasks;
+  parsedTasks.forEach(paintToDoList);
+}

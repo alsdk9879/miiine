@@ -26,20 +26,27 @@ $black: #414141;
   }
 
   .container-wrapper {
-    padding: 3rem 2rem;
+    padding: 3rem 0;
     border-radius: 2rem;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
     height: 100%;
-    min-height: 40rem;
+    min-height: 36rem;
+    overflow: hidden;
   }
 
   .title {
     font-size: 1.5rem;
     color: $primary-color;
     margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .task-header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+
     .input-task {
       position: relative;
 
@@ -101,7 +108,9 @@ $black: #414141;
   }
 
   .task-list {
-    margin-top: 2rem;
+    padding: 0 2rem 0.5rem;
+    overflow-y: auto;
+    max-height: calc(100% - 3rem - 1.5rem - 7.125rem);
   }
 
   .task-item {
