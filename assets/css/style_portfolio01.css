@@ -1,9 +1,9 @@
+@charset "UTF-8";
 /*
 ==========================================================================
   common  :: reset
 ==========================================================================
 */
-
 * {
   padding: 0;
   margin: 0;
@@ -14,17 +14,21 @@
 *,
 :after,
 :before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 :root {
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+       text-size-adjust: 100%;
   cursor: default;
   overflow-wrap: break-word;
   -moz-tab-size: 4;
-  tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
 }
 
 html,
@@ -41,7 +45,7 @@ html {
 body {
   line-height: 1;
   letter-spacing: -0.02em;
-  font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+  font-family: AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -92,6 +96,7 @@ a:focus,
 button:focus {
   cursor: pointer;
   text-decoration: none;
+  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   border: none;
 }
@@ -110,37 +115,27 @@ p {
   margin: 0;
 }
 
-input[type='text'],
-input[type='password'],
+input[type=text],
+input[type=password],
 textarea,
 select,
 button {
   border-radius: 0;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /*
 * responsive
-*/
-
-@media (max-width: 1399.98px) {
-}
-@media (max-width: 1199.98px) {
-}
-@media (max-width: 991.98px) {
-}
-@media (max-width: 767.98px) {
-}
-@media (max-width: 575.98px) {
-}
+*//*# sourceMappingURL=style_portfolio01.css.map */
