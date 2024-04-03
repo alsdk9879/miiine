@@ -14,6 +14,22 @@ function saveToDoList() {
   localStorage.setItem('task', JSON.stringify(tasks));
 }
 
+function checkDone(newTaskObj) {
+  console.log(newTaskObj.class);
+}
+
+function checkDoneList(event) {
+  const targetTaskItem = event.target.closest('.task-item');
+  targetTaskItem.classList.toggle('done');
+
+  // if (targetTaskItem.classList.contains('done')) {
+  //   console.log('true');
+  // } else {
+  //   console.log('false');
+  // }
+  checkDone();
+}
+
 function deleteToDoList(event) {
   const targetTaskItem = event.target.closest('.task-item');
   targetTaskItem.remove();
@@ -33,30 +49,14 @@ function paintToDoList(newTaskObj) {
     </div>`;
   taskList.appendChild(taskItem);
 
-  // console.log(newTaskObj);
-
-  const btnCheck = document.querySelectorAll('.task-item .btn-check');
-  btnCheck.forEach((el, index) => {
-    el.addEventListener('click', (event) => {
-      btnCheck.forEach((el) => {
-        el.classList.toggle('done');
-      });
-      console.log(taskItem);
-
-      // const taskItem = event.target.closest('.task-item');
-      // taskItem.classList.toggle('done');
-
-      // if (taskItem.classList.contains('done')) {
-      //   console.log('done');
-      // } else {
-      //   console.log('no');
-      // }
-    });
-  });
-
   const btnDelete = document.querySelectorAll('.task-item .btn-delete');
   btnDelete.forEach((el) => {
     el.addEventListener('click', deleteToDoList);
+  });
+
+  const btnCheck = document.querySelectorAll('.task-item .btn-check');
+  btnCheck.forEach((el) => {
+    el.addEventListener('click', checkDoneList);
   });
 }
 
@@ -67,7 +67,7 @@ function handleToDoList(event) {
   const newTaskObj = {
     text: newTask,
     id: Date.now(),
-    class: '',
+    class: false,
   };
   tasks.push(newTaskObj);
   paintToDoList(newTaskObj);
