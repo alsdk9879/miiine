@@ -6,6 +6,9 @@ const taskForm = document.querySelector('#toDoList .input-task');
 const taskInput = document.querySelector('#toDoList .input-task input');
 const btnAdd = document.querySelector('#toDoList .btn-add');
 const taskList = document.querySelector('#toDoList .task-list');
+const allTab = document.querySelector('#toDoList .task-list.all');
+const notDoneTab = document.querySelector('#toDoList .task-list.not-done');
+const doneTab = document.querySelector('#toDoList .task-list.done');
 const taskItems = document.querySelectorAll('#toDoList .task-item');
 
 let tasks = [];
@@ -22,7 +25,6 @@ function checkDone(newTaskObj) {
 function checkDoneList(event) {
   const targetTaskItem = event.target.closest('.task-item');
   targetTaskItem.classList.toggle('done');
-
   const taskIndex = tasks.findIndex((task) => task.id === parseInt(targetTaskItem.id));
   checkDone(tasks[taskIndex]);
 }
@@ -38,7 +40,6 @@ function paintToDoList(newTaskObj) {
   const taskItem = document.createElement('li');
   taskItem.classList.add('task-item');
   taskItem.id = newTaskObj.id;
-
   taskItem.innerHTML = `<button type="button" class="btn-check"><i class="fa-regular fa-circle"></i></button>
     <span class="task-name">${newTaskObj.text}</span>
     <div class="btn-wrap">
@@ -46,11 +47,15 @@ function paintToDoList(newTaskObj) {
       <button type="button" class="btn-delete"><i class="fa-regular fa-trash-can"></i></button>
     </div>`;
 
-  // if (!newTaskObj.class) {
-  //   notDoneTab.appendChild(taskItem);
-  // } else {
-  //   doneTab.appendChild(taskItem);
-  // }
+  if (!newTaskObj.class) {
+    taskItem.classList.remove('done');
+    const taskItemClone = taskItem.cloneNode(true);
+    notDoneTab.appendChild(taskItemClone);
+  } else {
+    taskItem.classList.add('done');
+    const taskItemClone = taskItem.cloneNode(true);
+    doneTab.appendChild(taskItemClone);
+  }
 
   taskList.appendChild(taskItem);
 
