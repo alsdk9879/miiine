@@ -17,10 +17,6 @@ function saveToDoList() {
   localStorage.setItem('task', JSON.stringify(tasks));
 }
 
-function editTask(event) {
-  console.log(event);
-}
-
 function checkDone(newTaskObj) {
   newTaskObj.class = !newTaskObj.class;
   saveToDoList();
@@ -72,11 +68,6 @@ function paintToDoList(newTaskObj) {
   btnCheck.forEach((el) => {
     el.addEventListener('click', checkDoneList);
   });
-
-  const btnEdit = document.querySelectorAll('#toDoList .btn-edit');
-  btnEdit.forEach((el) => {
-    el.addEventListener('click', editTask);
-  });
 }
 
 function handleToDoList(event) {
@@ -103,3 +94,16 @@ if (savedTasks !== null) {
   tasks = parsedTasks;
   parsedTasks.forEach(paintToDoList);
 }
+
+// function changeTodoList() {
+//   tasks = [];
+//   saveToDoList();
+
+//   const savedTasks = localStorage.getItem('task');
+
+//   if (savedTasks !== null) {
+//     const parsedTasks = JSON.parse(savedTasks);
+//     tasks = parsedTasks;
+//     parsedTasks.forEach(paintToDoList);
+//   }
+// }

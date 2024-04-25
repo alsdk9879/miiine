@@ -15,5 +15,6 @@ tabList.forEach((tab, index) => {
       cont.classList.remove('active');
     });
     tabCont[index].classList.add('active');
+    // changeTodoList();
   });
 });
