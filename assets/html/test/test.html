@@ -37,11 +37,11 @@
       // 생성자 함수
       // 함수이름 첫 글자는 대문자로
       function User(name, age) {
-        this.name = name;
+        this.name = name; // this.name 에서 'this'는 아래 user1(변수)라고 생각하면 됨. (ex, this.name = user1.name)
         this.age = age;
       }
 
-      let user1 = new User('Mike', 30); // new 연산자를 사용해서 호출
+      let user1 = new User('Mike', 30); // new 연산자를 사용해서 생성자 함수 호출
       let user2 = new User('Tony', 23);
 
       const user = {
@@ -50,10 +50,17 @@
         gender: 'male',
       };
 
-      const cloneUser = Object.assign({}, user); // Object.assign() : 객체 복사
+      // Object.assign() : 객체 복사
+      const cloneUser = Object.assign({}, user);
       cloneUser.name = 'Anne';
 
+      // Object.keys() : 키 배열 반환
       const arr = Object.keys(user);
+      // console.log(arr) = ['name', 'age', 'gender'];
+
+      // Object.values() : 값 배열 반환
+
+      // Object.entries() : 키/값을 쌍으로 묶어서 배열로 반환
 
       let userList = [
         { name: 'Mike', age: 30 },
