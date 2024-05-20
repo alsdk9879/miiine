@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*
 ==========================================================================
   common  :: reset
@@ -41,7 +42,7 @@ html {
 body {
   line-height: 1;
   letter-spacing: -0.02em;
-  font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+  font-family: 'Pretendard', 'GmarketSans', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

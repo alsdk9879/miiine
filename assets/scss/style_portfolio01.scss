@@ -1,5 +1,40 @@
-// reset
+// import
 @import './_common/default';
+@import './_common/import';
 
 #portfolio01 {
+  .navbar {
+    max-width: 18.75rem;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+
+    .home {
+      display: block;
+      font-family: 'GmarketSans';
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.6;
+      text-align: center;
+      padding: 4.375rem 0;
+
+      em {
+        font-weight: 700;
+      }
+    }
+
+    .nav-list-wrap {
+      padding: 0 2.5rem;
+    }
+
+    .nav-list {
+      a {
+        display: flex;
+        align-items: center;
+        height: 4.375rem;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
 }
