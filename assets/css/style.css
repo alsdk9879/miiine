@@ -324,7 +324,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*
-* responsive
+ responsive
 */
 .btns {
   background-color: var(--primary-color-400);

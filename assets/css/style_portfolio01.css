@@ -1,5 +1,84 @@
 @charset "UTF-8";
 /*
+ import library css
+*/
+/*
+ fonts
+*/
+@import url("../fonts/portfolio_iconset.css");
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-display: swap;
+  src: local("GmarketSansBold"), url("../../fonts/woff2/GmarketSansBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 500;
+  font-display: swap;
+  src: local("GmarketSansMedium"), url("../../fonts/woff2/GmarketSansMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-display: swap;
+  src: local("GmarketSansLight"), url("../../fonts/woff2/GmarketSansLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url("../../fonts/woff2/Pretendard-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url("../../fonts/woff2/Pretendard-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("../../fonts/woff2/Pretendard-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("../../fonts/woff2/Pretendard-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("../../fonts/woff2/Pretendard-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("../../fonts/woff2/Pretendard-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url("../../fonts/woff2/Pretendard-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url("../../fonts/woff2/Pretendard-ExtraLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url("../../fonts/woff2/Pretendard-Thin.woff2") format("woff2");
+}
+/*
 ==========================================================================
   common  :: reset
 ==========================================================================
@@ -137,93 +216,41 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /*
-* responsive
+ responsive
 */
-/**
-* import library css
-*/
-/**
-* fonts
-*/
-@font-face {
-  font-family: "GmarketSans";
-  font-weight: 700;
-  font-display: swap;
-  src: local("GmarketSansBold"), url("../../fonts/woff2/GmarketSansBold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "GmarketSans";
-  font-weight: 500;
-  font-display: swap;
-  src: local("GmarketSansMedium"), url("../../fonts/woff2/GmarketSansMedium.woff2") format("woff2");
-}
-@font-face {
-  font-family: "GmarketSans";
-  font-weight: 300;
-  font-display: swap;
-  src: local("GmarketSansLight"), url("../../fonts/woff2/GmarketSansLight.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 900;
-  font-display: swap;
-  src: local("Pretendard Black"), url("../../fonts/woff2/Pretendard-Black.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 800;
-  font-display: swap;
-  src: local("Pretendard ExtraBold"), url("../../fonts/woff2/Pretendard-ExtraBold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-display: swap;
-  src: local("Pretendard Bold"), url("../../fonts/woff2/Pretendard-Bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Pretendard";
+#portfolio01 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  height: 3rem;
+  border-radius: 0.625rem;
+  background-color: #f6f8fb;
+  font-size: 1rem;
   font-weight: 600;
-  font-display: swap;
-  src: local("Pretendard SemiBold"), url("../../fonts/woff2/Pretendard-SemiBold.woff2") format("woff2");
 }
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 500;
-  font-display: swap;
-  src: local("Pretendard Medium"), url("../../fonts/woff2/Pretendard-Medium.woff2") format("woff2");
+#portfolio01 .btn:hover {
+  background-color: #f6f8fb;
 }
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 400;
-  font-display: swap;
-  src: local("Pretendard Regular"), url("../../fonts/woff2/Pretendard-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 300;
-  font-display: swap;
-  src: local("Pretendard Light"), url("../../fonts/woff2/Pretendard-Light.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 200;
-  font-display: swap;
-  src: local("Pretendard ExtraLight"), url("../../fonts/woff2/Pretendard-ExtraLight.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 100;
-  font-display: swap;
-  src: local("Pretendard Thin"), url("../../fonts/woff2/Pretendard-Thin.woff2") format("woff2");
-}
-#portfolio01 .navbar {
-  max-width: 18.75rem;
+#portfolio01 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18.75rem;
   height: 100vh;
-  background-color: #000;
+  background-color: #222;
   color: #fff;
+  z-index: 99;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
-#portfolio01 .navbar .home {
+#portfolio01 .nav .home {
   display: block;
   font-family: "GmarketSans";
   font-size: 1rem;
@@ -232,20 +259,174 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: center;
   padding: 4.375rem 0;
 }
-#portfolio01 .navbar .home em {
+#portfolio01 .nav .home .name {
   font-weight: 700;
+  position: relative;
 }
-#portfolio01 .navbar .nav-list-wrap {
-  padding: 0 2.5rem;
+#portfolio01 .nav .nav-list-wrap {
+  padding-left: 2.5rem;
 }
-#portfolio01 .navbar .nav-list a {
+#portfolio01 .nav .nav-list a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 2.25rem;
   height: 4.375rem;
   font-size: 1rem;
   font-weight: 700;
+  padding: 0 2rem;
+}
+#portfolio01 .nav .nav-list i {
+  font-size: 1.5rem;
+}
+#portfolio01 .nav .nav-list:hover, #portfolio01 .nav .nav-list.active {
+  background-color: #fff;
+  border-radius: 2.25rem 0 0 2.25rem;
+  overflow: hidden;
+}
+#portfolio01 .nav .nav-list:hover a, #portfolio01 .nav .nav-list.active a {
+  color: #222;
+}
+#portfolio01 .nav .btn-nav-fold {
+  display: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  font-size: 0.75rem;
+  color: #9e9e9e;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 6.25rem;
+  right: -0.8125rem;
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+#portfolio01 .nav:hover .btn-nav-fold {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#portfolio01 .nav.fold {
+  width: 6.25rem;
+}
+#portfolio01 .nav.fold .home .name:after {
+  content: "M";
+  display: block;
+  width: 100%;
+  background-color: #222;
+  font-size: 1.25rem;
+  position: absolute;
+  top: -0.3125rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#portfolio01 .nav.fold .home .text {
+  display: none;
+}
+#portfolio01 .nav.fold .btn-nav-fold i::before {
+  content: "\e906";
+}
+#portfolio01 .nav.fold .nav-list-wrap {
+  padding-left: 0.625rem;
+}
+#portfolio01 .nav.fold .nav-list .list-name {
+  visibility: hidden;
+  overflow: hidden;
+}
+#portfolio01 .nav.fold .nav-list:hover .list-name {
+  visibility: visible;
+  overflow: visible;
+  position: absolute;
+  left: 85%;
+}
+#portfolio01 .nav.fold + .main {
+  padding-left: 9.375rem;
+}
+#portfolio01 .main {
+  font-family: "Pretendard";
+  width: 100%;
+  height: 100vh;
+  padding: 5rem 3.125rem 0 21.875rem;
+  -webkit-transition: padding-left 0.5s ease-in-out;
+  transition: padding-left 0.5s ease-in-out;
+}
+#portfolio01 .main .title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2.375rem;
+}
+#portfolio01 .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3.125rem;
+}
+#portfolio01 .section:last-child {
+  margin-bottom: 0;
+}
+#portfolio01 .sec-item {
+  width: 100%;
+  background-color: #f6f8fb;
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+#portfolio01 .sec-item .item {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.875rem;
+}
+#portfolio01 .sec-item .profile-info-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.875rem;
+}
+#portfolio01 .sec-item .profile-info-wrap .img-wrap {
+  width: 9.125rem;
+  height: 9.125rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+#portfolio01 .sec-item .profile-info-wrap .img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#portfolio01 .sec-item .profile-info-wrap .text-wrap .label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #999;
+  line-height: 1.2;
+  margin-bottom: 0.625rem;
+}
+#portfolio01 .sec-item .profile-info-wrap .text-wrap .text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+#portfolio01 .sec-item .profile-info-wrap .text-wrap .text em {
+  font-weight: 900;
+}
+#portfolio01 .sec-title {
+  font-size: 1.25rem;
+  font-weight: 600;
 }/*# sourceMappingURL=style_portfolio01.css.map */

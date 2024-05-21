@@ -5,30 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/style_portfolio01.css" />
-    <title>OH MINA ::</title>
+    <title>OH MINA :: PORTFOLIO</title>
   </head>
   <body>
     <div id="portfolio01">
-      <nav class="navbar">
-        <a href="#" class="home"><em>MINA</em><br />Web</a>
+      <!-- nav :: s -->
+      <nav class="nav">
+        <a href="#" class="home">
+          <em class="name">MINA</em>
+          <p class="text">Web Portfolio</p>
+        </a>
         <ul class="nav-list-wrap">
-          <li class="nav-list">
-            <a href="#">Portfolio</a>
+          <li class="nav-list active">
+            <a href="#">
+              <i class="icon-grid"></i>
+              <p class="list-name">Portfolio</p>
+            </a>
           </li>
           <li class="nav-list">
-            <a href="#">Works</a>
+            <a href="#">
+              <i class="icon-file"></i>
+              <p class="list-name">Works</p>
+            </a>
           </li>
           <li class="nav-list">
-            <a href="#">Profile</a>
+            <a href="#">
+              <i class="icon-user"></i>
+              <p class="list-name">Profile</p>
+            </a>
           </li>
           <li class="nav-list">
-            <a href="#">자기소개서</a>
+            <a href="#">
+              <i class="icon-smile"></i>
+              <p class="list-name">About</p>
+            </a>
           </li>
           <li class="nav-list">
-            <a href="#">Github</a>
+            <a href="#">
+              <i class="icon-github"></i>
+              <p class="list-name">Github</p>
+            </a>
           </li>
         </ul>
+        <button type="button" class="btn-nav-fold"><i class="icon-arrow-left"></i></button>
       </nav>
+      <!-- nav :: e -->
+
+      <!-- main :: s -->
+      <main class="main">
+        <h2 class="title">#</h2>
+        <section class="section">
+          <div class="sec-item profile-summary">
+            <div class="item profile">
+              <div class="profile-info-wrap">
+                <div class="img-wrap">
+                  <img src="https://picsum.photos/200/300" alt="" />
+                </div>
+                <div class="text-wrap">
+                  <span class="label">3년차 퍼블리셔</span>
+                  <p class="text">안녕하세요!<br />텍스트입니다<br />텍스트 <em>이름</em>입니다.</p>
+                </div>
+              </div>
+              <a href="" class="btn btn-open-profile"><i class="icon-user"></i>Profile Open</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- works :: s -->
+        <section class="section works">
+          <h3 class="sec-title">Works</h3>
+          <div class="sec-item"></div>
+        </section>
+        <!-- works :: e -->
+
+        <!-- skill :: s -->
+        <section class="section skill">
+          <h3 class="sec-title">Skill</h3>
+          <div class="sec-item"></div>
+        </section>
+        <!-- skill :: e -->
+      </main>
+      <!-- main :: e -->
     </div>
     <!-- script -->
     <script src="../../js/portfolio/portfolio01.js"></script>
