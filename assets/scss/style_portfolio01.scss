@@ -2,13 +2,20 @@
 @import './_common/import';
 @import './_common/default';
 
-$nav-width: 18.75rem;
-$nav-width-fold: 6.25rem;
+$lnb-width: 18.75rem;
+$lnb-width-fold: 6.25rem;
+$nav-height: 4rem;
 
 $white: #fff;
 $black: #222;
 
 #portfolio01 {
+  // common
+  .flex-row {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
   // component
   .btn {
     display: flex;
@@ -20,23 +27,24 @@ $black: #222;
     background-color: #f6f8fb;
     font-size: 1rem;
     font-weight: 600;
+    padding: 0 0.75rem;
 
     &:hover {
-      background-color: #f6f8fb;
+      background-color: #e6ecf5;
     }
   }
 
-  // nav
-  .nav {
+  // lnb
+  .lnb {
     position: fixed;
     top: 0;
     left: 0;
-    width: $nav-width;
+    width: $lnb-width;
     height: 100vh;
     background-color: $black;
     color: $white;
     z-index: 99;
-    transition: width 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     .home {
       display: block;
@@ -53,16 +61,16 @@ $black: #222;
       }
     }
 
-    .nav-list-wrap {
+    .lnb-list-wrap {
       padding-left: 2.5rem;
     }
 
-    .nav-list {
+    .lnb-list {
       a {
         display: flex;
         align-items: center;
         gap: 2.25rem;
-        height: 4.375rem;
+        height: 5rem;
         font-size: 1rem;
         font-weight: 700;
         padding: 0 2rem;
@@ -75,7 +83,7 @@ $black: #222;
       &:hover,
       &.active {
         background-color: $white;
-        border-radius: 2.25rem 0 0 2.25rem;
+        border-radius: 3.5rem 0 0 3.5rem;
         overflow: hidden;
 
         a {
@@ -84,7 +92,7 @@ $black: #222;
       }
     }
 
-    .btn-nav-fold {
+    .btn-lnb-fold {
       display: none;
       width: 1.75rem;
       height: 1.75rem;
@@ -102,14 +110,14 @@ $black: #222;
     }
 
     &:hover {
-      .btn-nav-fold {
+      .btn-lnb-fold {
         display: flex;
       }
     }
 
-    // nav 접혔을 때
+    // lnb 접혔을 때
     &.fold {
-      width: $nav-width-fold;
+      width: $lnb-width-fold;
 
       .home {
         .name {
@@ -131,7 +139,7 @@ $black: #222;
         }
       }
 
-      .btn-nav-fold {
+      .btn-lnb-fold {
         i {
           &::before {
             content: '\e906';
@@ -139,11 +147,11 @@ $black: #222;
         }
       }
 
-      .nav-list-wrap {
+      .lnb-list-wrap {
         padding-left: 0.625rem;
       }
 
-      .nav-list {
+      .lnb-list {
         .list-name {
           visibility: hidden;
           overflow: hidden;
@@ -159,10 +167,15 @@ $black: #222;
         }
       }
 
-      + .main {
-        padding-left: calc($nav-width-fold + 3.125rem);
+      ~ .main {
+        padding-left: calc($lnb-width-fold + 3.125rem);
       }
     }
+  }
+
+  // nav
+  .nav {
+    display: none;
   }
 
   // main
@@ -170,10 +183,10 @@ $black: #222;
     font-family: 'Pretendard';
     width: 100%;
     height: 100vh;
-    padding: 5rem 3.125rem 0 calc($nav-width + 3.125rem);
+    padding: 5rem 3.125rem 0 calc($lnb-width + 3.125rem);
     transition: padding-left 0.5s ease-in-out;
 
-    .title {
+    h2.title {
       font-size: 2.25rem;
       font-weight: 700;
       margin-bottom: 2.375rem;
@@ -192,15 +205,80 @@ $black: #222;
   }
 
   .sec-item {
-    width: 100%;
     background-color: #f6f8fb;
     border-radius: 1rem;
     padding: 1.25rem;
+    flex: 1;
+
+    .item-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
 
     .item {
       background-color: $white;
       border-radius: 1rem;
-      padding: 1.875rem;
+      flex: 1;
+
+      &.profile {
+        box-shadow: 0px 5px 15px 0px rgb(8, 12, 56, 0.15);
+        padding: 1.875rem;
+      }
+
+      &.view-detail {
+        min-width: 18.75rem;
+        background: linear-gradient(120deg, rgba(0, 79, 152, 0.8), rgba(21, 107, 187, 0.8));
+        box-shadow: 0px 5px 15px 0px rgb(0 0 0/16%);
+        font-size: 1rem;
+        font-weight: 900;
+        color: $white;
+        padding: 1.25rem;
+
+        .item-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 2rem;
+
+          .label {
+            display: flex;
+            align-items: baseline;
+            gap: 0.625rem;
+
+            i {
+              position: relative;
+              top: 1px;
+            }
+          }
+
+          .btn-view {
+            height: 1.875rem;
+            font-size: 0.875rem;
+            background-color: #3a6ea5;
+            box-shadow: 0px 3px 6px 0px rgb(8, 12, 56, 0.15);
+
+            &:hover {
+              background-color: #004f98;
+            }
+          }
+        }
+
+        .item-body {
+          &.value {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+
+            i {
+              font-size: 0.75rem;
+              color: rgba(225, 225, 225, 0.7);
+            }
+          }
+        }
+      }
     }
 
     .profile-info-wrap {
@@ -242,10 +320,279 @@ $black: #222;
         }
       }
     }
+
+    .btn-open-profile {
+      color: #004f98;
+    }
+
+    &.profile-summary {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    &.about {
+      max-height: 20.25rem;
+      overflow: hidden;
+
+      .sec-title {
+        margin-bottom: 1.25rem;
+      }
+
+      .item-wrap {
+        overflow-y: auto;
+      }
+
+      .item {
+        border: 1px solid #eee;
+      }
+
+      .accordion {
+        &.open {
+          .accordion-header {
+            border-bottom: 1px solid #eee;
+          }
+        }
+      }
+
+      .accordion-header {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        position: relative;
+        padding: 1rem;
+        cursor: pointer;
+
+        &::after {
+          content: '\e906';
+          font-family: 'portfolio_iconset';
+          display: block;
+          width: 0.625rem;
+          height: 0.625rem;
+          font-size: 0.625rem;
+          margin-left: auto;
+          transform: rotate(90deg);
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      .label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.375rem;
+        height: 1.875rem;
+        background-color: $white;
+        border-radius: 1.875rem;
+        border: 1px solid #d46372;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #d46372;
+      }
+
+      .title {
+        font-size: 0.875rem;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+
+        .text {
+          padding: 1.25rem;
+          font-size: 0.875rem;
+          font-weight: 400;
+          line-height: 1.2;
+        }
+      }
+    }
   }
 
   .sec-title {
     font-size: 1.25rem;
     font-weight: 600;
   }
+}
+
+/*
+* responsive
+*/
+
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px) {
+  #portfolio01 {
+    // lnb
+    .lnb {
+      width: $lnb-width-fold;
+
+      .home {
+        .name {
+          &:after {
+            content: 'M';
+            display: block;
+            width: 100%;
+            background-color: $black;
+            font-size: 1.25rem;
+            position: absolute;
+            top: -0.3125rem;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        .text {
+          display: none;
+        }
+      }
+
+      .lnb-list-wrap {
+        padding-left: 0.625rem;
+      }
+
+      .lnb-list {
+        .list-name {
+          visibility: hidden;
+          overflow: hidden;
+        }
+
+        &:hover {
+          .list-name {
+            visibility: visible;
+            overflow: visible;
+            position: absolute;
+            left: 85%;
+          }
+        }
+      }
+
+      &:hover {
+        .btn-lnb-fold {
+          display: none;
+        }
+      }
+
+      ~ .main {
+        padding-left: calc($lnb-width-fold + 3.125rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+  #portfolio01 {
+    .lnb {
+      width: 100%;
+      height: calc(100vh - $nav-height);
+      top: initial;
+      left: initial;
+      right: -110%;
+      bottom: 0;
+      padding: 4rem 0 0 3rem;
+
+      .home {
+        display: none;
+      }
+
+      .lnb-list-wrap {
+        padding-left: 0;
+      }
+
+      .lnb-list {
+        .list-name {
+          visibility: visible;
+          overflow: visible;
+        }
+
+        &:hover {
+          .list-name {
+            position: relative;
+            left: initial;
+          }
+        }
+      }
+
+      ~ .main {
+        padding: 4.5rem 1rem 3rem;
+      }
+
+      &.open {
+        right: 0;
+
+        ~ .nav {
+          .btn-nav-open {
+            &::before {
+              transform: rotate(45deg);
+              width: 1.5rem;
+              top: 0.75rem;
+              left: 0.25rem;
+            }
+
+            &::after {
+              transform: rotate(-45deg);
+              width: 1.5rem;
+              bottom: 0.625rem;
+              left: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: $nav-height;
+      background-color: $black;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: $white;
+      padding: 0 1rem;
+
+      .name {
+        font-weight: 700;
+      }
+
+      .btn-nav-open {
+        width: 1.875rem;
+        height: 1.5rem;
+        position: relative;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          width: 1.25rem;
+          border: 1px solid $white;
+          position: absolute;
+          border-radius: 1.875rem;
+          transition: transform 0.15s ease-in-out;
+        }
+
+        &::before {
+          top: 0.375rem;
+        }
+
+        &::after {
+          bottom: 5px;
+          width: 1.875rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
 }
