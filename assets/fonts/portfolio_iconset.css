@@ -10,9 +10,9 @@
   font-display: block;
 }
 
-[class^='icon-'], [class*=' icon-'] {
+i {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'portfolio_iconset';
+  font-family: 'portfolio_iconset' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,9 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-github:before {
-  content: "\e900";
-}
 .icon-home:before {
   content: "\e901";
 }
@@ -84,4 +81,57 @@
 }
 .icon-link:before {
   content: "\e913";
+}
+.icon-html .path1:before {
+  content: "\e91a";
+  /* color: rgb(228, 77, 38); */
+  color: #fff;
+}
+.icon-html .path2:before {
+  content: "\e91d";
+  margin-left: -1em;
+  /* color: rgb(255, 255, 255); */
+  color: #004f98;
+}
+.icon-css .path1:before {
+  content: "\e918";
+  /* color: rgb(2, 119, 189); */
+  color: #fff;
+}
+.icon-css .path2:before {
+  content: "\e919";
+  margin-left: -1em;
+  /* color: rgb(255, 255, 255); */
+  color: #004f98;
+}
+.icon-sass:before {
+  content: "\e915";
+  /* color: #cd6799; */
+  color: #fff
+}
+.icon-javascript .path1:before {
+  content: "\e916";
+  /* color: rgb(255, 214, 0); */
+  color: #fff;
+}
+.icon-javascript .path2:before {
+  content: "\e917";
+  margin-left: -1em;
+  /* color: rgb(0, 0, 1); */
+  color: #004f98;
+}
+.icon-bootstrap:before {
+  content: "\e920";
+  /* color: #673ab7; */
+}
+.icon-github:before {
+  content: "\e900";
+}
+.icon-react:before {
+  content: "\e914";
+  /* color: #61dafb; */
+}
+.icon-git:before {
+  content: "\e91c";
+  /* color: #f03c2e; */
 }

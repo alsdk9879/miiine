@@ -10,7 +10,7 @@ btnLnbFold.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth <= 767.98) {
+  if (window.innerWidth <= 991.98) {
     lnb.classList.remove('fold');
   }
 });
@@ -45,3 +45,7 @@ function onToggleAccordion(e) {
 }
 
 accordionHeader && accordionHeader.forEach((el) => el.addEventListener('click', onToggleAccordion));
+
+/*
+ modal
+*/

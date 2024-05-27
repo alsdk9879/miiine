@@ -1,0 +1,139 @@
+#portfolio01 {
+  &.works {
+    .sec-item {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  .work-list {
+    .sec-item {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .item {
+      padding: 1rem;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 2px 5px 0px rgba(8, 12, 56, 0.15);
+
+      &:hover {
+        box-shadow: 0px 5px 15px 0px rgba(8, 12, 56, 0.15);
+        transform: scale(1.01);
+      }
+
+      .img-wrap {
+        border-radius: 0.625rem;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          padding-top: 76%;
+          background-color: #eee;
+        }
+
+        &::after {
+          content: '\e90f';
+          font-family: 'portfolio_iconset';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #999;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+      }
+
+      .text-wrap {
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+
+      .project-name {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1.125rem;
+      }
+
+      .project-desc {
+        color: #999;
+        line-height: 1.4;
+        margin-bottom: 1.125rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      .project-period {
+        font-size: 0.75rem;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/*
+* responsive
+*/
+
+@media (max-width: 1599.98px) {
+}
+
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+  #portfolio01 {
+    .work-list {
+      .sec-item {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+  #portfolio01 {
+    .work-list {
+      .sec-item {
+        gap: 1rem;
+      }
+
+      .item {
+        padding: 0.75rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 399.98px) {
+  #portfolio01 {
+    .work-list {
+      .sec-item {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

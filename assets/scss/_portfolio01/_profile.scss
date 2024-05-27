@@ -1,0 +1,55 @@
+#portfolio01 {
+  &.profile {
+    .main {
+      background-color: #f6f8fb;
+    }
+
+    .sec-item {
+      background-color: $white;
+      border: 1px solid #eee;
+      border-radius: 0;
+      padding: 0;
+    }
+
+    .item {
+      display: flex;
+      border-bottom: 1px solid #eee;
+      padding: 1.875rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 400;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .title {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+/*
+* responsive
+*/
+
+@media (max-width: 1599.98px) {
+}
+
+@media (max-width: 1399.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 399.98px) {
+}
