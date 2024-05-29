@@ -249,6 +249,10 @@
           }
         }
       }
+
+      em {
+        font-weight: 700;
+      }
     }
 
     .profile-info {
@@ -720,6 +724,10 @@
   #portfolio01 {
     .sec-item {
       .item {
+        &.profile-info-wrap {
+          padding: 1.875rem 1.25rem 1.25rem 1.25rem;
+        }
+
         &.view-detail {
           .item-header {
             .btn-view {

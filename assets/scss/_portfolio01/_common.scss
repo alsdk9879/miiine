@@ -28,6 +28,15 @@ $primary-color: #004f98;
     &:hover {
       background-color: #e6ecf5;
     }
+
+    &.bg-black {
+      background-color: $black;
+      color: $white;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
   }
 }
 

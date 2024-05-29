@@ -11,9 +11,15 @@
       padding: 0;
     }
 
+    .sec-title {
+      color: #004f98;
+    }
+
     .item {
       display: flex;
+      gap: 4.5rem;
       border-bottom: 1px solid #eee;
+      border-radius: 0;
       padding: 1.875rem 1.5rem;
       font-size: 1rem;
       font-weight: 400;
@@ -24,7 +30,42 @@
 
       .title {
         font-weight: 700;
+        min-width: 4rem;
       }
+
+      .desc {
+        color: #666;
+      }
+    }
+
+    .career {
+      .item {
+        flex-direction: column;
+        gap: 0;
+        color: #666;
+      }
+
+      .project-name {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+
+      .project-desc {
+        display: flex;
+        margin-bottom: 0.25rem;
+
+        &::before {
+          content: '-';
+          display: block;
+          margin-right: 0.25rem;
+        }
+      }
+    }
+
+    .btn-download {
+      width: fit-content;
+      min-width: 13.125rem;
+      margin: 0 auto;
     }
   }
 }

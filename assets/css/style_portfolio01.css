@@ -249,6 +249,13 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01 .btn:hover {
   background-color: #e6ecf5;
 }
+#portfolio01 .btn.bg-black {
+  background-color: #222;
+  color: #fff;
+}
+#portfolio01 .btn.bg-black:hover {
+  background-color: #000;
+}
 
 /*
 * responsive
@@ -495,6 +502,9 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01 .sec-item .item.view-detail .item-body.value i {
   font-size: 0.75rem;
   color: rgba(225, 225, 225, 0.7);
+}
+#portfolio01 .sec-item .item em {
+  font-weight: 700;
 }
 #portfolio01 .sec-item .profile-info {
   display: -webkit-box;
@@ -925,6 +935,9 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 @media (max-width: 767.98px) {
+  #portfolio01 .sec-item .item.profile-info-wrap {
+    padding: 1.875rem 1.25rem 1.25rem 1.25rem;
+  }
   #portfolio01 .sec-item .item.view-detail .item-header .btn-view {
     height: 1.75rem;
     font-size: 0.75rem;
@@ -1099,11 +1112,16 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 0;
   padding: 0;
 }
+#portfolio01.profile .sec-title {
+  color: #004f98;
+}
 #portfolio01.profile .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 4.5rem;
   border-bottom: 1px solid #eee;
+  border-radius: 0;
   padding: 1.875rem 1.5rem;
   font-size: 1rem;
   font-weight: 400;
@@ -1113,6 +1131,54 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio01.profile .item .title {
   font-weight: 700;
+  min-width: 4rem;
+}
+#portfolio01.profile .item .desc {
+  color: #666;
+}
+#portfolio01.profile .career .item {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0;
+  color: #666;
+}
+#portfolio01.profile .career .project-name {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+#portfolio01.profile .career .project-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.25rem;
+}
+#portfolio01.profile .career .project-desc::before {
+  content: "-";
+  display: block;
+  margin-right: 0.25rem;
+}
+#portfolio01.profile .btn-download {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 13.125rem;
+  margin: 0 auto;
+}
+
+/*
+* responsive
+*/
+#portfolio01.about {
+  background-color: #f6f8fb;
+  padding: 2rem 0;
+}
+#portfolio01.about .main {
+  width: 61.5rem;
+  margin: 0 auto;
+  padding: 5.125rem 0 3.125rem 6.5rem;
+  background-color: #fff;
 }
 
 /*
