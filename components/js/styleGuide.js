@@ -12,8 +12,6 @@ function scrollProgress() {
   let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 
   document.querySelectorAll('.guide-inner-wrap').forEach((el, index) => {
-    console.log(el)
-    
     if (scrollTop >= el.offsetTop - 100) {
       document.querySelectorAll('.nav .nav-link').forEach((el) => {
         el.classList.remove('active');

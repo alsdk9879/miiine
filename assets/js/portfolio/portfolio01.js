@@ -5,13 +5,14 @@
 const lnb = document.querySelector('.lnb');
 const btnLnbFold = document.querySelector('.lnb .btn-lnb-fold');
 
-btnLnbFold.addEventListener('click', () => {
-  lnb.classList.toggle('fold');
-});
+btnLnbFold &&
+  btnLnbFold.addEventListener('click', () => {
+    lnb.classList.toggle('fold');
+  });
 
 window.addEventListener('resize', () => {
   if (window.innerWidth <= 991.98) {
-    lnb.classList.remove('fold');
+    lnb && lnb.classList.remove('fold');
   }
 });
 
@@ -21,9 +22,10 @@ window.addEventListener('resize', () => {
 
 const btnNavOpen = document.querySelector('.nav .btn-nav-open');
 
-btnNavOpen.addEventListener('click', () => {
-  lnb.classList.toggle('open');
-});
+btnNavOpen &&
+  btnNavOpen.addEventListener('click', () => {
+    lnb.classList.toggle('open');
+  });
 
 /*
  accordion
@@ -49,3 +51,30 @@ accordionHeader && accordionHeader.forEach((el) => el.addEventListener('click', 
 /*
  modal
 */
+
+/*
+ profile > 스크롤시 해당 섹션에 따라 우측 snb active
+*/
+
+document.querySelectorAll('.snb .snb-list').forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector(el.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
+});
+
+function scrollProgress() {
+  let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+  document.querySelectorAll('.section').forEach((el, index) => {
+    if (scrollTop >= el.offsetTop - 100) {
+      document.querySelectorAll('.snb .snb-list').forEach((el) => {
+        el.classList.remove('active');
+      });
+      document.querySelector('.snb .snb-list:nth-child(' + (index + 1) + ')').classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll', scrollProgress);
