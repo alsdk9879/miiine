@@ -69,11 +69,12 @@ function scrollProgress() {
   let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 
   document.querySelectorAll('.section').forEach((el, index) => {
+    const snbListIndex = document.querySelector('.snb .snb-list:nth-child(' + (index + 1) + ')');
     if (scrollTop >= el.offsetTop - 100) {
       document.querySelectorAll('.snb .snb-list').forEach((el) => {
         el.classList.remove('active');
       });
-      document.querySelector('.snb .snb-list:nth-child(' + (index + 1) + ')').classList.add('active');
+      snbListIndex && snbListIndex.classList.add('active');
     }
   });
 }
