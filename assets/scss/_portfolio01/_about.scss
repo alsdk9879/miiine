@@ -58,16 +58,11 @@
       gap: 0;
       margin-bottom: 0;
       border-top: 2px solid $black;
-      border-bottom: 2px solid $black;
       padding: 1.25rem 0 5rem;
 
       &:first-of-type {
         border: none;
         padding: 0;
-      }
-
-      &:last-of-type {
-        border: none;
       }
     }
 
@@ -92,7 +87,7 @@
         font-size: 0.875rem;
         color: #666;
         display: block;
-        margin-bottom: 0.125rem;
+        margin-bottom: 0.25rem;
 
         &:last-of-type {
           margin-bottom: 1rem;
@@ -123,8 +118,12 @@
       }
     }
 
+    .desc {
+      line-height: 1.6;
+    }
+
     .basic-info {
-      .text {
+      .desc {
         margin-bottom: 2.25rem;
 
         &:last-of-type {

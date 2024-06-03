@@ -68,6 +68,8 @@ document.querySelectorAll('.snb .snb-list').forEach((el) => {
 function scrollProgress() {
   let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 
+  console.log(scrollTop);
+
   document.querySelectorAll('.section').forEach((el, index) => {
     const snbListIndex = document.querySelector('.snb .snb-list:nth-child(' + (index + 1) + ')');
     if (scrollTop >= el.offsetTop - 100) {

@@ -37,8 +37,13 @@
         color: #666;
       }
 
+      .text-wrap {
+        display: flex;
+        gap: 0.5rem;
+      }
+
       em {
-        margin-right: 0.375rem;
+        flex: none;
       }
     }
 
@@ -47,14 +52,16 @@
         flex-direction: column;
         gap: 0;
         color: #666;
+        border-bottom: none;
       }
 
       .project-name {
-        font-weight: 700;
+        font-weight: 800;
         margin-bottom: 0.75rem;
       }
 
-      .project-desc {
+      .project-desc,
+      .project-period {
         display: flex;
         margin-bottom: 0.25rem;
 
@@ -91,6 +98,18 @@
 }
 
 @media (max-width: 767.98px) {
+  #portfolio01 {
+    &.profile {
+      .item {
+        gap: 3rem;
+
+        .text-wrap {
+          flex-direction: column;
+          gap: 0.125rem;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
