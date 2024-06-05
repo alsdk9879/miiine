@@ -741,18 +741,6 @@ input[type=number]::-webkit-outer-spin-button {
           flex-direction: column;
   gap: 1.25rem;
 }
-#portfolio01 .skill .sec-item::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1.25rem;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#f6f9fc));
-  background: linear-gradient(transparent, #f6f9fc);
-  border-radius: 0 0 1em 1em;
-}
 #portfolio01 .skill .item {
   padding: 1.25rem 1.875rem;
   border: 1px solid #eee;
@@ -901,7 +889,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: initial;
   }
   #portfolio01 .lnb ~ .main {
-    padding: 3.5rem 1rem 3rem;
+    padding: 8rem 1rem 3rem;
   }
   #portfolio01 .lnb.open {
     right: 0;
@@ -936,6 +924,12 @@ input[type=number]::-webkit-outer-spin-button {
     font-weight: 500;
     color: #fff;
     padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
   }
   #portfolio01 .nav .name {
     font-weight: 700;
@@ -1292,7 +1286,9 @@ input[type=number]::-webkit-outer-spin-button {
   position: sticky;
   right: 0;
   top: 7rem;
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 #portfolio01.about .snb-list {
   width: 10rem;
@@ -1385,6 +1381,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio01.about .basic-info .desc:last-of-type {
   margin-bottom: 3.125rem;
+}
+#portfolio01.about .career .sec-item .desc {
+  margin-bottom: 1rem;
 }
 #portfolio01.about .name {
   font-size: 2.5rem;

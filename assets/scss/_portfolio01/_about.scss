@@ -22,7 +22,7 @@
       position: sticky;
       right: 0;
       top: 7rem;
-      height: 100vh;
+      height: fit-content;
     }
 
     .snb-list {
@@ -128,6 +128,14 @@
 
         &:last-of-type {
           margin-bottom: 3.125rem;
+        }
+      }
+    }
+
+    .career {
+      .sec-item {
+        .desc {
+          margin-bottom: 1rem;
         }
       }
     }
