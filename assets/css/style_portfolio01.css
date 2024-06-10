@@ -1344,7 +1344,7 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01.about .sec-item .sub-title {
   font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 1.125rem;
+  margin-bottom: 0.625rem;
 }
 #portfolio01.about .sec-item .sub-desc {
   font-size: 0.875rem;
@@ -1388,6 +1388,9 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01.about .career .sec-item .desc-wrap {
   margin-bottom: 3.125rem;
 }
+#portfolio01.about .career .sec-item .desc-wrap:last-child {
+  margin-bottom: 0;
+}
 #portfolio01.about .career .sec-item .desc {
   margin-bottom: 0.5rem;
   padding-left: 1rem;
@@ -1416,6 +1419,12 @@ input[type=number]::-webkit-outer-spin-button {
   display: inline-block;
   margin-right: 0.5rem;
   font-size: 0.875rem;
+}
+#portfolio01.about .introduce .desc {
+  margin-bottom: 0;
+}
+#portfolio01.about .introduce .desc:first-of-type {
+  margin-bottom: 3.125rem;
 }
 #portfolio01.about .name {
   font-size: 2.5rem;
