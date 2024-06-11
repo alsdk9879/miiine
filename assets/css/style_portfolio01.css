@@ -1374,7 +1374,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding-bottom: 0;
 }
 #portfolio01.about .desc {
-  line-height: 1.6;
+  line-height: 1.4;
 }
 #portfolio01.about .basic-info .desc {
   margin-bottom: 2.25rem;
@@ -1389,6 +1389,9 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: 3.125rem;
 }
 #portfolio01.about .career .sec-item .desc-wrap:last-child {
+  margin-bottom: 0;
+}
+#portfolio01.about .career .sec-item .desc-wrap:last-child .desc:last-of-type {
   margin-bottom: 0;
 }
 #portfolio01.about .career .sec-item .desc {
@@ -1419,6 +1422,9 @@ input[type=number]::-webkit-outer-spin-button {
   display: inline-block;
   margin-right: 0.5rem;
   font-size: 0.875rem;
+}
+#portfolio01.about .introduce .text-wrap:last-of-type .desc {
+  margin-bottom: 0;
 }
 #portfolio01.about .introduce .desc {
   margin-bottom: 0;
