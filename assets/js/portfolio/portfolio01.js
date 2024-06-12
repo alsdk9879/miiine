@@ -49,8 +49,16 @@ function onToggleAccordion(e) {
 accordionHeader && accordionHeader.forEach((el) => el.addEventListener('click', onToggleAccordion));
 
 /*
- modal
+ work > 각 프로젝트 클릭시 modal open & close
 */
+
+const project = document.querySelectorAll('.works .work-list .item');
+
+project.forEach((el, index) => {
+  el.addEventListener('click', () => {
+    console.log('click');
+  });
+});
 
 /*
  about > 스크롤시 해당 섹션에 따라 우측 snb active
