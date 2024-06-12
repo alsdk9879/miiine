@@ -53,7 +53,7 @@ accordionHeader && accordionHeader.forEach((el) => el.addEventListener('click', 
 */
 
 /*
- profile > 스크롤시 해당 섹션에 따라 우측 snb active
+ about > 스크롤시 해당 섹션에 따라 우측 snb active
 */
 
 document.querySelectorAll('.snb .snb-list').forEach((el) => {
@@ -70,6 +70,7 @@ function scrollProgress() {
 
   document.querySelectorAll('.section').forEach((el, index) => {
     const snbListIndex = document.querySelector('.snb .snb-list:nth-child(' + (index + 1) + ')');
+
     if (scrollTop >= el.offsetTop - 100) {
       document.querySelectorAll('.snb .snb-list').forEach((el) => {
         el.classList.remove('active');
@@ -79,3 +80,14 @@ function scrollProgress() {
   });
 }
 window.addEventListener('scroll', scrollProgress);
+
+window.onscroll = function () {
+  const lastSnbList = document.querySelector('.snb .snb-list:last-child');
+
+  if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+    document.querySelectorAll('.snb .snb-list').forEach((el) => {
+      el.classList.remove('active');
+    });
+    lastSnbList.classList.add('active');
+  }
+};

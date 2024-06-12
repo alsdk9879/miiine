@@ -1432,6 +1432,24 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01.about .introduce .desc:first-of-type {
   margin-bottom: 3.125rem;
 }
+#portfolio01.about .info-wrap {
+  margin-bottom: 6.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#portfolio01.about .info-wrap .img-wrap {
+  max-width: 11.875rem;
+  max-height: 11.875rem;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 0.75rem;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+}
 #portfolio01.about .name {
   font-size: 2.5rem;
   font-weight: 700;
@@ -1446,7 +1464,6 @@ input[type=number]::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   gap: 2.5rem;
-  margin-bottom: 6.5rem;
 }
 #portfolio01.about .info-list dt {
   color: #666;
@@ -1509,5 +1526,9 @@ input[type=number]::-webkit-outer-spin-button {
 @media (max-width: 767.98px) {
   #portfolio01.about .main {
     padding: 4rem 2rem 3rem 2rem;
+  }
+  #portfolio01.about .info-wrap .img-wrap {
+    max-width: 8.75rem;
+    max-height: 8.75rem;
   }
 }/*# sourceMappingURL=style_portfolio01.css.map */
