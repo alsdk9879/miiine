@@ -1064,6 +1064,9 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: transparent;
   padding: 0;
 }
+#portfolio01.works.pop-open {
+  overflow: hidden;
+}
 #portfolio01 .work-list .sec-item {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1137,6 +1140,131 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01 .work-list .item .project-period {
   font-size: 0.75rem;
   color: #004f98;
+}
+#portfolio01 .pop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#portfolio01 .pop.open {
+  display: block;
+}
+#portfolio01 .pop .pop-cont {
+  width: 62.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-36%, -50%);
+          transform: translate(-36%, -50%);
+  z-index: 99;
+}
+#portfolio01 .pop .txt-wrap {
+  padding-bottom: 6.25rem;
+}
+#portfolio01 .pop .txt-wrap .title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+}
+#portfolio01 .pop .txt-wrap .sub-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c54d6;
+  margin-top: 2rem;
+}
+#portfolio01 .pop .txt-wrap .desc {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 1rem;
+  max-height: 10.9375rem;
+  overflow-y: auto;
+}
+#portfolio01 .pop .txt-wrap .btn-wrap {
+  margin-top: 3.375rem;
+}
+#portfolio01 .pop .txt-wrap .btn-wrap a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #111;
+  border-radius: 1.6875rem;
+  width: 14.875rem;
+  height: 3.375rem;
+  line-height: 3.375rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+#portfolio01 .pop .txt-wrap .btn-wrap a::after {
+  content: "\e91f";
+  font-family: "hri_iconset";
+  display: inline-block;
+}
+#portfolio01 .pop .txt-wrap .btn-wrap a:first-child {
+  margin-right: 0.625rem;
+}
+#portfolio01 .pop .txt-wrap .btn-wrap a:hover {
+  background-color: #c6d800;
+  color: #111;
+}
+#portfolio01 .pop .txt-wrap .btn-wrap a:hover::after {
+  -webkit-animation: arrow 0.8s infinite forwards;
+          animation: arrow 0.8s infinite forwards;
+}
+#portfolio01 .pop .img-wrap {
+  width: 35.375rem;
+  height: 43.75rem;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+#portfolio01 .pop .img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#portfolio01 .pop .btn-close {
+  width: 3rem;
+  height: 3rem;
+  background-color: #111;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: -6%;
+}
+#portfolio01 .pop .btn-close::after {
+  content: "\e90c";
+  font-family: "portfolio_iconset";
+  font-size: 1rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /*

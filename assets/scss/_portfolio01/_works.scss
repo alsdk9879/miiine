@@ -4,6 +4,10 @@
       background-color: transparent;
       padding: 0;
     }
+
+    &.pop-open {
+      overflow: hidden;
+    }
   }
 
   .work-list {
@@ -84,6 +88,137 @@
       .project-period {
         font-size: 0.75rem;
         color: $primary-color;
+      }
+    }
+  }
+
+  .pop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &.open {
+      display: block;
+    }
+
+    .pop-cont {
+      width: 62.5rem;
+      background-color: #fff;
+      border-radius: 1rem;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-36%, -50%);
+      z-index: 99;
+    }
+
+    .txt-wrap {
+      padding-bottom: 6.25rem;
+
+      .title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #111;
+        line-height: 1.3;
+      }
+
+      .sub-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #2c54d6;
+        margin-top: 2rem;
+      }
+
+      .desc {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #555;
+        line-height: 1.6;
+        margin-top: 1rem;
+        max-height: 10.9375rem;
+        overflow-y: auto;
+      }
+
+      .btn-wrap {
+        margin-top: 3.375rem;
+
+        a {
+          display: inline-flex;
+          justify-content: space-between;
+          padding: 0 1.5rem;
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #fff;
+          background-color: #111;
+          border-radius: 1.6875rem;
+          width: 14.875rem;
+          height: 3.375rem;
+          line-height: 3.375rem;
+          transition: 0.2s;
+
+          &::after {
+            content: '\e91f';
+            font-family: 'hri_iconset';
+            display: inline-block;
+          }
+
+          &:first-child {
+            margin-right: 0.625rem;
+          }
+
+          &:hover {
+            background-color: #c6d800;
+            color: #111;
+
+            &::after {
+              animation: arrow 0.8s infinite forwards;
+            }
+          }
+        }
+      }
+    }
+
+    .img-wrap {
+      width: 35.375rem;
+      height: 43.75rem;
+      flex: none;
+      border-radius: 1rem;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .btn-close {
+      width: 3rem;
+      height: 3rem;
+      background-color: #111;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: -6%;
+
+      &::after {
+        content: '\e90c';
+        font-family: 'portfolio_iconset';
+        font-size: 1rem;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }
