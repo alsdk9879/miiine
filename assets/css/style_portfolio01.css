@@ -1160,6 +1160,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio01 .pop .pop-cont {
   width: 62.5rem;
+  height: 43.75rem;
   background-color: #fff;
   border-radius: 1rem;
   position: relative;
@@ -1168,33 +1169,48 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-transform: translate(-36%, -50%);
           transform: translate(-36%, -50%);
   z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 #portfolio01 .pop .txt-wrap {
-  padding-bottom: 6.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 14rem 3rem 5rem;
+  width: calc(100% - 28.375rem);
 }
 #portfolio01 .pop .txt-wrap .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #111;
-  line-height: 1.3;
+  color: #222;
+  margin-bottom: 2rem;
 }
 #portfolio01 .pop .txt-wrap .sub-title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
-  color: #2c54d6;
-  margin-top: 2rem;
+  color: #3a6ea5;
+  margin-bottom: 1rem;
 }
 #portfolio01 .pop .txt-wrap .desc {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: #555;
-  line-height: 1.6;
-  margin-top: 1rem;
+  font-size: 1rem;
+  color: #999;
+  line-height: 1.4;
   max-height: 10.9375rem;
   overflow-y: auto;
+  margin-bottom: 1rem;
+  margin-right: 3rem;
 }
 #portfolio01 .pop .txt-wrap .btn-wrap {
-  margin-top: 3.375rem;
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
 }
 #portfolio01 .pop .txt-wrap .btn-wrap a {
   display: -webkit-inline-box;
@@ -1203,57 +1219,48 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #fff;
-  background-color: #111;
-  border-radius: 1.6875rem;
-  width: 14.875rem;
+  background-color: #222;
+  border-radius: 1.875rem;
+  width: 13.75rem;
   height: 3.375rem;
-  line-height: 3.375rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 #portfolio01 .pop .txt-wrap .btn-wrap a::after {
-  content: "\e91f";
-  font-family: "hri_iconset";
+  content: "\e906";
+  font-family: "portfolio_iconset";
   display: inline-block;
-}
-#portfolio01 .pop .txt-wrap .btn-wrap a:first-child {
-  margin-right: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 #portfolio01 .pop .txt-wrap .btn-wrap a:hover {
-  background-color: #c6d800;
-  color: #111;
+  background-color: #3a6ea5;
 }
 #portfolio01 .pop .txt-wrap .btn-wrap a:hover::after {
   -webkit-animation: arrow 0.8s infinite forwards;
           animation: arrow 0.8s infinite forwards;
 }
 #portfolio01 .pop .img-wrap {
-  width: 35.375rem;
-  height: 43.75rem;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-#portfolio01 .pop .img-wrap img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 28.375rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #eee;
 }
 #portfolio01 .pop .btn-close {
   width: 3rem;
   height: 3rem;
-  background-color: #111;
+  background-color: #222;
   border-radius: 50%;
   position: absolute;
   top: 0;
-  right: -6%;
+  right: -5.5%;
 }
 #portfolio01 .pop .btn-close::after {
   content: "\e90c";
@@ -1267,6 +1274,35 @@ input[type=number]::-webkit-outer-spin-button {
           transform: translate(-50%, -50%);
 }
 
+@-webkit-keyframes arrow {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  50% {
+    -webkit-transform: translateX(35%);
+            transform: translateX(35%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  50% {
+    -webkit-transform: translateX(35%);
+            transform: translateX(35%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
 /*
 * responsive
 */
