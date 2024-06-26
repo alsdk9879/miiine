@@ -97,8 +97,8 @@ const popList = [
   {
     id: 'pop1',
     title: '통일플러스센터',
-    subTitle: '2024.05 ~',
-    desc: '프로젝트 설명',
+    subTitle: '퍼블리싱  <br> 기여도 : 100%',
+    desc: '통일부와 지역사회가 함께하는 통일 참여 소통 종합 플렛폼인 통일플러스센터 웹 사이트를 유지보수하고 있습니다. <br> 기여도 : 100%',
     btnViewPC: 'PC화면 보러가기',
     btnViewMO: '모바일화면 보러가기',
     viewPCLink: '#',
