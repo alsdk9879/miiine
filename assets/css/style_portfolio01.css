@@ -1117,6 +1117,8 @@ input[type=number]::-webkit-outer-spin-button {
   right: 0;
   bottom: 0;
   z-index: 1;
+  -o-object-position: top;
+     object-position: top;
 }
 #portfolio01 .work-list .item .text-wrap {
   font-size: 0.875rem;
@@ -1158,17 +1160,23 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01 .pop.open {
   display: block;
 }
-#portfolio01 .pop .pop-cont {
-  width: 62.5rem;
-  height: 43.75rem;
-  background-color: #fff;
-  border-radius: 1rem;
+#portfolio01 .pop .pop-cont-wrap {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   position: relative;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-36%, -50%);
           transform: translate(-36%, -50%);
   z-index: 99;
+}
+#portfolio01 .pop .pop-cont {
+  overflow: hidden;
+  width: 62.5rem;
+  height: 43.75rem;
+  background-color: #fff;
+  border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1182,28 +1190,38 @@ input[type=number]::-webkit-outer-spin-button {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 14rem 3rem 5rem;
-  width: calc(100% - 28.375rem);
+  width: calc(100% - 30rem);
 }
 #portfolio01 .pop .txt-wrap .title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #222;
   margin-bottom: 2rem;
+  word-break: auto-phrase;
 }
-#portfolio01 .pop .txt-wrap .sub-title {
+#portfolio01 .pop .txt-wrap .part,
+#portfolio01 .pop .txt-wrap .contribution {
   font-size: 1.125rem;
   font-weight: 700;
   color: #3a6ea5;
   margin-bottom: 1rem;
 }
-#portfolio01 .pop .txt-wrap .desc {
+#portfolio01 .pop .txt-wrap .part {
+  margin-bottom: 0.25rem;
+}
+#portfolio01 .pop .txt-wrap .desc,
+#portfolio01 .pop .txt-wrap .period {
   font-size: 1rem;
+  font-weight: 500;
   color: #999;
   line-height: 1.4;
   max-height: 10.9375rem;
   overflow-y: auto;
   margin-bottom: 1rem;
   margin-right: 3rem;
+}
+#portfolio01 .pop .txt-wrap .period {
+  font-weight: 500;
 }
 #portfolio01 .pop .txt-wrap .btn-wrap {
   margin-top: auto;
@@ -1248,10 +1266,15 @@ input[type=number]::-webkit-outer-spin-button {
           animation: arrow 0.8s infinite forwards;
 }
 #portfolio01 .pop .img-wrap {
-  width: 28.375rem;
+  width: 30rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  background-color: #eee;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+#portfolio01 .pop .img-wrap img {
+  -o-object-position: top;
+     object-position: top;
 }
 #portfolio01 .pop .btn-close {
   width: 3rem;
