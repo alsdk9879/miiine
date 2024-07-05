@@ -17,6 +17,14 @@ window.addEventListener('resize', () => {
 });
 
 /*
+ lnb-mark move
+*/
+
+const lnbList = document.querySelectorAll('.lnb .lnb-list');
+
+console.log(lnbList);
+
+/*
  mobile :: nav open & close
 */
 
@@ -242,7 +250,7 @@ popList.forEach((el, index) => {
     `<div class='pop' id='${popList[index].id}'>
       <div class='pop-cont-wrap'>
         <div class='pop-cont'>
-          <div class='txt-wrap'>
+          <div class='text-wrap'>
             <h2 class='title'>${popList[index].title}</h2>
             <p class='part'>${popList[index].part}</p>
             <p class='contribution'>${popList[index].contribution}</p>
@@ -277,10 +285,10 @@ itemProject.forEach((el, index) => {
     pop[index].classList.add('open');
     bodyWorks.classList.add('pop-open');
 
-    if (window.innerWidth < 1200) {
-      pop[index].classList.remove('open');
-      bodyWorks.classList.remove('pop-open');
-    }
+    // if (window.innerWidth < 1200) {
+    //   pop[index].classList.remove('open');
+    //   bodyWorks.classList.remove('pop-open');
+    // }
   });
 });
 

@@ -81,6 +81,7 @@
         font-size: 1.125rem;
         font-weight: 600;
         margin-bottom: 0.625rem;
+        line-height: 1.4;
       }
 
       .sub-desc {
@@ -333,6 +334,46 @@
 }
 
 @media (max-width: 575.98px) {
+  #portfolio01 {
+    &.about {
+      .info-wrap {
+        flex-direction: column-reverse;
+        gap: 2rem;
+
+        .text-wrap {
+          text-align: center;
+        }
+
+        .name {
+          font-size: 2.25rem;
+        }
+
+        .job {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .info-list {
+          justify-content: center;
+          font-size: 0.875rem;
+
+          dt {
+            display: none;
+          }
+
+          dd {
+            color: #666;
+          }
+        }
+
+        .img-wrap {
+          margin: 0 auto;
+          max-width: 7.75rem;
+          max-height: 7.75rem;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 399.98px) {
