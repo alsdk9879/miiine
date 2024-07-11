@@ -11,6 +11,13 @@ $primary-color: #004f98;
 // #fcf7f2
 
 #portfolio01 {
+  height: 100vh;
+  height: -webkit-fill-available;
+  height: fill-available;
+
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
   // component
   .btn {
     display: flex;
@@ -64,3 +71,14 @@ $primary-color: #004f98;
 
 @media (max-width: 399.98px) {
 }
+
+// @supports (-webkit-touch-callout: none) {
+//   html,
+//   #portfolio01 {
+//     height: -webkit-fill-available;
+//   }
+
+//   #portfolio01 {
+//     min-height: -webkit-fill-available;
+//   }
+// }

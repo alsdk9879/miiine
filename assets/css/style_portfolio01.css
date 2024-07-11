@@ -225,6 +225,14 @@ input[type=number]::-webkit-outer-spin-button {
 /*
  responsive
 */
+#portfolio01 {
+  height: 100vh;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
 #portfolio01 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,7 +350,7 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01 .lnb .lnb-list i {
   font-size: 1.5rem;
 }
-#portfolio01 .lnb .lnb-list.active a {
+#portfolio01 .lnb .lnb-list.mouseover a {
   color: #222;
 }
 #portfolio01 .lnb .btn-lnb-fold {
@@ -374,6 +382,9 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01 .lnb.fold {
   width: 6.25rem;
 }
+#portfolio01 .lnb.fold .home {
+  padding-bottom: 5.875rem;
+}
 #portfolio01 .lnb.fold .home .name:after {
   content: "M";
   display: block;
@@ -388,6 +399,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio01 .lnb.fold .home .text {
   display: none;
+}
+#portfolio01 .lnb.fold .lnb-mark {
+  width: calc(100% - 0.625rem);
 }
 #portfolio01 .lnb.fold .btn-lnb-fold i::before {
   content: "\e906";
@@ -851,6 +865,9 @@ input[type=number]::-webkit-outer-spin-button {
   #portfolio01 .lnb {
     width: 6.25rem;
   }
+  #portfolio01 .lnb .home {
+    padding-bottom: 5.875rem;
+  }
   #portfolio01 .lnb .home .name:after {
     content: "M";
     display: block;
@@ -866,6 +883,9 @@ input[type=number]::-webkit-outer-spin-button {
   #portfolio01 .lnb .home .text {
     display: none;
   }
+  #portfolio01 .lnb .lnb-mark {
+    width: calc(100% - 0.625rem);
+  }
   #portfolio01 .lnb .lnb-list-wrap {
     padding-left: 0.625rem;
   }
@@ -878,6 +898,8 @@ input[type=number]::-webkit-outer-spin-button {
     overflow: visible;
     position: absolute;
     left: 85%;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
   #portfolio01 .lnb:hover .btn-lnb-fold {
     display: none;
@@ -926,6 +948,9 @@ input[type=number]::-webkit-outer-spin-button {
   }
   #portfolio01 .lnb.open {
     right: 0;
+  }
+  #portfolio01 .lnb.open .lnb-mark {
+    top: 4rem;
   }
   #portfolio01 .lnb.open ~ .nav .btn-nav-open::before {
     -webkit-transform: rotate(45deg);
@@ -1472,6 +1497,12 @@ input[type=number]::-webkit-outer-spin-button {
   #portfolio01 .work-list .sec-item {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+#portfolio01.profile .lnb .lnb-mark {
+  background-color: #f6f8fb;
+}
+#portfolio01.profile .lnb .lnb-mark-deco {
+  background-color: #f6f8fb;
 }
 #portfolio01.profile .main {
   background-color: #f6f8fb;

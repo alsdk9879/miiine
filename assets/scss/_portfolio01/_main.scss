@@ -90,12 +90,7 @@
         font-size: 1.5rem;
       }
 
-      // &:hover,
-      &.active {
-        // background-color: $white;
-        // border-radius: 3.5rem 0 0 3.5rem;
-        // overflow: hidden;
-
+      &.mouseover {
         a {
           color: $black;
         }
@@ -130,6 +125,8 @@
       width: $lnb-width-fold;
 
       .home {
+        padding-bottom: 5.875rem;
+
         .name {
           &:after {
             content: 'M';
@@ -147,6 +144,10 @@
         .text {
           display: none;
         }
+      }
+
+      .lnb-mark {
+        width: calc(100% - 0.625rem);
       }
 
       .btn-lnb-fold {
@@ -600,6 +601,8 @@
       width: $lnb-width-fold;
 
       .home {
+        padding-bottom: 5.875rem;
+
         .name {
           &:after {
             content: 'M';
@@ -619,6 +622,11 @@
         }
       }
 
+      .lnb-mark {
+        width: calc(100% - 0.625rem);
+        // top: 10.375rem;
+      }
+
       .lnb-list-wrap {
         padding-left: 0.625rem;
       }
@@ -635,6 +643,7 @@
             overflow: visible;
             position: absolute;
             left: 85%;
+            transition: all 0.4s ease-in-out;
           }
         }
       }
@@ -677,6 +686,7 @@
     .lnb {
       width: 100%;
       height: calc(100vh - $nav-height);
+      // height: -webkit-fill-available;
       top: initial;
       left: initial;
       right: -110%;
@@ -711,6 +721,10 @@
 
       &.open {
         right: 0;
+
+        .lnb-mark {
+          top: 4rem;
+        }
 
         ~ .nav {
           .btn-nav-open {
