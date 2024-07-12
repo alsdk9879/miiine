@@ -564,6 +564,12 @@
           line-height: 1.4;
         }
       }
+
+      .btn-more {
+        &::after {
+          background-color: #f6f8fb;
+        }
+      }
     }
   }
 
@@ -599,7 +605,7 @@
       align-items: center;
       width: auto;
       height: 1rem;
-      background-color: #f6f8fb;
+      background-color: $white;
       font-size: 0.75rem;
       font-weight: 900;
       position: absolute;
@@ -741,7 +747,7 @@
         right: 0;
 
         .lnb-mark {
-          top: 4rem;
+          // top: 4rem;
         }
 
         ~ .nav {

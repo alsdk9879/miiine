@@ -813,6 +813,9 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 400;
   line-height: 1.4;
 }
+#portfolio01 .sec-item.about .btn-more::after {
+  background-color: #f6f8fb;
+}
 #portfolio01 .sec-title-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -861,7 +864,7 @@ input[type=number]::-webkit-outer-spin-button {
           align-items: center;
   width: auto;
   height: 1rem;
-  background-color: #f6f8fb;
+  background-color: #fff;
   font-size: 0.75rem;
   font-weight: 900;
   position: absolute;
@@ -959,9 +962,6 @@ input[type=number]::-webkit-outer-spin-button {
   }
   #portfolio01 .lnb.open {
     right: 0;
-  }
-  #portfolio01 .lnb.open .lnb-mark {
-    top: 4rem;
   }
   #portfolio01 .lnb.open ~ .nav .btn-nav-open::before {
     -webkit-transform: rotate(45deg);

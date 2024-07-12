@@ -23,26 +23,35 @@ window.addEventListener('resize', () => {
 const lnbList = document.querySelectorAll('.lnb .lnb-list');
 const lnbMark = document.querySelector('.lnb .lnb-mark');
 
-lnbList.forEach((list) => {
-  list.addEventListener('mouseenter', () => {
-    list.classList.add('mouseover');
+function moveLnbMark() {
+  lnbList.forEach((list) => {
+    list.addEventListener('mouseenter', () => {
+      list.classList.add('mouseover');
 
-    const siblings = Array.from(list.parentElement.children).filter((el) => {
-      return el !== list;
+      const siblings = Array.from(list.parentElement.children).filter((el) => {
+        return el !== list;
+      });
+      siblings.forEach((sibling) => {
+        sibling.classList.remove('mouseover');
+      });
+
+      const lnbListRect = list.getBoundingClientRect();
+      lnbMark.style.top = lnbListRect.top + 'px';
+      lnbMark.style.transition = 'top 0.4s ease-in-out';
+
+      if (window.innerWidth <= 991.98) {
+        lnbMark.style.top = lnbListRect.top - 72 + 'px';
+      }
+
+      if (document.querySelector('.lnb').classList.contains('open')) {
+        console.log('ddd');
+      }
     });
-    siblings.forEach((sibling) => {
-      sibling.classList.remove('mouseover');
-    });
-
-    const lnbListRect = list.getBoundingClientRect();
-    lnbMark.style.top = lnbListRect.top + 'px';
-    lnbMark.style.transition = 'top 0.4s ease-in-out';
-
-    if (window.innerWidth <= 991.98) {
-      lnbMark.style.top = lnbListRect.top - 72 + 'px';
-    }
   });
-});
+}
+moveLnbMark();
+
+document.addEventListener('DOMContentLoaded', () => {});
 
 /*
  mobile :: nav open & close
