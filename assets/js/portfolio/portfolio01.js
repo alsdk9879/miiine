@@ -42,16 +42,36 @@ function moveLnbMark() {
       if (window.innerWidth <= 991.98) {
         lnbMark.style.top = lnbListRect.top - 72 + 'px';
       }
-
-      if (document.querySelector('.lnb').classList.contains('open')) {
-        console.log('ddd');
-      }
     });
   });
 }
 moveLnbMark();
 
-document.addEventListener('DOMContentLoaded', () => {});
+function moveLnbMarklnbOpen() {
+  const lnbOpenObserver = new MutationObserver(function (el) {
+    el.forEach(function (viewing) {
+      if (viewing.target.classList.contains('open')) {
+        const arrLnbList = Array.from(lnbList);
+        const found = arrLnbList.find((el) => el.classList.contains('active'));
+
+        lnbMark.style.top = found.offsetTop + 'px';
+      }
+    });
+  });
+
+  const config = {
+    attributes: true,
+  };
+
+  lnbOpenObserver.observe(lnb, config);
+}
+moveLnbMarklnbOpen();
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 991.98) {
+    moveLnbMarklnbOpen();
+  }
+});
 
 /*
  mobile :: nav open & close

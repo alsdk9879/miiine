@@ -31,7 +31,7 @@
       height: 4.5rem;
       background-color: $white;
       position: absolute;
-      top: 11.9494rem;
+      // top: 11.9494rem;
       right: 0;
       border-radius: 3.5rem 0 0 3.5rem;
     }
@@ -93,6 +93,12 @@
       &.mouseover {
         a {
           color: $black;
+        }
+
+        &.active {
+          a {
+            color: $black;
+          }
         }
       }
     }
@@ -748,6 +754,7 @@
 
         .lnb-mark {
           // top: 4rem;
+          top: initial;
         }
 
         ~ .nav {

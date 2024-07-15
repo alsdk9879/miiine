@@ -290,7 +290,6 @@ input[type=number]::-webkit-outer-spin-button {
   height: 4.5rem;
   background-color: #fff;
   position: absolute;
-  top: 11.9494rem;
   right: 0;
   border-radius: 3.5rem 0 0 3.5rem;
 }
@@ -343,6 +342,9 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 1.5rem;
 }
 #portfolio01 .lnb .lnb-list.mouseover a {
+  color: #222;
+}
+#portfolio01 .lnb .lnb-list.mouseover.active a {
   color: #222;
 }
 #portfolio01 .lnb .btn-lnb-fold {
@@ -962,6 +964,9 @@ input[type=number]::-webkit-outer-spin-button {
   }
   #portfolio01 .lnb.open {
     right: 0;
+  }
+  #portfolio01 .lnb.open .lnb-mark {
+    top: initial;
   }
   #portfolio01 .lnb.open ~ .nav .btn-nav-open::before {
     -webkit-transform: rotate(45deg);
