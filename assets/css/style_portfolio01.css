@@ -799,6 +799,7 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01 .sec-item.about .title {
   font-size: 0.875rem;
   font-weight: 400;
+  line-height: 1.3;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1060,6 +1061,11 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #portfolio01 .sec-item.about .title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 }
 @media (max-width: 767.98px) {

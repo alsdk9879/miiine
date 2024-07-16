@@ -17,10 +17,35 @@ window.addEventListener('resize', () => {
 });
 
 /*
- lnb-mark move
+ lnb-list setAttribute target
 */
 
 const lnbList = document.querySelectorAll('.lnb .lnb-list');
+const arrLnbList = Array.from(lnbList);
+
+const lnbListAbout = arrLnbList[arrLnbList.length - 2].lastElementChild;
+const lnbListGithub = arrLnbList[arrLnbList.length - 1].lastElementChild;
+
+function setAttributeTarget() {
+  lnbListAbout.setAttribute('target', '_blank');
+  lnbListGithub.setAttribute('target', '_blank');
+}
+
+function removeAttributeTarget() {
+  lnbListAbout.removeAttribute('target');
+  lnbListGithub.removeAttribute('target');
+}
+
+if (window.innerWidth <= 991.98) {
+  removeAttributeTarget();
+} else {
+  setAttributeTarget();
+}
+
+/*
+ lnb-mark move
+*/
+
 const lnbMark = document.querySelector('.lnb .lnb-mark');
 
 function moveLnbMark() {
@@ -51,7 +76,6 @@ function moveLnbMarklnbOpen() {
   const lnbOpenObserver = new MutationObserver(function (el) {
     el.forEach(function (viewing) {
       if (viewing.target.classList.contains('open')) {
-        const arrLnbList = Array.from(lnbList);
         const found = arrLnbList.find((el) => el.classList.contains('active'));
 
         lnbMark.style.top = found.offsetTop + 'px';
@@ -70,6 +94,9 @@ moveLnbMarklnbOpen();
 window.addEventListener('resize', () => {
   if (window.innerWidth <= 991.98) {
     moveLnbMarklnbOpen();
+    removeAttributeTarget();
+  } else {
+    setAttributeTarget();
   }
 });
 
