@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/*
+ import library css
+*/
+/*
+ fonts
+*/
+@import url("../fonts/portfolio_iconset.css");
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-display: swap;
+  src: local("GmarketSansBold"), url("../fonts/woff2/GmarketSansBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 500;
+  font-display: swap;
+  src: local("GmarketSansMedium"), url("../fonts/woff2/GmarketSansMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-display: swap;
+  src: local("GmarketSansLight"), url("../fonts/woff2/GmarketSansLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url("../fonts/woff2/Pretendard-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url("../fonts/woff2/Pretendard-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("../fonts/woff2/Pretendard-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("../fonts/woff2/Pretendard-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("../fonts/woff2/Pretendard-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("../fonts/woff2/Pretendard-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url("../fonts/woff2/Pretendard-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url("../fonts/woff2/Pretendard-ExtraLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url("../fonts/woff2/Pretendard-Thin.woff2") format("woff2");
+}
+/*
+==========================================================================
+  common  :: reset
+==========================================================================
+*/
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+  cursor: default;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-family: "Pretendard", "GmarketSans", AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+button,
+textarea,
+select,
+a {
+  font-family: inherit;
+  color: inherit;
+  background-color: inherit;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+dl,
+li,
+menu,
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+button,
+a:hover,
+button:hover,
+a:active,
+button:active,
+a:focus,
+button:focus {
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border: none;
+}
+
+a:active {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+input[type=text],
+input[type=password],
+textarea,
+select,
+button {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*
+ responsive
+*/
+/*
+* responsive
+*//*# sourceMappingURL=style_portfolio02.css.map */
