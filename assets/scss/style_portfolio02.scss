@@ -1,4 +1,5 @@
 // import
-@import './_common/import';
-@import './_common/default';
-@import './_portfolio02/common';
+@import './_common/import'; // 폰트 및 아이콘
+@import './_common/default'; // reset css
+@import './_portfolio02/common'; // component 및 변수
+@import './_portfolio02/main';

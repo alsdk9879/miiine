@@ -78,6 +78,36 @@
   font-display: swap;
   src: local("Pretendard Thin"), url("../fonts/woff2/Pretendard-Thin.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Satoshi Black"), url("../fonts/woff2/Satoshi-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Satoshi Bold"), url("../fonts/woff2/Satoshi-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Satoshi Medium"), url("../fonts/woff2/Satoshi-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Satoshi Regular"), url("../fonts/woff2/Satoshi-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Satoshi Light"), url("../fonts/woff2/Satoshi-Light.woff2") format("woff2");
+}
 /*
 ==========================================================================
   common  :: reset
@@ -124,7 +154,7 @@ html {
 body {
   line-height: 1.2;
   letter-spacing: -0.02em;
-  font-family: "Pretendard", "GmarketSans", AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
+  font-family: "Pretendard", "GmarketSans", "Satoshi", AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

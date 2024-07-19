@@ -7,6 +7,8 @@
  fonts
 */
 @import url('../fonts/portfolio_iconset.css');
+
+// GmarketSans
 @font-face {
   font-family: 'GmarketSans';
   font-weight: 700;
@@ -28,6 +30,7 @@
   src: local('GmarketSansLight'), url('../fonts/woff2/GmarketSansLight.woff2') format('woff2');
 }
 
+// Pretendard
 @font-face {
   font-family: 'Pretendard';
   font-weight: 900;
@@ -89,4 +92,40 @@
   font-weight: 100;
   font-display: swap;
   src: local('Pretendard Thin'), url('../fonts/woff2/Pretendard-Thin.woff2') format('woff2');
+}
+
+// Satoshi
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 900;
+  font-display: swap;
+  src: local('Satoshi Black'), url('../fonts/woff2/Satoshi-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 700;
+  font-display: swap;
+  src: local('Satoshi Bold'), url('../fonts/woff2/Satoshi-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 500;
+  font-display: swap;
+  src: local('Satoshi Medium'), url('../fonts/woff2/Satoshi-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 300;
+  font-display: swap;
+  src: local('Satoshi Regular'), url('../fonts/woff2/Satoshi-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  font-weight: 100;
+  font-display: swap;
+  src: local('Satoshi Light'), url('../fonts/woff2/Satoshi-Light.woff2') format('woff2');
 }
