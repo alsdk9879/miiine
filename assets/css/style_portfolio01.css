@@ -688,7 +688,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio01 .sec-item .profile-info .img-wrap {
   width: 9.125rem;
-  height: 9.125rem;
+  height: 11.125rem;
   border-radius: 0.625rem;
   overflow: hidden;
 }
@@ -697,6 +697,8 @@ input[type=number]::-webkit-outer-spin-button {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 #portfolio01 .sec-item .profile-info .text-wrap .label {
   display: block;
@@ -1150,7 +1152,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
   #portfolio01 .sec-item .profile-info .img-wrap {
     width: 8.125rem;
-    height: 8.125rem;
+    height: 10.125rem;
   }
   #portfolio01 .sec-item .profile-info .text-wrap {
     text-align: center;
@@ -1518,7 +1520,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 1.5rem;
   }
   #portfolio01 .pop .text-wrap .desc,
-#portfolio01 .pop .text-wrap .period {
+  #portfolio01 .pop .text-wrap .period {
     margin-right: 0;
     max-height: 9.2rem;
   }
@@ -1855,6 +1857,10 @@ input[type=number]::-webkit-outer-spin-button {
   border-bottom-right-radius: 50%;
   overflow: hidden;
 }
+#portfolio01.about .info-wrap .img-wrap img {
+  -o-object-position: top;
+     object-position: top;
+}
 #portfolio01.about .name {
   font-size: 2.5rem;
   font-weight: 700;
@@ -1949,10 +1955,10 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
   }
   #portfolio01.about .info-wrap .name {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   #portfolio01.about .info-wrap .job {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     margin-bottom: 0.5rem;
   }
   #portfolio01.about .info-wrap .info-list {

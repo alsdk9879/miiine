@@ -37,7 +37,7 @@
                 </dl>
               </div>
               <div class="img-wrap">
-                <img src="https://picsum.photos/200/300" alt="img-profile" />
+                <img src="../../images/portfolio/프로필2_오민아.jpg" alt="img-profile" />
               </div>
             </div>
 
@@ -298,7 +298,45 @@
       </main>
       <!-- main :: e -->
     </div>
+
     <!-- script -->
-    <script src="../../js/portfolio/portfolio01.js"></script>
+    <script>
+      // about > 스크롤시 해당 섹션에 따라 우측 snb active
+      document.querySelectorAll('.snb .snb-list').forEach((el) => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.querySelector(el.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+          });
+        });
+      });
+
+      function scrollProgress() {
+        let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+        document.querySelectorAll('.section').forEach((el, index) => {
+          const snbListIndex = document.querySelector('.snb .snb-list:nth-child(' + (index + 1) + ')');
+
+          if (scrollTop >= el.offsetTop - 100) {
+            document.querySelectorAll('.snb .snb-list').forEach((el) => {
+              el.classList.remove('active');
+            });
+            snbListIndex && snbListIndex.classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', scrollProgress);
+
+      window.onscroll = function () {
+        const lastSnbList = document.querySelector('.snb .snb-list:last-child');
+
+        if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+          document.querySelectorAll('.snb .snb-list').forEach((el) => {
+            el.classList.remove('active');
+          });
+          lastSnbList && lastSnbList.classList.add('active');
+        }
+      };
+    </script>
   </body>
 </html>

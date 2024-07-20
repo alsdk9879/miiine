@@ -222,6 +222,10 @@
         border-bottom-left-radius: 50%;
         border-bottom-right-radius: 50%;
         overflow: hidden;
+
+        img {
+          object-position: top;
+        }
       }
     }
 
@@ -345,11 +349,11 @@
         }
 
         .name {
-          font-size: 2.25rem;
+          font-size: 2rem;
         }
 
         .job {
-          font-size: 1.25rem;
+          font-size: 1.125rem;
           margin-bottom: 0.5rem;
         }
 
