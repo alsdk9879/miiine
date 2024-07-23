@@ -32,7 +32,7 @@
       padding: 0 1.75rem;
     }
 
-    .nav {
+    .nav-list-wrap {
       min-width: 23.375rem;
       padding: 0;
       background-color: transparent;
@@ -42,20 +42,25 @@
       .nav-list {
         width: 100%;
         height: 100%;
-        background-color: $secondary-color1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: $secondary-color1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
       }
     }
 
     .btn-contact {
       font-size: 1.25rem;
-      color: $white;
-      background-color: $primary-color2;
-      position: relative;
       padding: 0 1.5rem;
+      background-color: $primary-color2;
+      color: $white;
 
       &::before {
         content: 'Contact';
@@ -89,7 +94,7 @@
       width: 3.75rem;
       height: 100%;
       padding: 0;
-      position: relative;
+      color: $black;
 
       &::before,
       &::after {
@@ -138,9 +143,120 @@
     top: -110%;
     border-radius: 0;
     transition: top 0.3s ease-in-out;
+    padding: 8rem $mo-nav-padding 1.75rem;
+    background-color: $primary-color1;
 
     &.open {
       top: 0;
+      z-index: 1;
+    }
+
+    .nav-list-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .nav-list {
+      font-family: 'Austin';
+      font-size: 2.625rem;
+      font-weight: 300;
+    }
+
+    .btn-wrap {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      position: absolute;
+      bottom: 1.75rem;
+      width: calc(100% - $mo-nav-padding - $mo-nav-padding);
+    }
+
+    .btn-go {
+      width: calc(50% - 0.25rem);
+      // height: 3.875rem;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+
+      &:last-of-type {
+        width: 100%;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1.25rem;
+        border-top: 1px solid $white;
+        position: absolute;
+        top: 1.375rem;
+        right: 1.375rem;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 0.875rem;
+        height: 0.875rem;
+        border-top: 1px solid $white;
+        border-right: 1px solid $white;
+        position: relative;
+        top: -0.1875rem;
+      }
+    }
+  }
+
+  .section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 7.125rem;
+  }
+
+  .animaiton-items-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .name {
+      font-family: 'Austin';
+      font-size: 150px;
+      font-weight: 300;
+      line-height: 1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+
+      .text {
+        display: block;
+      }
+    }
+  }
+
+  .shape-ball {
+    width: 36%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -12%);
+    transform-origin: center center;
+    z-index: 1;
+  }
+
+  .shape {
+    width: 100%;
+    height: auto;
+    border-radius: 50% 50% 0 0;
+    background-color: $secondary-color1;
+
+    &.halfmoon {
+      position: absolute;
+      bottom: -60%;
+      transform-origin: center;
+      transition: transform 0.8s ease-in-out;
     }
   }
 }
@@ -172,7 +288,7 @@
         padding: 0;
       }
 
-      .nav {
+      .nav-list-wrap {
         display: none;
       }
 
@@ -188,6 +304,10 @@
 
     .mo-nav {
       display: block;
+    }
+
+    .section {
+      padding: 0 1rem;
     }
   }
 }

@@ -108,6 +108,54 @@
   font-display: swap;
   src: local("Satoshi Light"), url("../fonts/woff2/Satoshi-Light.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Austin";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Austin Ultra"), url("../fonts/woff2/Austin-Ultra.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Austin";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Austin Fat"), url("../fonts/woff2/Austin-Fat.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Austin";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Austin Extrabold"), url("../fonts/woff2/Austin-Extrabold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Austin";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Austin Bold"), url("../fonts/woff2/Austin-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Austin";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Austin Semibold"), url("../fonts/woff2/Austin-Semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Austin";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Austin Medium"), url("../fonts/woff2/Austin-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Austin";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Austin Roman"), url("../fonts/woff2/Austin-Roman.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Austin";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Austin Light"), url("../fonts/woff2/Austin-Light.woff2") format("woff2");
+}
 /*
 ==========================================================================
   common  :: reset
@@ -154,7 +202,7 @@ html {
 body {
   line-height: 1.2;
   letter-spacing: -0.02em;
-  font-family: "Pretendard", "GmarketSans", "Satoshi", AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
+  font-family: "Pretendard", "GmarketSans", "Satoshi", "Austin", AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -272,6 +320,9 @@ input[type=number]::-webkit-outer-spin-button {
   gap: 0.5rem;
   padding: 0 1rem;
   border-radius: 1.875rem;
+  background-color: #51733f;
+  color: #fff;
+  position: relative;
 }
 
 /*
@@ -319,14 +370,19 @@ input[type=number]::-webkit-outer-spin-button {
   width: 14.875rem;
   padding: 0 1.75rem;
 }
-#portfolio02 .header .nav {
+#portfolio02 .header .nav-list-wrap {
   min-width: 23.375rem;
   padding: 0;
   background-color: transparent;
   margin-left: auto;
   gap: 0.25rem;
 }
-#portfolio02 .header .nav .nav-list {
+#portfolio02 .header .nav-list-wrap .nav-list {
+  width: 100%;
+  height: 100%;
+}
+#portfolio02 .header .nav-list-wrap .nav-list a {
+  display: block;
   width: 100%;
   height: 100%;
   background-color: #f5f5eb;
@@ -343,10 +399,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio02 .header .btn-contact {
   font-size: 1.25rem;
-  color: #fff;
-  background-color: #51733f;
-  position: relative;
   padding: 0 1.5rem;
+  background-color: #51733f;
+  color: #fff;
 }
 #portfolio02 .header .btn-contact::before {
   content: "Contact";
@@ -379,7 +434,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 3.75rem;
   height: 100%;
   padding: 0;
-  position: relative;
+  color: #222;
 }
 #portfolio02 .header .btn-mo-nav-open::before, #portfolio02 .header .btn-mo-nav-open::after {
   content: "";
@@ -426,9 +481,123 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 0;
   -webkit-transition: top 0.3s ease-in-out;
   transition: top 0.3s ease-in-out;
+  padding: 8rem 1.5rem 1.75rem;
+  background-color: #d2d3c2;
 }
 #portfolio02 .mo-nav.open {
   top: 0;
+  z-index: 1;
+}
+#portfolio02 .mo-nav .nav-list-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+#portfolio02 .mo-nav .nav-list {
+  font-family: "Austin";
+  font-size: 2.625rem;
+  font-weight: 300;
+}
+#portfolio02 .mo-nav .btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  bottom: 1.75rem;
+  width: calc(100% - 1.5rem - 1.5rem);
+}
+#portfolio02 .mo-nav .btn-go {
+  width: calc(50% - 0.25rem);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1.5rem;
+}
+#portfolio02 .mo-nav .btn-go:last-of-type {
+  width: 100%;
+}
+#portfolio02 .mo-nav .btn-go::before {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  border-top: 1px solid #fff;
+  position: absolute;
+  top: 1.375rem;
+  right: 1.375rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+#portfolio02 .mo-nav .btn-go::after {
+  content: "";
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  position: relative;
+  top: -0.1875rem;
+}
+#portfolio02 .section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 7.125rem;
+}
+#portfolio02 .animaiton-items-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#portfolio02 .animaiton-items-wrap .name {
+  font-family: "Austin";
+  font-size: 150px;
+  font-weight: 300;
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+#portfolio02 .animaiton-items-wrap .name .text {
+  display: block;
+}
+#portfolio02 .shape-ball {
+  width: 36%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -12%);
+          transform: translate(-50%, -12%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  z-index: 1;
+}
+#portfolio02 .shape {
+  width: 100%;
+  height: auto;
+  border-radius: 50% 50% 0 0;
+  background-color: #f5f5eb;
+}
+#portfolio02 .shape.halfmoon {
+  position: absolute;
+  bottom: -60%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
 }
 
 /*
@@ -445,7 +614,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: transparent;
     padding: 0;
   }
-  #portfolio02 .header .nav {
+  #portfolio02 .header .nav-list-wrap {
     display: none;
   }
   #portfolio02 .header .btn-contact {
@@ -459,5 +628,8 @@ input[type=number]::-webkit-outer-spin-button {
   }
   #portfolio02 .mo-nav {
     display: block;
+  }
+  #portfolio02 .section {
+    padding: 0 1rem;
   }
 }/*# sourceMappingURL=style_portfolio02.css.map */
