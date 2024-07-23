@@ -1,4 +1,12 @@
 /*
+ AOS
+*/
+AOS.init({
+  duration: 1200,
+  offset: 10,
+});
+
+/*
  mo-nav open & close
 */
 
@@ -11,41 +19,46 @@ btnMoNavOpen.addEventListener('click', () => {
 });
 
 /*
- main > shape halfmoon height
+ shape halfmoon height
 */
 
 const shape = document.querySelector('.shape.halfmoon');
-const shapeHeight = shape.clientWidth / 2;
 
-shape.style.height = shapeHeight + 'px';
-shape.style.borderRadius = `0 0 ${shapeHeight}px ${shapeHeight}px`;
+function calcShapeStyle() {
+  const shapeHeight = shape.clientWidth / 2;
+  shape.style.height = shapeHeight + 'px';
+  shape.style.borderRadius = `0 0 ${shapeHeight}px ${shapeHeight}px`;
+}
+calcShapeStyle();
+
+window.addEventListener('resize', () => {
+  calcShapeStyle();
+});
 
 /*
  스크롤에 따라 요소 애니메이션
 */
 
-const imgMainBall = document.querySelector('.sec-main .shape-ball');
+const shapeBall = document.querySelector('.sec-main .shape-ball img');
 
 let lastScrollY = 0;
 
 window.addEventListener('scroll', () => {
   let scrollY = window.scrollY;
 
-  console.log(scrollY);
+  // console.log(scrollY);
 
   if (lastScrollY < scrollY) {
     shape.style.transform = 'rotate(15deg)';
-  } else {
-    shape.style.transform = 'rotate(0)';
   }
   lastScrollY = scrollY;
 
-  let translateY = (scrollY - 150) * 0.7;
-  let translateX = (scrollY - 150) * 0.7;
+  let translateX = scrollY * 0.7;
+  let translateY = translateX / 4;
 
-  imgMainBall.style.transform = 'translateY(' + translateY + 'px) translateX(' + translateX + 'px) rotate(' + translateY + 'deg';
+  shapeBall.style.transform = 'translateY(' + translateY + 'px) translateX(' + translateX + 'px) rotate(' + translateY + 'deg';
 
-  if (scrollY == 0) {
-    imgMainBall.style.transform = 'translate(-50%, -12%)';
+  if (scrollY < 100) {
+    shape.style.transform = 'rotate(0deg)';
   }
 });

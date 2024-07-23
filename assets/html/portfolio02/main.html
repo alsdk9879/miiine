@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../libs/aos/aos.css" />
     <link rel="stylesheet" href="../../css/style_portfolio02.css" />
     <title>::</title>
   </head>
   <body>
     <div id="portfolio02">
       <!-- header :: s -->
-      <header class="header">
+      <header class="header" data-aos="fade-down" data-aos-delay="200">
         <span class="label">Text</span>
         <ul class="nav-list-wrap">
           <li class="nav-list">
@@ -44,28 +45,30 @@
       <section class="section sec-main">
         <div class="animaiton-items-wrap">
           <h1 class="name">
-            <span class="text">MAIN</span>
-            <span class="text">TEXT</span>
+            <span class="text" data-aos="fade-up" data-aos-delay="600">MAIN</span>
+            <span class="text" data-aos="fade-up" data-aos-delay="800">TEXT</span>
           </h1>
           <div class="shape-ball">
             <img src="../../images/portfolio/portfolio02/img_main_ball.webp" alt="img-main-ball" />
           </div>
-          <div class="shape halfmoon"></div>
+          <div class="shape halfmoon" data-aos="fade-up">
+            <h2 class="text">
+              Text<br />
+              Text <em class="underline">Text</em> Text
+            </h2>
+          </div>
         </div>
       </section>
 
-      <section class="section sec-main">
-        <div class="animaiton-items-wrap">
-          <h1 class="name">
-            <span class="text">MAIN</span>
-            <span class="text">TEXT</span>
-          </h1>
-        </div>
+      <section class="section about">
+        <div class="shape"></div>
+        <h2 class="greet">Hi there,</h2>
       </section>
       <!-- main :: e -->
     </div>
 
     <!-- script -->
+    <script src="../../libs/aos/aos.js"></script>
     <script src="../../js/portfolio/portfolio02.js"></script>
   </body>
 </html>

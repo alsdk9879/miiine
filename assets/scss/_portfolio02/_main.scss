@@ -1,7 +1,7 @@
 #portfolio02 {
-  height: 100vh;
+  height: fit-content;
   font-family: 'Satoshi';
-  background-color: $primary-color1;
+  background: $primary-color1;
 
   .header {
     display: flex;
@@ -59,7 +59,7 @@
     .btn-contact {
       font-size: 1.25rem;
       padding: 0 1.5rem;
-      background-color: $primary-color2;
+      background-color: $primary-color3;
       color: $white;
 
       &::before {
@@ -209,8 +209,22 @@
   .section {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding: 0 7.125rem;
+    font-family: 'Austin';
+
+    &.sec-main {
+      &::before {
+        content: '';
+        display: block;
+        width: calc(100% - 32rem);
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background: repeating-linear-gradient(90deg, $primary-color1, $primary-color1 30px, $secondary-color2 0, $secondary-color2 31px);
+      }
+    }
   }
 
   .animaiton-items-wrap {
@@ -219,7 +233,6 @@
     height: 100%;
 
     .name {
-      font-family: 'Austin';
       font-size: 150px;
       font-weight: 300;
       line-height: 1;
@@ -231,17 +244,27 @@
 
       .text {
         display: block;
+        position: relative;
+
+        &:first-of-type {
+          left: -50%;
+        }
+
+        &:last-of-type {
+          left: 50%;
+        }
       }
     }
   }
 
   .shape-ball {
-    width: 36%;
+    // width: 36%;
+    width: 38.125rem;
     height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -12%);
+    transform: translate(-50%, -10%);
     transform-origin: center center;
     z-index: 1;
   }
@@ -251,12 +274,27 @@
     height: auto;
     border-radius: 50% 50% 0 0;
     background-color: $secondary-color1;
+  }
 
-    &.halfmoon {
-      position: absolute;
-      bottom: -60%;
-      transform-origin: center;
-      transition: transform 0.8s ease-in-out;
+  .halfmoon {
+    position: absolute;
+    bottom: -54%;
+    transform-origin: center;
+    transition: transform 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4.375rem;
+    font-weight: 500;
+    line-height: 1.6;
+
+    .text {
+      .underline {
+        text-decoration: underline;
+        text-decoration-color: $primary-color3;
+        text-underline-offset: 10px;
+      }
     }
   }
 }
