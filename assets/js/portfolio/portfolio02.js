@@ -19,15 +19,23 @@ btnMoNavOpen.addEventListener('click', () => {
 });
 
 /*
- shape halfmoon height
+ shape size calculate
 */
 
-const shape = document.querySelector('.shape.halfmoon');
+const shapeHalfmoon = document.querySelector('.shape.halfmoon');
+const shapeCircleTextLine = document.querySelector('.shape.circle-text-line');
 
 function calcShapeStyle() {
-  const shapeHeight = shape.clientWidth / 2;
-  shape.style.height = shapeHeight + 'px';
-  shape.style.borderRadius = `0 0 ${shapeHeight}px ${shapeHeight}px`;
+  const shapeHeight = shapeHalfmoon.clientWidth / 2;
+
+  shapeHalfmoon.style.height = shapeHeight + 'px';
+  shapeHalfmoon.style.borderRadius = `0 0 ${shapeHeight}px ${shapeHeight}px`;
+  shapeHalfmoon.style.bottom = -(shapeHeight / 15.666) + '%';
+
+  // shapeCircleTextLine.style.width = (window.clientWidth - 228) / 2.68 + 'px';
+  shapeCircleTextLine.style.width = (window.clientWidth - 228) / 2.68 + 'px';
+
+  console.dir(window);
 }
 calcShapeStyle();
 
@@ -49,7 +57,7 @@ window.addEventListener('scroll', () => {
   // console.log(scrollY);
 
   if (lastScrollY < scrollY) {
-    shape.style.transform = 'rotate(15deg)';
+    shapeHalfmoon.style.transform = 'rotate(15deg)';
   }
   lastScrollY = scrollY;
 
@@ -59,6 +67,6 @@ window.addEventListener('scroll', () => {
   shapeBall.style.transform = 'translateY(' + translateY + 'px) translateX(' + translateX + 'px) rotate(' + translateY + 'deg';
 
   if (scrollY < 100) {
-    shape.style.transform = 'rotate(0deg)';
+    shapeHalfmoon.style.transform = 'rotate(0deg)';
   }
 });

@@ -59,7 +59,7 @@
     .btn-contact {
       font-size: 1.25rem;
       padding: 0 1.5rem;
-      background-color: $primary-color3;
+      background-color: $primary-color4;
       color: $white;
 
       &::before {
@@ -212,46 +212,60 @@
     height: 100vh;
     padding: 0 7.125rem;
     font-family: 'Austin';
-
-    &.sec-main {
-      &::before {
-        content: '';
-        display: block;
-        width: calc(100% - 32rem);
-        height: 100%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        background: repeating-linear-gradient(90deg, $primary-color1, $primary-color1 30px, $secondary-color2 0, $secondary-color2 31px);
-      }
-    }
   }
 
-  .animaiton-items-wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    .name {
-      font-size: 150px;
-      font-weight: 300;
-      line-height: 1;
+  .sec-main {
+    &::before {
+      content: '';
+      display: block;
+      width: calc(100% - 32rem);
+      height: 100%;
       position: absolute;
       left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
+      background: repeating-linear-gradient(90deg, $primary-color1, $primary-color1 30px, $secondary-color2 0, $secondary-color2 31px);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 25%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $primary-color1;
+      z-index: 1;
+    }
+
+    .animaiton-items-wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
       z-index: 2;
 
-      .text {
-        display: block;
-        position: relative;
+      .name {
+        font-size: 150px;
+        font-weight: 300;
+        line-height: 1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
 
-        &:first-of-type {
-          left: -50%;
-        }
+        .text {
+          display: block;
+          position: relative;
 
-        &:last-of-type {
-          left: 50%;
+          &:first-of-type {
+            left: -50%;
+          }
+
+          &:last-of-type {
+            left: 50%;
+          }
         }
       }
     }
@@ -271,14 +285,14 @@
 
   .shape {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 50% 50% 0 0;
     background-color: $secondary-color1;
   }
 
   .halfmoon {
     position: absolute;
-    bottom: -54%;
+    // bottom: -54%;
     transform-origin: center;
     transition: transform 0.8s ease-in-out;
     display: flex;
@@ -292,9 +306,55 @@
     .text {
       .underline {
         text-decoration: underline;
-        text-decoration-color: $primary-color3;
+        text-decoration-color: $primary-color4;
         text-underline-offset: 10px;
       }
+    }
+  }
+
+  .sec-about {
+    height: fit-content;
+
+    .animaiton-items-wrap {
+      background-color: $secondary-color2;
+      padding: 50% 9.125rem;
+    }
+
+    .greet {
+      font-size: 6.25rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .text-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+
+    .nickname {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: $primary-color4;
+      border: 1px solid $primary-color4;
+      border-radius: 1.875rem;
+      padding: 0.25rem 1rem;
+      flex: none;
+      height: 3.625rem;
+    }
+
+    .text-introduce {
+      width: 50%;
+      font-family: 'Satoshi';
+      font-size: 1.375rem;
+      line-height: 1.3;
+      padding-right: 6.25rem;
+    }
+
+    .circle-text-line {
+      border-radius: 50%;
+      background-color: $primary-color2;
+      position: absolute;
     }
   }
 }
