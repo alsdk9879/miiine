@@ -32,10 +32,10 @@ function calcShapeStyle() {
   shapeHalfmoon.style.borderRadius = `0 0 ${shapeHeight}px ${shapeHeight}px`;
   shapeHalfmoon.style.bottom = -(shapeHeight / 15.666) + '%';
 
-  // shapeCircleTextLine.style.width = (window.clientWidth - 228) / 2.68 + 'px';
-  shapeCircleTextLine.style.width = (window.clientWidth - 228) / 2.68 + 'px';
+  shapeCircleTextLine.style.width = (window.innerWidth - 228) / 2.68 + 'px';
+  shapeCircleTextLine.style.height = (window.innerWidth - 228) / 2.68 + 'px';
 
-  console.dir(window);
+  console.log(window.innerWidth);
 }
 calcShapeStyle();
 
@@ -54,10 +54,8 @@ let lastScrollY = 0;
 window.addEventListener('scroll', () => {
   let scrollY = window.scrollY;
 
-  // console.log(scrollY);
-
   if (lastScrollY < scrollY) {
-    shapeHalfmoon.style.transform = 'rotate(15deg)';
+    shapeHalfmoon.style.transform = 'rotate(12deg)';
   }
   lastScrollY = scrollY;
 
@@ -68,5 +66,11 @@ window.addEventListener('scroll', () => {
 
   if (scrollY < 100) {
     shapeHalfmoon.style.transform = 'rotate(0deg)';
+  }
+
+  if (scrollY > 500) {
+    document.querySelectorAll('.underline').forEach((el) => {
+      el.classList.add('draw');
+    });
   }
 });

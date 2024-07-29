@@ -585,7 +585,7 @@ input[type=number]::-webkit-outer-spin-button {
   z-index: 2;
 }
 #portfolio02 .sec-main .animaiton-items-wrap .name {
-  font-size: 150px;
+  font-size: 9.375rem;
   font-weight: 300;
   line-height: 1;
   position: absolute;
@@ -650,6 +650,16 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-text-decoration-color: #51733f;
           text-decoration-color: #51733f;
   text-underline-offset: 10px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(176, 251, 188)), to(rgb(176, 251, 188))), -webkit-gradient(linear, left top, left bottom, from(#e5faff), to(#7dd4e7));
+  background-image: linear-gradient(rgb(176, 251, 188), rgb(176, 251, 188)), linear-gradient(#e5faff, #7dd4e7);
+  background-size: 100% 2px, 100% 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-size 700ms linear;
+  transition: background-size 700ms linear;
+}
+#portfolio02 .halfmoon .text .underline.draw {
+  background-size: 0 2px, 100% 2px;
 }
 #portfolio02 .sec-about {
   height: -webkit-fit-content;
@@ -658,7 +668,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio02 .sec-about .animaiton-items-wrap {
   background-color: #ecedde;
-  padding: 50% 9.125rem;
+  padding: 50% 9.125rem 34%;
 }
 #portfolio02 .sec-about .greet {
   font-size: 6.25rem;
@@ -673,6 +683,8 @@ input[type=number]::-webkit-outer-spin-button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 3rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 #portfolio02 .sec-about .nickname {
   font-size: 2.5rem;
@@ -686,22 +698,92 @@ input[type=number]::-webkit-outer-spin-button {
           flex: none;
   height: 3.625rem;
 }
-#portfolio02 .sec-about .text-introduce {
+#portfolio02 .sec-about .text-introduce-wrap {
   width: 50%;
   font-family: "Satoshi";
   font-size: 1.375rem;
   line-height: 1.3;
   padding-right: 6.25rem;
 }
+#portfolio02 .sec-about .text-introduce {
+  margin-bottom: 1.5rem;
+}
+#portfolio02 .sec-about .text-introduce:last-child {
+  margin-bottom: 0;
+}
 #portfolio02 .sec-about .circle-text-line {
   border-radius: 50%;
   background-color: #b1c0a0;
   position: absolute;
+  left: 50%;
+  bottom: -35%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /*
 * responsive
 */
+@media (max-width: 1599.98px) {
+  #portfolio02 .section {
+    padding: 0 4rem;
+  }
+  #portfolio02 .sec-main::before {
+    width: calc(100% - 24rem);
+  }
+  #portfolio02 .shape-ball {
+    width: 33.125rem;
+    -webkit-transform: translate(-50%, 6%);
+            transform: translate(-50%, 6%);
+  }
+}
+@media (max-width: 1399.98px) {
+  #portfolio02 .sec-about .text-introduce-wrap {
+    padding-right: 0;
+  }
+}
+@media (max-width: 1199.98px) {
+  #portfolio02 .section {
+    padding: 0 1rem;
+  }
+  #portfolio02 .sec-main::before {
+    width: calc(100% - 20rem);
+  }
+  #portfolio02 .sec-main::after {
+    width: 20%;
+  }
+  #portfolio02 .sec-about .animaiton-items-wrap {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  #portfolio02 .sec-about .greet {
+    font-size: 4.5rem;
+  }
+  #portfolio02 .sec-about .nickname {
+    font-size: 2rem;
+    height: 3rem;
+  }
+  #portfolio02 .sec-about .text-introduce-wrap {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 991.98px) {
+  #portfolio02 .sec-main::before {
+    width: calc(100% - 5rem);
+  }
+  #portfolio02 .sec-main::after {
+    width: 32%;
+  }
+  #portfolio02 .shape-ball {
+    width: 24rem;
+  }
+  #portfolio02 .halfmoon {
+    font-size: 4rem;
+    line-height: 1.3;
+    height: 38% !important;
+    bottom: -15% !important;
+  }
+}
 @media (max-width: 767.98px) {
   #portfolio02 .header {
     gap: 0;
@@ -730,5 +812,35 @@ input[type=number]::-webkit-outer-spin-button {
   }
   #portfolio02 .section {
     padding: 0 1rem;
+  }
+  #portfolio02 .sec-main::after {
+    width: 0;
+  }
+  #portfolio02 .sec-main .animaiton-items-wrap .name {
+    font-size: 5rem;
+    -webkit-transform: translate(-50%, -120%);
+            transform: translate(-50%, -120%);
+  }
+  #portfolio02 .sec-main .animaiton-items-wrap .name .text:first-of-type {
+    left: -30%;
+  }
+  #portfolio02 .sec-main .animaiton-items-wrap .name .text:last-of-type {
+    left: 30%;
+  }
+  #portfolio02 .shape-ball {
+    width: 20rem;
+  }
+  #portfolio02 .halfmoon {
+    font-size: 2.4rem;
+    height: 28 !important;
+    bottom: -5.6% !important;
+  }
+  #portfolio02 .sec-about .animaiton-items-wrap {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 30% 30% 0 0;
+  }
+  #portfolio02 .sec-about .text-introduce-wrap {
+    width: 100%;
   }
 }/*# sourceMappingURL=style_portfolio02.css.map */

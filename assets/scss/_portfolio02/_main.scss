@@ -246,7 +246,7 @@
       z-index: 2;
 
       .name {
-        font-size: 150px;
+        font-size: 9.375rem;
         font-weight: 300;
         line-height: 1;
         position: absolute;
@@ -308,6 +308,16 @@
         text-decoration: underline;
         text-decoration-color: $primary-color4;
         text-underline-offset: 10px;
+
+        background-image: linear-gradient(rgb(176, 251, 188), rgb(176, 251, 188)), linear-gradient(#e5faff, #7dd4e7);
+        background-size: 100% 2px, 100% 2px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat, no-repeat;
+        transition: background-size 700ms linear;
+
+        &.draw {
+          background-size: 0 2px, 100% 2px;
+        }
       }
     }
   }
@@ -317,7 +327,7 @@
 
     .animaiton-items-wrap {
       background-color: $secondary-color2;
-      padding: 50% 9.125rem;
+      padding: 50% 9.125rem 34%;
     }
 
     .greet {
@@ -330,6 +340,7 @@
       display: flex;
       justify-content: space-between;
       gap: 3rem;
+      flex-wrap: wrap;
     }
 
     .nickname {
@@ -343,7 +354,7 @@
       height: 3.625rem;
     }
 
-    .text-introduce {
+    .text-introduce-wrap {
       width: 50%;
       font-family: 'Satoshi';
       font-size: 1.375rem;
@@ -351,10 +362,21 @@
       padding-right: 6.25rem;
     }
 
+    .text-introduce {
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     .circle-text-line {
       border-radius: 50%;
       background-color: $primary-color2;
       position: absolute;
+      left: 50%;
+      bottom: -35%;
+      transform: translate(-50%, -50%);
     }
   }
 }
@@ -364,15 +386,95 @@
 */
 
 @media (max-width: 1599.98px) {
+  #portfolio02 {
+    .section {
+      padding: 0 4rem;
+    }
+
+    .sec-main {
+      &::before {
+        width: calc(100% - 24rem);
+      }
+    }
+
+    .shape-ball {
+      width: 33.125rem;
+      transform: translate(-50%, 6%);
+    }
+  }
 }
 
 @media (max-width: 1399.98px) {
+  #portfolio02 {
+    .sec-about {
+      .text-introduce-wrap {
+        padding-right: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 1199.98px) {
+  #portfolio02 {
+    .section {
+      padding: 0 1rem;
+    }
+
+    .sec-main {
+      &::before {
+        width: calc(100% - 20rem);
+      }
+
+      &::after {
+        width: 20%;
+      }
+    }
+
+    .sec-about {
+      .animaiton-items-wrap {
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+
+      .greet {
+        font-size: 4.5rem;
+      }
+
+      .nickname {
+        font-size: 2rem;
+        height: 3rem;
+      }
+
+      .text-introduce-wrap {
+        font-size: 1.25rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 991.98px) {
+  #portfolio02 {
+    .sec-main {
+      &::before {
+        width: calc(100% - 5rem);
+      }
+
+      &::after {
+        width: 32%;
+      }
+    }
+
+    .shape-ball {
+      width: 24rem;
+    }
+
+    .halfmoon {
+      font-size: 4rem;
+      line-height: 1.3;
+      height: 38% !important;
+      bottom: -15% !important;
+    }
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -406,6 +508,51 @@
 
     .section {
       padding: 0 1rem;
+    }
+
+    .sec-main {
+      &::after {
+        width: 0;
+      }
+
+      .animaiton-items-wrap {
+        .name {
+          font-size: 5rem;
+          transform: translate(-50%, -120%);
+
+          .text {
+            &:first-of-type {
+              left: -30%;
+            }
+
+            &:last-of-type {
+              left: 30%;
+            }
+          }
+        }
+      }
+    }
+
+    .shape-ball {
+      width: 20rem;
+    }
+
+    .halfmoon {
+      font-size: 2.4rem;
+      height: 28 !important;
+      bottom: -5.6% !important;
+    }
+
+    .sec-about {
+      .animaiton-items-wrap {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        border-radius: 30% 30% 0 0;
+      }
+
+      .text-introduce-wrap {
+        width: 100%;
+      }
     }
   }
 }
