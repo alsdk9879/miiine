@@ -8,6 +8,13 @@
     &.pop-open {
       overflow: hidden;
     }
+
+    .lnb {
+      .lnb-mark {
+        top: 263.188px;
+        transition: top 0.4s ease-in-out;
+      }
+    }
   }
 
   .work-list {

@@ -1233,6 +1233,11 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01.works.pop-open {
   overflow: hidden;
 }
+#portfolio01.works .lnb .lnb-mark {
+  top: 263.188px;
+  -webkit-transition: top 0.4s ease-in-out;
+  transition: top 0.4s ease-in-out;
+}
 #portfolio01 .work-list .sec-item {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1608,6 +1613,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio01.profile .lnb .lnb-mark {
   background-color: #f6f8fb;
+  top: 335.188px;
+  -webkit-transition: top 0.4s ease-in-out;
+  transition: top 0.4s ease-in-out;
 }
 #portfolio01.profile .lnb .lnb-mark-deco {
   background-color: #f6f8fb;
