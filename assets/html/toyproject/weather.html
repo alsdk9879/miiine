@@ -11,6 +11,14 @@
   </head>
   <body>
     <div id="weather">
+      <div>
+        <dl>
+          <dt>기온</dt>
+          <dd class="temperature"></dd>
+        </dl>
+        <img class="icon" src="" alt="img-weather" />
+      </div>
+
       <!-- aside :: s -->
       <aside class="current-weather">
         <div class="searchbox">
@@ -22,7 +30,7 @@
           <img src="../../images/clonecoding/weather/01d.png" alt="img-weather" />
         </div>
         <div class="weather-info">
-          <span class="temperature"><span class="data">30</span>°C</span>
+          <span class="temperature"><span class="data"></span>°C</span>
           <span class="sensible-temperature">Feels like <span class="data">37</span> °C</span>
           <span class="description">
             <i class="fa-brands fa-cloudversify"></i>
@@ -34,7 +42,6 @@
           <span class="time">오후 1:23</span>
           <span class="location">
             <i class="fa-solid fa-location-dot"></i>
-            <span class="data">Delhi</span>, IN
           </span>
         </div>
       </aside>
@@ -42,8 +49,120 @@
 
       <!-- main :: s -->
       <main class="main">
+        <!-- This Week :: s -->
+        <div class="content-wrap this-week">
+          <div class="title">This Week</div>
+          <div class="weather-content">
+            <div class="item">
+              <div class="date">
+                <span class="txt">화요일</span>
+              </div>
+              <div class="img-weather">
+                <img src="../../images/clonecoding/weather/01d.png" alt="" />
+                <span class="weather-desc">light rain</span>
+              </div>
+              <div class="temperature">
+                <span class="max">36°</span>
+                <span class="min">27°</span>
+              </div>
+            </div>
+            <div class="item">
+              <div class="date">
+                <span class="txt">화요일</span>
+              </div>
+              <div class="img-weather">
+                <img src="../../images/clonecoding/weather/01d.png" alt="" />
+                <span class="weather-desc">light rain</span>
+              </div>
+              <div class="temperature">
+                <span class="max">36°</span>
+                <span class="min">27°</span>
+              </div>
+            </div>
+            <div class="item">
+              <div class="date">
+                <span class="txt">화요일</span>
+              </div>
+              <div class="img-weather">
+                <img src="../../images/clonecoding/weather/01d.png" alt="" />
+                <span class="weather-desc">light rain</span>
+              </div>
+              <div class="temperature">
+                <span class="max">36°</span>
+                <span class="min">27°</span>
+              </div>
+            </div>
+            <div class="item">
+              <div class="date">
+                <span class="txt">화요일</span>
+              </div>
+              <div class="img-weather">
+                <img src="../../images/clonecoding/weather/01d.png" alt="" />
+                <span class="weather-desc">light rain</span>
+              </div>
+              <div class="temperature">
+                <span class="max">36°</span>
+                <span class="min">27°</span>
+              </div>
+            </div>
+            <div class="item">
+              <div class="date">
+                <span class="txt">화요일</span>
+              </div>
+              <div class="img-weather">
+                <img src="../../images/clonecoding/weather/01d.png" alt="" />
+                <span class="weather-desc">light rain</span>
+              </div>
+              <div class="temperature">
+                <span class="max">36°</span>
+                <span class="min">27°</span>
+              </div>
+            </div>
+            <div class="item">
+              <div class="date">
+                <span class="txt">화요일</span>
+              </div>
+              <div class="img-weather">
+                <img src="../../images/clonecoding/weather/01d.png" alt="" />
+                <span class="weather-desc">light rain</span>
+              </div>
+              <div class="temperature">
+                <span class="max">36°</span>
+                <span class="min">27°</span>
+              </div>
+            </div>
+            <div class="item">
+              <div class="date">
+                <span class="txt">화요일</span>
+              </div>
+              <div class="img-weather">
+                <img src="../../images/clonecoding/weather/01d.png" alt="" />
+                <span class="weather-desc">light rain</span>
+              </div>
+              <div class="temperature">
+                <span class="max">36°</span>
+                <span class="min">27°</span>
+              </div>
+            </div>
+            <div class="item">
+              <div class="date">
+                <span class="txt">화요일</span>
+              </div>
+              <div class="img-weather">
+                <img src="../../images/clonecoding/weather/01d.png" alt="" />
+                <span class="weather-desc">light rain</span>
+              </div>
+              <div class="temperature">
+                <span class="max">36°</span>
+                <span class="min">27°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- This Week :: e -->
+
         <!-- Today :: s -->
-        <div class="content-wrap today">
+        <!-- <div class="content-wrap today">
           <div class="top-header">
             <div class="title">Today</div>
             <div class="tab-weather">
@@ -51,7 +170,6 @@
               <span class="tab-list">°F</span>
             </div>
           </div>
-          <!-- slide :: s -->
           <div class="swiper weather-content">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -123,8 +241,7 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
-          <!-- slide :: e -->
-        </div>
+        </div> -->
         <!-- Today :: e -->
 
         <!-- Today's Highlights :: s -->
@@ -195,118 +312,6 @@
           </div>
         </div>
         <!-- Today's Highlights :: e -->
-
-        <!-- This Week :: s -->
-        <div class="content-wrap this-week">
-          <div class="title">This Week</div>
-          <div class="weather-content">
-            <div class="item">
-              <div class="date">
-                <span class="txt">화요일</span>
-              </div>
-              <div class="img-weather">
-                <img src="../../images/clonecoding/weather/01d.png" alt="" />
-                <span class="weather-desc">light rain</span>
-              </div>
-              <div class="temperature">
-                <span class="highes">36°</span>
-                <span class="lowest">27°</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="date">
-                <span class="txt">화요일</span>
-              </div>
-              <div class="img-weather">
-                <img src="../../images/clonecoding/weather/01d.png" alt="" />
-                <span class="weather-desc">light rain</span>
-              </div>
-              <div class="temperature">
-                <span class="highes">36°</span>
-                <span class="lowest">27°</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="date">
-                <span class="txt">화요일</span>
-              </div>
-              <div class="img-weather">
-                <img src="../../images/clonecoding/weather/01d.png" alt="" />
-                <span class="weather-desc">light rain</span>
-              </div>
-              <div class="temperature">
-                <span class="highes">36°</span>
-                <span class="lowest">27°</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="date">
-                <span class="txt">화요일</span>
-              </div>
-              <div class="img-weather">
-                <img src="../../images/clonecoding/weather/01d.png" alt="" />
-                <span class="weather-desc">light rain</span>
-              </div>
-              <div class="temperature">
-                <span class="highes">36°</span>
-                <span class="lowest">27°</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="date">
-                <span class="txt">화요일</span>
-              </div>
-              <div class="img-weather">
-                <img src="../../images/clonecoding/weather/01d.png" alt="" />
-                <span class="weather-desc">light rain</span>
-              </div>
-              <div class="temperature">
-                <span class="highes">36°</span>
-                <span class="lowest">27°</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="date">
-                <span class="txt">화요일</span>
-              </div>
-              <div class="img-weather">
-                <img src="../../images/clonecoding/weather/01d.png" alt="" />
-                <span class="weather-desc">light rain</span>
-              </div>
-              <div class="temperature">
-                <span class="highes">36°</span>
-                <span class="lowest">27°</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="date">
-                <span class="txt">화요일</span>
-              </div>
-              <div class="img-weather">
-                <img src="../../images/clonecoding/weather/01d.png" alt="" />
-                <span class="weather-desc">light rain</span>
-              </div>
-              <div class="temperature">
-                <span class="highes">36°</span>
-                <span class="lowest">27°</span>
-              </div>
-            </div>
-            <div class="item">
-              <div class="date">
-                <span class="txt">화요일</span>
-              </div>
-              <div class="img-weather">
-                <img src="../../images/clonecoding/weather/01d.png" alt="" />
-                <span class="weather-desc">light rain</span>
-              </div>
-              <div class="temperature">
-                <span class="highes">36°</span>
-                <span class="lowest">27°</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- This Week :: e -->
       </main>
       <!-- main :: e -->
     </div>
