@@ -1834,7 +1834,7 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01.about .item {
   border-radius: 0;
   border-bottom: 1px solid #eee;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 #portfolio01.about .item:first-of-type {
   padding-top: 0;
@@ -1856,7 +1856,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: 2rem;
 }
 #portfolio01.about .career .sec-item .desc-wrap {
-  margin-bottom: 3.125rem;
+  margin-bottom: 2rem;
 }
 #portfolio01.about .career .sec-item .desc-wrap:last-child {
   margin-bottom: 0;
