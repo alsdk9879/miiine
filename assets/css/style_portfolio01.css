@@ -1698,12 +1698,23 @@ input[type=number]::-webkit-outer-spin-button {
   display: block;
   margin-right: 0.25rem;
 }
-#portfolio01.profile .btn-download {
+#portfolio01.profile .btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+#portfolio01.profile .btn-wrap .btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   min-width: 13.125rem;
-  margin: 0 auto;
 }
 
 /*
@@ -1815,6 +1826,10 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 600;
   margin-bottom: 0.625rem;
   line-height: 1.4;
+  margin-top: 1.5rem;
+}
+#portfolio01.about .sec-item .sub-title:first-of-type {
+  margin-top: 0;
 }
 #portfolio01.about .sec-item .sub-desc {
   font-size: 0.875rem;

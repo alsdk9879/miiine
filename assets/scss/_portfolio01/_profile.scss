@@ -94,10 +94,16 @@
       }
     }
 
-    .btn-download {
-      width: fit-content;
-      min-width: 13.125rem;
-      margin: 0 auto;
+    .btn-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .btn {
+        width: fit-content;
+        min-width: 13.125rem;
+      }
     }
   }
 }
