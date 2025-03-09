@@ -759,6 +759,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.5;
+  word-break: keep-all;
 }
 #portfolio01 .sec-item .profile-info .text-wrap .text em {
   font-weight: 900;
@@ -1573,7 +1574,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 1.5rem;
   }
   #portfolio01 .pop .text-wrap .desc,
-#portfolio01 .pop .text-wrap .period {
+  #portfolio01 .pop .text-wrap .period {
     margin-right: 0;
     max-height: 9.2rem;
   }
@@ -1645,6 +1646,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio01.profile .item:last-child {
   border-bottom: none;
+}
+#portfolio01.profile .item:last-child .text-wrap {
+  margin-bottom: 0.5rem;
+}
+#portfolio01.profile .item:last-child .text-wrap:last-child {
+  margin-bottom: 0;
 }
 #portfolio01.profile .item .title {
   font-weight: 700;

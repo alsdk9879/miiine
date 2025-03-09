@@ -38,6 +38,14 @@
 
       &:last-child {
         border-bottom: none;
+
+        .text-wrap {
+          margin-bottom: 0.5rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
 
       .title {

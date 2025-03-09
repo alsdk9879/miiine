@@ -647,8 +647,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 #portfolio02 .halfmoon .text .underline {
   text-decoration: underline;
-  -webkit-text-decoration-color: #51733f;
-          text-decoration-color: #51733f;
+  text-decoration-color: #51733f;
   text-underline-offset: 10px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(176, 251, 188)), to(rgb(176, 251, 188))), -webkit-gradient(linear, left top, left bottom, from(#e5faff), to(#7dd4e7));
   background-image: linear-gradient(rgb(176, 251, 188), rgb(176, 251, 188)), linear-gradient(#e5faff, #7dd4e7);
