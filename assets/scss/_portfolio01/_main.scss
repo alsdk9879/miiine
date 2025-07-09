@@ -990,6 +990,13 @@
 }
 
 @media (max-width: 575.98px) {
+  #portfolio01 {
+    .section {
+      &:last-of-type {
+        margin-bottom: 2.25rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 399.98px) {
