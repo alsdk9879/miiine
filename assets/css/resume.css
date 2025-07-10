@@ -460,6 +460,11 @@ ul > li:before {
   background-size: contain;
   background-position: center;
 }
+.profile .img-profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .profile-info {
   display: flex;
   flex-direction: column;
