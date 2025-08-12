@@ -342,7 +342,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: fixed;
   top: 0;
   left: 0;
-  width: 18.75rem;
+  width: 17.5rem;
   height: 100vh;
   background-color: #222;
   color: #fff;
@@ -364,7 +364,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: relative;
 }
 #portfolio01 .lnb .lnb-mark {
-  width: 16.25rem;
+  width: 15.25rem;
   height: 4.5rem;
   background-color: #fff;
   position: absolute;
@@ -398,7 +398,7 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 0 50% 0 0;
 }
 #portfolio01 .lnb .lnb-list-wrap {
-  padding-left: 2.5rem;
+  padding-left: 2.25rem;
 }
 #portfolio01 .lnb .lnb-list a {
   display: -webkit-box;
@@ -501,7 +501,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-family: "Pretendard";
   width: 100%;
   height: 100%;
-  padding: 5rem 3.125rem 3rem 21.875rem;
+  padding: 5rem 3.125rem 3rem 20rem;
   -webkit-transition: padding-left 0.5s ease-in-out;
   transition: padding-left 0.5s ease-in-out;
 }
@@ -662,6 +662,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-box-shadow: 0px 5px 15px 0px rgba(8, 12, 56, 0.15);
           box-shadow: 0px 5px 15px 0px rgba(8, 12, 56, 0.15);
   padding: 1.875rem;
+  -webkit-box-flex: 1.1;
+      -ms-flex: 1.1;
+          flex: 1.1;
 }
 #portfolio01 .sec-item .item.view-detail {
   background: linear-gradient(120deg, rgba(0, 79, 152, 0.8), rgba(21, 107, 187, 0.8));
@@ -773,9 +776,9 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   gap: 1.25rem;
   min-width: 48rem;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 2.3;
+      -ms-flex: 2.3;
+          flex: 2.3;
 }
 #portfolio01 .sec-item.profile-summary .item-wrap {
   -webkit-box-flex: 0.6;
@@ -1337,6 +1340,14 @@ input[type=number]::-webkit-outer-spin-button {
 #portfolio01 .pop.open {
   display: block;
 }
+#portfolio01 .pop.working .img-wrap img {
+  -o-object-position: center;
+     object-position: center;
+}
+#portfolio01 .pop.working .text-wrap .btn-wrap a {
+  pointer-events: none;
+  background-color: #ddd;
+}
 #portfolio01 .pop .pop-cont-wrap {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1547,6 +1558,13 @@ input[type=number]::-webkit-outer-spin-button {
     top: 1.75rem;
     right: 1rem;
   }
+  #portfolio01 .pop.working .img-wrap img {
+    width: 70%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 @media (max-width: 991.98px) {
   #portfolio01 .work-list .sec-item {
@@ -1581,7 +1599,7 @@ input[type=number]::-webkit-outer-spin-button {
   #portfolio01 .pop .text-wrap .desc,
   #portfolio01 .pop .text-wrap .period {
     margin-right: 0;
-    max-height: 9.2rem;
+    max-height: 10rem;
   }
   #portfolio01 .pop .text-wrap .btn-wrap {
     -webkit-box-orient: vertical;

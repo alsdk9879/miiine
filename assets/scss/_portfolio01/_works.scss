@@ -118,6 +118,23 @@
       display: block;
     }
 
+    &.working {
+      .img-wrap {
+        img {
+          object-position: center;
+        }
+      }
+
+      .text-wrap {
+        .btn-wrap {
+          a {
+            pointer-events: none;
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+
     .pop-cont-wrap {
       width: fit-content;
       position: relative;
@@ -317,6 +334,17 @@
         top: 1.75rem;
         right: 1rem;
       }
+
+      &.working {
+        .img-wrap {
+          img {
+            width: 70%;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
     }
   }
 }
@@ -363,7 +391,7 @@
         .desc,
         .period {
           margin-right: 0;
-          max-height: 9.2rem;
+          max-height: 10rem;
         }
 
         .btn-wrap {
