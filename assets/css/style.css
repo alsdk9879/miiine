@@ -2045,13 +2045,11 @@ body {
 }
 
 #barChart .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
-  -webkit-clip-path: inset(0% 0% 0% -100% round 20px);
-          clip-path: inset(0% 0% 0% -100% round 20px);
+  clip-path: inset(0% 0% 0% -100% round 20px);
 }
 
 #barChart2 .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
-  -webkit-clip-path: inset(0% 0% -100% 0% round 20px);
-          clip-path: inset(0% 0% -100% 0% round 20px);
+  clip-path: inset(0% 0% -100% 0% round 20px);
 }
 
 /*
