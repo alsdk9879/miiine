@@ -1453,6 +1453,14 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-animation: arrow 0.8s infinite forwards;
           animation: arrow 0.8s infinite forwards;
 }
+#portfolio01 .pop .text-wrap .btn-wrap a.disabled {
+  pointer-events: none;
+  background-color: #919191;
+}
+#portfolio01 .pop .text-wrap .btn-wrap a.disabled::after {
+  -webkit-animation: none;
+          animation: none;
+}
 #portfolio01 .pop .img-wrap {
   width: 30rem;
   border-top-right-radius: 1rem;

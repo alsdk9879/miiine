@@ -229,6 +229,15 @@
               animation: arrow 0.8s infinite forwards;
             }
           }
+
+          &.disabled {
+            pointer-events: none;
+            background-color: #919191;
+
+            &::after {
+              animation: none;
+            }
+          }
         }
       }
     }

@@ -388,8 +388,12 @@
             <p class='desc'>${popList[index].desc}</p>
             <p class='period'>${popList[index].period}</p>
             <div class='btn-wrap'>
-              <a href='${popList[index].viewPCLink}' target='_blank' class='btn-view-pc'>PC화면 보러가기</a>
-              <a href='${popList[index].viewMOLink}' target='_blank' class='btn-view-mo'>모바일화면 보러가기</a>
+              <a href='${popList[index].viewPCLink}' target='_blank' class='btn-view-pc ${
+            popList[index].viewPCLink === 'javascript:void(0);' ? 'disabled' : ''
+          }'>PC화면 보러가기</a>
+              <a href='${popList[index].viewMOLink}' target='_blank' class='btn-view-mo ${
+            popList[index].viewMOLink === 'javascript:void(0);' ? 'disabled' : ''
+          }'>모바일화면 보러가기</a>
             </div>
           </div>
           <div class='img-wrap'>
